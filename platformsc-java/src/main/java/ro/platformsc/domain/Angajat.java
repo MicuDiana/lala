@@ -79,15 +79,15 @@ public class Angajat implements Serializable {
     @Column(name = "alte_informatii")
     private String alteInformatii;
 
-    @ManyToMany(fetch = FetchType.LAZY)
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
             name = "T_ANGAJAT_T_LIMBA_STRAINA",
             joinColumns = {@JoinColumn(name = "angajat_id", referencedColumnName = "id")},
             inverseJoinColumns = {@JoinColumn(name = "limba_straina_id", referencedColumnName = "id")})
     private Set<LimbaStraina> limbaStrainas = new HashSet<>();
 
-    @OneToOne(mappedBy = "angajat", fetch = FetchType.LAZY)
-    @JsonIgnore private Persoana persoana;
+    @OneToOne
+    private Persoana persoana;
 
     @OneToMany(mappedBy = "angajat", fetch = FetchType.LAZY)
     @JsonIgnore

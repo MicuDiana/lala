@@ -21,7 +21,7 @@
     <!--
         Added the entity Angajat.
     -->
-    <changeSet id="20170621180914" author="teamnet">
+    <changeSet id="20170621180914" author="platforma">
         <createTable tableName="T_ANGAJAT">
             <column name="id" type="bigint" autoIncrement="true">
                 <constraints primaryKey="true" nullable="false"/>

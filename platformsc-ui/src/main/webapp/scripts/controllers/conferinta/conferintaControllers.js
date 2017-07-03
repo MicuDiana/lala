@@ -75,15 +75,11 @@ platformscControllers
         $scope.conferinta.grid.addSearchToColumn('tara', AppGridConstants.searchValueTypes.STRING,
             {filterType: AppGridConstants.searchFilterTypes.LIKE});
         
-        $scope.conferinta.grid.addColumn('data');
-        $scope.conferinta.grid.setColumnLabelKey('data', 'Data');
-        $scope.conferinta.grid.formatColumn('data', 'simpleDateFormatter');
-        $scope.conferinta.grid.addSearchToColumn('data', AppGridConstants.searchValueTypes.DATE,
-            {filterType: AppGridConstants.searchFilterTypes.BETWEEN, placeholders: ["De la: ", "Pana la: "]});
+
          
-        $scope.conferinta.grid.addColumn('organizareConferinte.id');
-        $scope.conferinta.grid.setColumnLabelKey('organizareConferinte.id', 'OrganizareConferinte');
-        $scope.conferinta.grid.addSearchToColumn('organizareConferinte.id', AppGridConstants.searchValueTypes.STRING,
+        $scope.conferinta.grid.addColumn('organizareConferinte.persoana.nume');
+        $scope.conferinta.grid.setColumnLabelKey('organizareConferinte.persoana.nume', 'OrganizareConferinte');
+        $scope.conferinta.grid.addSearchToColumn('organizareConferinte.persoana.nume', AppGridConstants.searchValueTypes.STRING,
             {filterType: AppGridConstants.searchFilterTypes.LIKE});
         
 

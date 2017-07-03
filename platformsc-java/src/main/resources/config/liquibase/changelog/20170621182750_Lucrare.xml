@@ -21,7 +21,7 @@
     <!--
         Added the entity Lucrare.
     -->
-    <changeSet id="20170621182750" author="teamnet">
+    <changeSet id="20170621182750" author="platforma">
         <createTable tableName="T_LUCRARE">
             <column name="id" type="bigint" autoIncrement="true">
                 <constraints primaryKey="true" nullable="false"/>

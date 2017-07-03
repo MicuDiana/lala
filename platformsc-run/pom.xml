@@ -51,12 +51,12 @@
 
                     <overlays>
                         <overlay>
-                            <groupId>ro.teamnet.bootstrap</groupId>
+                            <groupId>ro.platforma.bootstrap</groupId>
                             <artifactId>app-bootstrap-web</artifactId>
                         </overlay>
                         <!-- security module -->
                         <overlay>
-                            <groupId>ro.teamnet.bootstrap</groupId>
+                            <groupId>ro.platforma.bootstrap</groupId>
                             <artifactId>app-bootstrap-security-web</artifactId>
                         </overlay>
                         <overlay>
@@ -92,12 +92,12 @@
                             <failOnMissingWebXml>false</failOnMissingWebXml>
                             <overlays>
                                 <overlay>
-                                    <groupId>ro.teamnet.bootstrap</groupId>
+                                    <groupId>ro.platforma.bootstrap</groupId>
                                     <artifactId>app-bootstrap-web</artifactId>
                                 </overlay>
                                 <!-- security module -->
                                 <overlay>
-                                    <groupId>ro.teamnet.bootstrap</groupId>
+                                    <groupId>ro.platforma.bootstrap</groupId>
                                     <artifactId>app-bootstrap-security-web</artifactId>
                                 </overlay>
                                 <overlay>
@@ -136,12 +136,12 @@
                             <failOnMissingWebXml>false</failOnMissingWebXml>
                             <overlays>
                                 <overlay>
-                                    <groupId>ro.teamnet.bootstrap</groupId>
+                                    <groupId>ro.platforma.bootstrap</groupId>
                                     <artifactId>app-bootstrap-web</artifactId>
                                 </overlay>
                                 <!-- security module -->
                                 <overlay>
-                                    <groupId>ro.teamnet.bootstrap</groupId>
+                                    <groupId>ro.platforma.bootstrap</groupId>
                                     <artifactId>app-bootstrap-security-web</artifactId>
                                 </overlay>
                                 <overlay>
@@ -180,12 +180,12 @@
                             <failOnMissingWebXml>false</failOnMissingWebXml>
                             <overlays>
                                 <overlay>
-                                    <groupId>ro.teamnet.bootstrap</groupId>
+                                    <groupId>ro.platforma.bootstrap</groupId>
                                     <artifactId>app-bootstrap-web</artifactId>
                                 </overlay>
                                 <!-- security module -->
                                 <overlay>
-                                    <groupId>ro.teamnet.bootstrap</groupId>
+                                    <groupId>ro.platforma.bootstrap</groupId>
                                     <artifactId>app-bootstrap-security-web</artifactId>
                                 </overlay>
                                 <overlay>

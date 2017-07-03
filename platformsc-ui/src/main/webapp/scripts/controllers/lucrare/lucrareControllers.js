@@ -102,45 +102,15 @@ platformscControllers
             $scope.lucrare.grid.addSearchToColumn('titlu', AppGridConstants.searchValueTypes.STRING,
                 {filterType: AppGridConstants.searchFilterTypes.LIKE});
 
-            $scope.lucrare.grid.addColumn('anPublicare');
-            $scope.lucrare.grid.setColumnLabelKey('anPublicare', 'AnPublicare');
-            $scope.lucrare.grid.addSearchToColumn('anPublicare', AppGridConstants.searchValueTypes.NUMBER,
-                {filterType: AppGridConstants.searchFilterTypes.EQUAL});
 
-            $scope.lucrare.grid.addColumn('numarAutori');
-            $scope.lucrare.grid.setColumnLabelKey('numarAutori', 'NumarAutori');
-            $scope.lucrare.grid.addSearchToColumn('numarAutori', AppGridConstants.searchValueTypes.NUMBER,
-                {filterType: AppGridConstants.searchFilterTypes.EQUAL});
 
             $scope.lucrare.grid.addColumn('denumire');
             $scope.lucrare.grid.setColumnLabelKey('denumire', 'Denumire');
             $scope.lucrare.grid.addSearchToColumn('denumire', AppGridConstants.searchValueTypes.STRING,
                 {filterType: AppGridConstants.searchFilterTypes.LIKE});
 
-            $scope.lucrare.grid.addColumn('factorDeImpact');
-            $scope.lucrare.grid.setColumnLabelKey('factorDeImpact', 'FactorDeImpact');
-            $scope.lucrare.grid.addSearchToColumn('factorDeImpact', AppGridConstants.searchValueTypes.NUMBER,
-                {filterType: AppGridConstants.searchFilterTypes.EQUAL});
 
-            $scope.lucrare.grid.addColumn('issn');
-            $scope.lucrare.grid.setColumnLabelKey('issn', 'Issn');
-            $scope.lucrare.grid.addSearchToColumn('issn', AppGridConstants.searchValueTypes.STRING,
-                {filterType: AppGridConstants.searchFilterTypes.LIKE});
 
-            $scope.lucrare.grid.addColumn('isbn');
-            $scope.lucrare.grid.setColumnLabelKey('isbn', 'Isbn');
-            $scope.lucrare.grid.addSearchToColumn('isbn', AppGridConstants.searchValueTypes.STRING,
-                {filterType: AppGridConstants.searchFilterTypes.LIKE});
-
-            $scope.lucrare.grid.addColumn('editori');
-            $scope.lucrare.grid.setColumnLabelKey('editori', 'Editori');
-            $scope.lucrare.grid.addSearchToColumn('editori', AppGridConstants.searchValueTypes.STRING,
-                {filterType: AppGridConstants.searchFilterTypes.LIKE});
-
-            $scope.lucrare.grid.addColumn('volum');
-            $scope.lucrare.grid.setColumnLabelKey('volum', 'Volum');
-            $scope.lucrare.grid.addSearchToColumn('volum', AppGridConstants.searchValueTypes.STRING,
-                {filterType: AppGridConstants.searchFilterTypes.LIKE});
 
             $scope.lucrare.grid.addColumn('numar');
             $scope.lucrare.grid.setColumnLabelKey('numar', 'Numar');
@@ -157,36 +127,16 @@ platformscControllers
             $scope.lucrare.grid.addSearchToColumn('editura', AppGridConstants.searchValueTypes.STRING,
                 {filterType: AppGridConstants.searchFilterTypes.LIKE});
 
-            $scope.lucrare.grid.addColumn('wos');
-            $scope.lucrare.grid.setColumnLabelKey('wos', 'Wos');
-            $scope.lucrare.grid.addSearchToColumn('wos', AppGridConstants.searchValueTypes.STRING,
-                {filterType: AppGridConstants.searchFilterTypes.LIKE});
 
-            $scope.lucrare.grid.addColumn('issnJurnal');
-            $scope.lucrare.grid.setColumnLabelKey('issnJurnal', 'IssnJurnal');
-            $scope.lucrare.grid.addSearchToColumn('issnJurnal', AppGridConstants.searchValueTypes.STRING,
-                {filterType: AppGridConstants.searchFilterTypes.LIKE});
+
 
             $scope.lucrare.grid.addColumn('capitole');
             $scope.lucrare.grid.setColumnLabelKey('capitole', 'Capitole');
             $scope.lucrare.grid.addSearchToColumn('capitole', AppGridConstants.searchValueTypes.STRING,
                 {filterType: AppGridConstants.searchFilterTypes.LIKE});
 
-            $scope.lucrare.grid.addColumn('rezultat');
-            $scope.lucrare.grid.setColumnLabelKey('rezultat', 'Rezultat');
-            $scope.lucrare.grid.addSearchToColumn('rezultat', AppGridConstants.searchValueTypes.STRING,
-                {filterType: AppGridConstants.searchFilterTypes.LIKE});
 
 
-            $scope.lucrare.grid.addColumn('tipBrevet');
-            $scope.lucrare.grid.setColumnLabelKey('tipBrevet', 'TipBrevet');
-            $scope.lucrare.grid.addSearchToColumn('tipBrevet', AppGridConstants.searchValueTypes.STRING,
-                {filterType: AppGridConstants.searchFilterTypes.LIKE});
-
-            $scope.lucrare.grid.addColumn('qx');
-            $scope.lucrare.grid.setColumnLabelKey('qx', 'Qx');
-            $scope.lucrare.grid.addSearchToColumn('qx', AppGridConstants.searchValueTypes.STRING,
-                {filterType: AppGridConstants.searchFilterTypes.LIKE});
 
             $scope.lucrare.grid.addColumn('indexataDe');
             $scope.lucrare.grid.setColumnLabelKey('indexataDe', 'IndexataDe');

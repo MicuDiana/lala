@@ -92,7 +92,7 @@
         </div>
     </div>
     <!-- end field 3 -->
-        </div><!--from i+1%entityLayout --></div> 
+        </div>
         <div class="row m0">
             <div class="mb15 col-md-6">
                 <div class="form-group">
@@ -101,10 +101,10 @@
                     <ui-select ng-model="conferinta.data.organizareConferinte"
                                theme="selectize" >
                         <ui-select-match placeholder="Select organizareConferinte...">
-                            {{$select.selected.id}}
+                            {{$select.selected.persoana.nume}}
                         </ui-select-match>
                         <ui-select-choices repeat="organizareConferinte in organizareConferintes  | filter: $select.search">
-                            <div ng-bind-html="organizareConferinte.id | highlight: $select.search"></div>
+                            <div ng-bind-html="organizareConferinte.persoana.nume  | highlight: $select.search"></div>
                         </ui-select-choices>
                     </ui-select>
                 </div>

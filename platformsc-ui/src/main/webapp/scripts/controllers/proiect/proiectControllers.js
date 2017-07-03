@@ -70,12 +70,12 @@ platformscControllers
         $scope.proiect.grid.addSearchToColumn('titlu', AppGridConstants.searchValueTypes.STRING,
             {filterType: AppGridConstants.searchFilterTypes.LIKE});
         
-        $scope.proiect.grid.addColumn('acronim');
+       /* $scope.proiect.grid.addColumn('acronim');
         $scope.proiect.grid.setColumnLabelKey('acronim', 'Acronim');
         $scope.proiect.grid.addSearchToColumn('acronim', AppGridConstants.searchValueTypes.STRING,
             {filterType: AppGridConstants.searchFilterTypes.LIKE});
-        
-        $scope.proiect.grid.addColumn('dataIncepere');
+        */
+      /*  $scope.proiect.grid.addColumn('dataIncepere');
         $scope.proiect.grid.setColumnLabelKey('dataIncepere', 'DataIncepere');
         $scope.proiect.grid.formatColumn('dataIncepere', 'simpleDateFormatter');
         $scope.proiect.grid.addSearchToColumn('dataIncepere', AppGridConstants.searchValueTypes.DATE,
@@ -86,7 +86,7 @@ platformscControllers
         $scope.proiect.grid.formatColumn('dataFinalizare', 'simpleDateFormatter');
         $scope.proiect.grid.addSearchToColumn('dataFinalizare', AppGridConstants.searchValueTypes.DATE,
             {filterType: AppGridConstants.searchFilterTypes.BETWEEN, placeholders: ["De la: ", "Pana la: "]});
-        
+        */
         $scope.proiect.grid.addColumn('beneficiar');
         $scope.proiect.grid.setColumnLabelKey('beneficiar', 'Beneficiar');
         $scope.proiect.grid.addSearchToColumn('beneficiar', AppGridConstants.searchValueTypes.STRING,
@@ -112,15 +112,15 @@ platformscControllers
         $scope.proiect.grid.addSearchToColumn('calitate', AppGridConstants.searchValueTypes.STRING,
             {filterType: AppGridConstants.searchFilterTypes.LIKE});
         
-        $scope.proiect.grid.addColumn('parteneri');
+       /* $scope.proiect.grid.addColumn('parteneri');
         $scope.proiect.grid.setColumnLabelKey('parteneri', 'Parteneri');
         $scope.proiect.grid.addSearchToColumn('parteneri', AppGridConstants.searchValueTypes.STRING,
-            {filterType: AppGridConstants.searchFilterTypes.LIKE});
+            {filterType: AppGridConstants.searchFilterTypes.LIKE});*/
         
-        $scope.proiect.grid.addColumn('siteWeb');
+      /*  $scope.proiect.grid.addColumn('siteWeb');
         $scope.proiect.grid.setColumnLabelKey('siteWeb', 'SiteWeb');
         $scope.proiect.grid.addSearchToColumn('siteWeb', AppGridConstants.searchValueTypes.STRING,
-            {filterType: AppGridConstants.searchFilterTypes.LIKE});
+            {filterType: AppGridConstants.searchFilterTypes.LIKE});*/
          
 
         

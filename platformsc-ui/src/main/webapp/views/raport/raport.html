@@ -1,0 +1,39 @@
+<div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4>Raport conferinte 2017</h4>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="row0">
+                    <div class="mb15 col-md-6">
+                        <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_conferinta.conferinta_locatie.$dirty && formCreateOrEdit_conferinta.conferinta_locatie.$valid, 'has-error': formCreateOrEdit_conferinta.conferinta_locatie.$dirty && formCreateOrEdit_conferinta.conferinta_locatie.$invalid}">
+
+                            <label>Locatie</label>
+                            <input type="text" class="form-control" name="conferinta_locatie" placeholder="Locatie" ng-model="conferinta.data.locatie"ng-minlength=1 ng-maxlength=50 maxlength="50" required>
+
+
+                        </div>
+                    </div>
+
+                    <div class="mb15 col-md-6">
+                        <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_conferinta.conferinta_tara.$dirty && formCreateOrEdit_conferinta.conferinta_tara.$valid, 'has-error': formCreateOrEdit_conferinta.conferinta_tara.$dirty && formCreateOrEdit_conferinta.conferinta_tara.$invalid}">
+
+                            <label>Tara</label>
+                            <input type="text" class="form-control" name="conferinta_tara" placeholder="Tara" ng-model="conferinta.data.tara"ng-minlength=1 ng-maxlength=50 maxlength="50" required>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row m0">
+                    <div class="col-md-12 text-right mb15">
+
+                        <button class="btn btn-success" ng-click="runReport('pdf')">Generare raport pdf</button>
+                        <button class="btn btn-success" ng-click="runReport('xlsx')">Generare raport xlsx</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

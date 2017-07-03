@@ -4,142 +4,140 @@
 <div class="alert alert-danger" ng-show="save.error">
     <strong>An error has occurred!</strong> {{functionality}} could not be saved.
 </div>
-<div  ng-if="persoana.components.create||persoana.components.update">
+<div ng-if="persoana.components.create||persoana.components.update">
     <form name="formCreateOrEdit_persoana" role="form" ng-submit="persoana.actions.createOrUpdate()">
         <input type="hidden" name="id" ng-model="persoana.data.id" readonly>
-        
-        <div class="row m0">
-        <div class="mb15 col-md-6">
-            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_persoana.persoana_nume.$dirty && formCreateOrEdit_persoana.persoana_nume.$valid, 'has-error': formCreateOrEdit_persoana.persoana_nume.$dirty && formCreateOrEdit_persoana.persoana_nume.$invalid}">
-                
-                <label>Nume</label>
-                <input type="text" class="form-control" name="persoana_nume" placeholder="Nume" ng-model="persoana.data.nume"ng-minlength=1 ng-maxlength=50 maxlength="50" required>
-                
-                <div ng-show="formCreateOrEdit_persoana.persoana_nume.$dirty && formCreateOrEdit_persoana.persoana_nume.$invalid">
-                    <p class="help-block" ng-show="formCreateOrEdit_persoana.persoana_nume.$error.required">
-                        Your field Nume is required.
-                    </p><p class="help-block" ng-show="formCreateOrEdit_persoana.persoana_nume.$error.minlength">
-                        Your field Nume is required to be at least 1 character
-                    </p>
-                    <p class="help-block"
-                    ng-show="formCreateOrEdit_persoana.persoana_nume.$error.maxlength">
-                        Your field Nume cannot be longer than 50 characters
-                    </p>
-            </div>
-        </div>
-    </div>
-    <!-- end field 0 -->
-        
-        <div class="mb15 col-md-6">
-            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_persoana.persoana_prenume.$dirty && formCreateOrEdit_persoana.persoana_prenume.$valid, 'has-error': formCreateOrEdit_persoana.persoana_prenume.$dirty && formCreateOrEdit_persoana.persoana_prenume.$invalid}">
-                
-                <label>Prenume</label>
-                <input type="text" class="form-control" name="persoana_prenume" placeholder="Prenume" ng-model="persoana.data.prenume"ng-minlength=1 ng-maxlength=50 maxlength="50" required>
-                
-                <div ng-show="formCreateOrEdit_persoana.persoana_prenume.$dirty && formCreateOrEdit_persoana.persoana_prenume.$invalid">
-                    <p class="help-block" ng-show="formCreateOrEdit_persoana.persoana_prenume.$error.required">
-                        Your field Prenume is required.
-                    </p><p class="help-block" ng-show="formCreateOrEdit_persoana.persoana_prenume.$error.minlength">
-                        Your field Prenume is required to be at least 1 character
-                    </p>
-                    <p class="help-block"
-                    ng-show="formCreateOrEdit_persoana.persoana_prenume.$error.maxlength">
-                        Your field Prenume cannot be longer than 50 characters
-                    </p>
-            </div>
-        </div>
-    </div>
-    <!-- end field 1 -->
-        </div><!--from i+1%entityLayout -->
-        <div class="row m0">
-        <div class="mb15 col-md-6">
-            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_persoana.persoana_email.$dirty && formCreateOrEdit_persoana.persoana_email.$valid, 'has-error': formCreateOrEdit_persoana.persoana_email.$dirty && formCreateOrEdit_persoana.persoana_email.$invalid}">
-                
-                <label>Email</label>
-                <input type="text" class="form-control" name="persoana_email" placeholder="Email" ng-model="persoana.data.email"ng-minlength=1 ng-maxlength=50 maxlength="50" >
-                
-                <div ng-show="formCreateOrEdit_persoana.persoana_email.$dirty && formCreateOrEdit_persoana.persoana_email.$invalid">
-                    <p class="help-block" ng-show="formCreateOrEdit_persoana.persoana_email.$error.minlength">
-                        Your field Email is required to be at least 1 character
-                    </p>
-                    <p class="help-block"
-                    ng-show="formCreateOrEdit_persoana.persoana_email.$error.maxlength">
-                        Your field Email cannot be longer than 50 characters
-                    </p>
-            </div>
-        </div>
-    </div>
-    <!-- end field 2 -->
-        </div><!--from fields.length%entityLayout -->
+
         <div class="row m0">
             <div class="mb15 col-md-6">
-                <div class="form-group">
-                    <label>Angajat</label>
+                <div class="form-group"
+                     ng-class="{'has-success': formCreateOrEdit_persoana.persoana_nume.$dirty && formCreateOrEdit_persoana.persoana_nume.$valid, 'has-error': formCreateOrEdit_persoana.persoana_nume.$dirty && formCreateOrEdit_persoana.persoana_nume.$invalid}">
 
-                    <ui-select ng-model="persoana.data.angajat"
-                               theme="selectize" >
-                        <ui-select-match placeholder="Select angajat...">
-                            {{$select.selected.nume}}
-                        </ui-select-match>
-                        <ui-select-choices repeat="angajat in angajats  | filter: $select.search">
-                            <div ng-bind-html="angajat.nume | highlight: $select.search"></div>
-                        </ui-select-choices>
-                    </ui-select>
+                    <label>Nume</label>
+                    <input type="text" class="form-control" name="persoana_nume" placeholder="Nume"
+                           ng-model="persoana.data.nume" ng-minlength=1 ng-maxlength=50 maxlength="50" required>
+
+                    <div ng-show="formCreateOrEdit_persoana.persoana_nume.$dirty && formCreateOrEdit_persoana.persoana_nume.$invalid">
+                        <p class="help-block" ng-show="formCreateOrEdit_persoana.persoana_nume.$error.required">
+                            Your field Nume is required.
+                        </p>
+                        <p class="help-block" ng-show="formCreateOrEdit_persoana.persoana_nume.$error.minlength">
+                            Your field Nume is required to be at least 1 character
+                        </p>
+                        <p class="help-block"
+                           ng-show="formCreateOrEdit_persoana.persoana_nume.$error.maxlength">
+                            Your field Nume cannot be longer than 50 characters
+                        </p>
+                    </div>
                 </div>
             </div>
-        
+            <!-- end field 0 -->
+
             <div class="mb15 col-md-6">
+                <div class="form-group"
+                     ng-class="{'has-success': formCreateOrEdit_persoana.persoana_prenume.$dirty && formCreateOrEdit_persoana.persoana_prenume.$valid, 'has-error': formCreateOrEdit_persoana.persoana_prenume.$dirty && formCreateOrEdit_persoana.persoana_prenume.$invalid}">
+
+                    <label>Prenume</label>
+                    <input type="text" class="form-control" name="persoana_prenume" placeholder="Prenume"
+                           ng-model="persoana.data.prenume" ng-minlength=1 ng-maxlength=50 maxlength="50" required>
+
+                    <div ng-show="formCreateOrEdit_persoana.persoana_prenume.$dirty && formCreateOrEdit_persoana.persoana_prenume.$invalid">
+                        <p class="help-block" ng-show="formCreateOrEdit_persoana.persoana_prenume.$error.required">
+                            Your field Prenume is required.
+                        </p>
+                        <p class="help-block" ng-show="formCreateOrEdit_persoana.persoana_prenume.$error.minlength">
+                            Your field Prenume is required to be at least 1 character
+                        </p>
+                        <p class="help-block"
+                           ng-show="formCreateOrEdit_persoana.persoana_prenume.$error.maxlength">
+                            Your field Prenume cannot be longer than 50 characters
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- end field 1 -->
+        </div><!--from i+1%entityLayout -->
+        <div class="row m0">
+            <div class="mb15 col-md-6">
+                <div class="form-group"
+                     ng-class="{'has-success': formCreateOrEdit_persoana.persoana_email.$dirty && formCreateOrEdit_persoana.persoana_email.$valid, 'has-error': formCreateOrEdit_persoana.persoana_email.$dirty && formCreateOrEdit_persoana.persoana_email.$invalid}">
+
+                    <label>Email</label>
+                    <input type="text" class="form-control" name="persoana_email" placeholder="Email"
+                           ng-model="persoana.data.email" ng-minlength=1 ng-maxlength=50 maxlength="50">
+
+                    <div ng-show="formCreateOrEdit_persoana.persoana_email.$dirty && formCreateOrEdit_persoana.persoana_email.$invalid">
+                        <p class="help-block" ng-show="formCreateOrEdit_persoana.persoana_email.$error.minlength">
+                            Your field Email is required to be at least 1 character
+                        </p>
+                        <p class="help-block"
+                           ng-show="formCreateOrEdit_persoana.persoana_email.$error.maxlength">
+                            Your field Email cannot be longer than 50 characters
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- end field 2 -->
+           <!-- <div class="mb15 col-md-6">
                 <div class="form-group">
                     <label>Lucrare</label>
 
                     <ui-select multiple ng-model="persoana.data.lucrares">
-                        <ui-select-match placeholder="Select lucrare...">{{$item.id}}</ui-select-match>
-                        <ui-select-choices
-                                repeat="lucrare in lucrares | filter:$select.search">
-                            <div ng-bind-html="lucrare.id | highlight: $select.search"></div>
+                        <ui-select-match placeholder="Select lucrare...">
+                            {{$item.denumire}}
+                        </ui-select-match>
+                        <ui-select-choices repeat="lucrare in lucrares | filter:$select.search">
+                            <div ng-bind-html="lucrare.denumire | highlight: $select.search"></div>
+                        </ui-select-choices>
+                    </ui-select>
+                </div>
+            </div>-->
+            <div class="mb15 col-md-6">
+                <div class="form-group">
+                    <label>Proiect</label>
+
+                    <ui-select ng-model="persoana.data.proiect"
+                               theme="selectize">
+                        <ui-select-match placeholder="Select proiect...">
+                            {{$select.selected.titlu}}
+                        </ui-select-match>
+                        <ui-select-choices repeat="proiect in proiects  | filter: $select.search">
+                            <div ng-bind-html="proiect.titlu | highlight: $select.search"></div>
                         </ui-select-choices>
                     </ui-select>
                 </div>
             </div>
-        </div> </div> </div> 
+        </div><!--from fields.length%entityLayout -->
+
+
+
+
         <div class="row m0">
             <div class="mb15 col-md-6">
                 <div class="form-group">
                     <label>MembruAsocProf</label>
 
                     <ui-select multiple ng-model="persoana.data.membruAsocProfs">
-                        <ui-select-match placeholder="Select membruAsocProf...">{{$item.id}}</ui-select-match>
+                        <ui-select-match placeholder="Select membruAsocProf...">{{$item.asociatia}}</ui-select-match>
                         <ui-select-choices
                                 repeat="membruAsocProf in membruAsocProfs | filter:$select.search">
-                            <div ng-bind-html="membruAsocProf.id | highlight: $select.search"></div>
+                            <div ng-bind-html="membruAsocProf.asociatia | highlight: $select.search"></div>
                         </ui-select-choices>
                     </ui-select>
                 </div>
             </div>
-        
-            <div class="mb15 col-md-6">
-                <div class="form-group">
-                    <label>Proiect</label>
 
-                    <ui-select ng-model="persoana.data.proiect"
-                               theme="selectize" >
-                        <ui-select-match placeholder="Select proiect...">
-                            {{$select.selected.id}}
-                        </ui-select-match>
-                        <ui-select-choices repeat="proiect in proiects  | filter: $select.search">
-                            <div ng-bind-html="proiect.id | highlight: $select.search"></div>
-                        </ui-select-choices>
-                    </ui-select>
-                </div>
-            </div>
-        </div> 
-        
-    <!-- end field 2 -->
+
+        </div>
+
+        <!-- end field 2 -->
 
         <div class="row m0">
             <div class="col-md-12 text-right mb15">
                 <button class="btn btn-warning" ng-click="persoana.actions.back()">Cancel</button>
-                <button ng-disabled="formCreateOrEdit_persoana.$invalid" class="btn btn-success" ng-click="persoana.actions.createOrUpdate();formCreateOrEdit_persoana.$setPristine();">Save</button>
+                <button ng-disabled="formCreateOrEdit_persoana.$invalid" class="btn btn-success"
+                        ng-click="persoana.actions.createOrUpdate();formCreateOrEdit_persoana.$setPristine();">Save
+                </button>
             </div>
         </div>
     </form>
@@ -151,7 +149,8 @@
                 <form name="formDelete_persoana">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
-                                ng-click="clear()">&times;</button>
+                                ng-click="clear()">&times;
+                        </button>
                         <h4 class="modal-title">Confirm delete operation</h4>
                     </div>
                     <div class="modal-body">
@@ -161,7 +160,9 @@
                         <div class="row m0">
                             <div class="col-md-12 text-right mb15">
                                 <button class="btn btn-warning" ng-click="persoana.actions.back()">Cancel</button>
-                                <button ng-disabled="formCreateOrEdit_persoana.$invalid" class="btn btn-danger" ng-click="persoana.actions.confirmDelete()">Delete</button>
+                                <button ng-disabled="formCreateOrEdit_persoana.$invalid" class="btn btn-danger"
+                                        ng-click="persoana.actions.confirmDelete()">Delete
+                                </button>
                             </div>
                         </div>
                     </div>

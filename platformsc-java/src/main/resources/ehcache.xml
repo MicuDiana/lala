@@ -16,23 +16,23 @@
     </cache-template>
 
 
-    <cache alias="ro.teamnet.bootstrap.domain.User"
+    <cache alias="ro.platforma.bootstrap.domain.User"
            uses-template="simple">
     </cache>
 
-    <cache alias="ro.teamnet.bootstrap.domain.Authority"
+    <cache alias="ro.platforma.bootstrap.domain.Authority"
            uses-template="simple">
     </cache>
 
-    <cache alias="ro.teamnet.bootstrap.domain.User.authorities"
+    <cache alias="ro.platforma.bootstrap.domain.User.authorities"
            uses-template="simple">
     </cache>
 
-    <cache alias="ro.teamnet.bootstrap.domain.PersistentToken"
+    <cache alias="ro.platforma.bootstrap.domain.PersistentToken"
            uses-template="simple">
     </cache>
 
-    <cache alias="ro.teamnet.bootstrap.domain.User.persistentTokens"
+    <cache alias="ro.platforma.bootstrap.domain.User.persistentTokens"
            uses-template="simple">
     </cache>
 

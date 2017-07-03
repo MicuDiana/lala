@@ -46,6 +46,7 @@ module.exports = function (grunt) {
     require('time-grunt')(grunt);
 
 
+
     grunt.initConfig({
         yeoman: {
             // configurable paths
@@ -93,7 +94,8 @@ module.exports = function (grunt) {
                     port: MIDDLEWARE_PORT,
                     https: false,
                     changeOrigin: false,
-                    rewrite: rewriteUrl('app')
+                    rewrite: rewriteUrl('app'),
+                    excludedFileTypes: ['pdf', 'jar', 'gz']
 
                 },
                 {
@@ -160,6 +162,8 @@ module.exports = function (grunt) {
                     changeOrigin: false,
                     rewrite: rewriteUrl('api')
                 }
+
+
                 ],
             options: {
                 port: 9000,

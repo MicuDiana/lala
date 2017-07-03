@@ -78,10 +78,10 @@
                     <ui-select ng-model="membruRedactie.data.angajat"
                                theme="selectize" >
                         <ui-select-match placeholder="Select angajat...">
-                            {{$select.selected.id}}
+                            {{$select.selected.angajat.persoana.nume}}
                         </ui-select-match>
                         <ui-select-choices repeat="angajat in angajats  | filter: $select.search">
-                            <div ng-bind-html="angajat.id | highlight: $select.search"></div>
+                            <div ng-bind-html="angajat.persoana.nume | highlight: $select.search"></div>
                         </ui-select-choices>
                     </ui-select>
                 </div>

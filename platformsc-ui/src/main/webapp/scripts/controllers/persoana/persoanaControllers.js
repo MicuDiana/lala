@@ -1,7 +1,7 @@
 'use strict';
 platformscControllers
-    .controller('PersoanaController', ['$scope', 'AppGridConstants', 'AppGridMetadataBuilder', 'Functionality', 'Persoana', 'Angajat', 'Lucrare', 'Premiu', 'OrganizareConferinte', 'MembruAsocProf', 'Proiect',
-        function ($scope, AppGridConstants, AppGridMetadataBuilder, Functionality, Persoana, Angajat, Lucrare, Premiu, OrganizareConferinte, MembruAsocProf, Proiect) {
+    .controller('PersoanaController', ['$scope', 'AppGridConstants', 'AppGridMetadataBuilder', 'Functionality', 'Persoana', 'Lucrare', 'Angajat', 'Premiu', 'OrganizareConferinte', 'MembruAsocProf', 'Proiect',
+        function ($scope, AppGridConstants, AppGridMetadataBuilder, Functionality, Persoana,  Lucrare,Angajat, Premiu, OrganizareConferinte, MembruAsocProf, Proiect) {
 
         Functionality.init($scope,'persoana',Persoana);
 
@@ -13,7 +13,7 @@ platformscControllers
         };
 
         
-        $scope.angajats = Angajat.query();
+
         $scope.lucrares = Lucrare.query();
         $scope.premius = Premiu.query();
         $scope.organizareConferintes = OrganizareConferinte.query();
@@ -119,14 +119,10 @@ platformscControllers
         $scope.persoana.grid.addSearchToColumn('email', AppGridConstants.searchValueTypes.STRING,
             {filterType: AppGridConstants.searchFilterTypes.LIKE});
          
-        $scope.persoana.grid.addColumn('angajat.nume');
-        $scope.persoana.grid.setColumnLabelKey('angajat.nume', 'Angajat');
-        $scope.persoana.grid.addSearchToColumn('angajat.nume', AppGridConstants.searchValueTypes.STRING,
-            {filterType: AppGridConstants.searchFilterTypes.LIKE});
-        
-        $scope.persoana.grid.addColumn('proiect.id');
-        $scope.persoana.grid.setColumnLabelKey('proiect.id', 'Proiect');
-        $scope.persoana.grid.addSearchToColumn('proiect.id', AppGridConstants.searchValueTypes.STRING,
+
+        $scope.persoana.grid.addColumn('proiect.titlu');
+        $scope.persoana.grid.setColumnLabelKey('proiect.titlu', 'Proiect');
+        $scope.persoana.grid.addSearchToColumn('proiect.titlu', AppGridConstants.searchValueTypes.STRING,
             {filterType: AppGridConstants.searchFilterTypes.LIKE});
         
 

@@ -56,6 +56,8 @@
         "/scripts/controllers/membruRedactie/membruRedactieControllers.js",
         "/scripts/services/membruRedactie/membruRedactieService.js",
         "/scripts/controllers/proiect/proiectControllers.js",
-        "/scripts/services/proiect/proiectService.js"
+        "/scripts/services/proiect/proiectService.js",
+        "/scripts/controllers/raport/raportControllers.js"
+
     ]
 }

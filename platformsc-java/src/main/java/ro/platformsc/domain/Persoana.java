@@ -46,8 +46,11 @@ public class Persoana implements Serializable {
     @Column(name = "email")
     private String email;
 
-    @OneToOne
-    private Angajat angajat;
+
+
+
+    @OneToOne(mappedBy = "persoana", fetch = FetchType.LAZY)
+    @JsonIgnore private Angajat angajat;
 
     @ManyToMany
     @JoinTable(
@@ -64,14 +67,14 @@ public class Persoana implements Serializable {
     @JsonIgnore
     private Set<OrganizareConferinte> organizareConferintes = new HashSet<>();
 
-    @ManyToMany
+    @ManyToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
     @JoinTable(
             name = "T_PERSOANA_T_MEMBRU_ASOC_PROF",
             joinColumns = {@JoinColumn(name = "persoana_id", referencedColumnName = "id")},
             inverseJoinColumns = {@JoinColumn(name = "membru_asoc_prof_id", referencedColumnName = "id")})
     private Set<MembruAsocProf> membruAsocProfs = new HashSet<>();
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     private Proiect proiect;
 
 

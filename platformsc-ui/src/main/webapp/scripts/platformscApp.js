@@ -140,6 +140,16 @@ platformscApp
                   authorizedModules: [AUTH_BOOTSTRAP.all]
               }
            });
+        $routeProvider
+           .when('/raport', {
+              templateUrl: '/views/raport/raport.html',
+              controller: 'RaportController',
+              access: {
+                  authorizedModules: [AUTH_BOOTSTRAP.all]
+              }
+           });
+
+
         //place some routes here
 
         // include i18n files

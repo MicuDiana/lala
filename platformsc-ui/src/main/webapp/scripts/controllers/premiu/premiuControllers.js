@@ -8,7 +8,7 @@ platformscControllers
         $scope.setTitle('Premiu');
 
         $scope.premiu.actions.clear = function () {
-            $scope.premiu.data = {international: false, emisDeAR: false, emisDe: null, an: null, tipPremiu: null, denumirePremiu: null, emitent: null, an: null, id: null};
+            $scope.premiu.data = {international: false, emisDeAR: false, emisDe: null, an: null, tipPremiu: null, denumirePremiu: null, emitent: null, id: null};
             $scope.searchTerms = [];
         };
 
@@ -27,6 +27,11 @@ platformscControllers
 
         $scope.premiu.grid.init();
         $scope.premiu.grid.reset();
+
+            $scope.premiu.grid.addColumn('persoana.nume');
+            $scope.premiu.grid.setColumnLabelKey('persoana.nume', 'Persoana');
+            $scope.premiu.grid.addSearchToColumn('persoana.nume', AppGridConstants.searchValueTypes.STRING,
+                {filterType: AppGridConstants.searchFilterTypes.LIKE});
         
         $scope.premiu.grid.addColumn('international');
         $scope.premiu.grid.setColumnLabelKey('international', 'International');
@@ -68,10 +73,7 @@ platformscControllers
         $scope.premiu.grid.addSearchToColumn('an', AppGridConstants.searchValueTypes.NUMBER,
             {filterType: AppGridConstants.searchFilterTypes.EQUAL});
          
-        $scope.premiu.grid.addColumn('persoana.id');
-        $scope.premiu.grid.setColumnLabelKey('persoana.id', 'Persoana');
-        $scope.premiu.grid.addSearchToColumn('persoana.id', AppGridConstants.searchValueTypes.STRING,
-            {filterType: AppGridConstants.searchFilterTypes.LIKE});
+
         
 
         

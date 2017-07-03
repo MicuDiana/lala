@@ -4,188 +4,195 @@
 <div class="alert alert-danger" ng-show="save.error">
     <strong>An error has occurred!</strong> {{functionality}} could not be saved.
 </div>
-<div  ng-if="premiu.components.create||premiu.components.update">
+<div ng-if="premiu.components.create||premiu.components.update">
     <form name="formCreateOrEdit_premiu" role="form" ng-submit="premiu.actions.createOrUpdate()">
         <input type="hidden" name="id" ng-model="premiu.data.id" readonly>
-        
+
         <div class="row m0">
-        <div class="mb15 col-md-6">
-            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_premiu.premiu_international.$dirty && formCreateOrEdit_premiu.premiu_international.$valid, 'has-error': formCreateOrEdit_premiu.premiu_international.$dirty && formCreateOrEdit_premiu.premiu_international.$invalid}">
-                
-                <div class="checkbox-container">
-                    <input id="premiu_international"
-                           name="premiu_international"
-                           type="checkbox"
-                           ng-model="premiu.data.international">
-                    <label class="custom-select" for="premiu_international">
-                        International
-                    </label>
+            <div class="mb15 col-md-6">
+                <div class="form-group"
+                     ng-class="{'has-success': formCreateOrEdit_premiu.premiu_international.$dirty && formCreateOrEdit_premiu.premiu_international.$valid, 'has-error': formCreateOrEdit_premiu.premiu_international.$dirty && formCreateOrEdit_premiu.premiu_international.$invalid}">
+
+                    <div class="checkbox-container">
+                        <input id="premiu_international"
+                               name="premiu_international"
+                               type="checkbox"
+                               ng-model="premiu.data.international">
+                        <label class="custom-select" for="premiu_international">
+                            International
+                        </label>
+                    </div>
+
+                    <div ng-show="formCreateOrEdit_premiu.premiu_international.$dirty && formCreateOrEdit_premiu.premiu_international.$invalid">
+                        <p class="help-block" ng-show="formCreateOrEdit_premiu.premiu_international.$error.required">
+                            Your field International is required.
+                        </p>
+                    </div>
                 </div>
-                
-                <div ng-show="formCreateOrEdit_premiu.premiu_international.$dirty && formCreateOrEdit_premiu.premiu_international.$invalid">
-                    <p class="help-block" ng-show="formCreateOrEdit_premiu.premiu_international.$error.required">
-                        Your field International is required.
-                    </p>
             </div>
-        </div>
-    </div>
-    <!-- end field 0 -->
-        
-        <div class="mb15 col-md-6">
-            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_premiu.premiu_emisDeAR.$dirty && formCreateOrEdit_premiu.premiu_emisDeAR.$valid, 'has-error': formCreateOrEdit_premiu.premiu_emisDeAR.$dirty && formCreateOrEdit_premiu.premiu_emisDeAR.$invalid}">
-                
-                <div class="checkbox-container">
-                    <input id="premiu_emisDeAR"
-                           name="premiu_emisDeAR"
-                           type="checkbox"
-                           ng-model="premiu.data.emisDeAR">
-                    <label class="custom-select" for="premiu_emisDeAR">
-                        EmisDeAR
-                    </label>
+            <!-- end field 0 -->
+
+            <div class="mb15 col-md-6">
+                <div class="form-group"
+                     ng-class="{'has-success': formCreateOrEdit_premiu.premiu_emisDeAR.$dirty && formCreateOrEdit_premiu.premiu_emisDeAR.$valid, 'has-error': formCreateOrEdit_premiu.premiu_emisDeAR.$dirty && formCreateOrEdit_premiu.premiu_emisDeAR.$invalid}">
+
+                    <div class="checkbox-container">
+                        <input id="premiu_emisDeAR"
+                               name="premiu_emisDeAR"
+                               type="checkbox"
+                               ng-model="premiu.data.emisDeAR">
+                        <label class="custom-select" for="premiu_emisDeAR">
+                            EmisDeAR
+                        </label>
+                    </div>
+
+                    <div ng-show="formCreateOrEdit_premiu.premiu_emisDeAR.$dirty && formCreateOrEdit_premiu.premiu_emisDeAR.$invalid">
+                        <p class="help-block" ng-show="formCreateOrEdit_premiu.premiu_emisDeAR.$error.required">
+                            Your field EmisDeAR is required.
+                        </p>
+                    </div>
                 </div>
-                
-                <div ng-show="formCreateOrEdit_premiu.premiu_emisDeAR.$dirty && formCreateOrEdit_premiu.premiu_emisDeAR.$invalid">
-                    <p class="help-block" ng-show="formCreateOrEdit_premiu.premiu_emisDeAR.$error.required">
-                        Your field EmisDeAR is required.
-                    </p>
             </div>
-        </div>
-    </div>
-    <!-- end field 1 -->
+            <!-- end field 1 -->
         </div><!--from i+1%entityLayout -->
         <div class="row m0">
-        <div class="mb15 col-md-6">
-            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_premiu.premiu_emisDe.$dirty && formCreateOrEdit_premiu.premiu_emisDe.$valid, 'has-error': formCreateOrEdit_premiu.premiu_emisDe.$dirty && formCreateOrEdit_premiu.premiu_emisDe.$invalid}">
-                
-                <label>EmisDe</label>
-                <input type="text" class="form-control" name="premiu_emisDe" placeholder="EmisDe" ng-model="premiu.data.emisDe"ng-minlength=1 ng-maxlength=50 maxlength="50" required>
-                
-                <div ng-show="formCreateOrEdit_premiu.premiu_emisDe.$dirty && formCreateOrEdit_premiu.premiu_emisDe.$invalid">
-                    <p class="help-block" ng-show="formCreateOrEdit_premiu.premiu_emisDe.$error.required">
-                        Your field EmisDe is required.
-                    </p><p class="help-block" ng-show="formCreateOrEdit_premiu.premiu_emisDe.$error.minlength">
-                        Your field EmisDe is required to be at least 1 character
-                    </p>
-                    <p class="help-block"
-                    ng-show="formCreateOrEdit_premiu.premiu_emisDe.$error.maxlength">
-                        Your field EmisDe cannot be longer than 50 characters
-                    </p>
+            <div class="mb15 col-md-6">
+                <div class="form-group"
+                     ng-class="{'has-success': formCreateOrEdit_premiu.premiu_emisDe.$dirty && formCreateOrEdit_premiu.premiu_emisDe.$valid, 'has-error': formCreateOrEdit_premiu.premiu_emisDe.$dirty && formCreateOrEdit_premiu.premiu_emisDe.$invalid}">
+
+                    <label>EmisDe</label>
+                    <input type="text" class="form-control" name="premiu_emisDe" placeholder="EmisDe"
+                           ng-model="premiu.data.emisDe" ng-minlength=1 ng-maxlength=50 maxlength="50" required>
+
+                    <div ng-show="formCreateOrEdit_premiu.premiu_emisDe.$dirty && formCreateOrEdit_premiu.premiu_emisDe.$invalid">
+                        <p class="help-block" ng-show="formCreateOrEdit_premiu.premiu_emisDe.$error.required">
+                            Your field EmisDe is required.
+                        </p>
+                        <p class="help-block" ng-show="formCreateOrEdit_premiu.premiu_emisDe.$error.minlength">
+                            Your field EmisDe is required to be at least 1 character
+                        </p>
+                        <p class="help-block"
+                           ng-show="formCreateOrEdit_premiu.premiu_emisDe.$error.maxlength">
+                            Your field EmisDe cannot be longer than 50 characters
+                        </p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-    <!-- end field 2 -->
-        
-        <div class="mb15 col-md-6">
-            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_premiu.premiu_an.$dirty && formCreateOrEdit_premiu.premiu_an.$valid, 'has-error': formCreateOrEdit_premiu.premiu_an.$dirty && formCreateOrEdit_premiu.premiu_an.$invalid}">
-                
-                <label>An</label>
-                <input type="number" class="form-control" name="premiu_an" placeholder="An" ng-model="premiu.data.an" required>
-                
-                <div ng-show="formCreateOrEdit_premiu.premiu_an.$dirty && formCreateOrEdit_premiu.premiu_an.$invalid">
-                    <p class="help-block" ng-show="formCreateOrEdit_premiu.premiu_an.$error.required">
-                        Your field An is required.
-                    </p>
+            <!-- end field 2 -->
+
+            <div class="mb15 col-md-6">
+                <div class="form-group"
+                     ng-class="{'has-success': formCreateOrEdit_premiu.premiu_an.$dirty && formCreateOrEdit_premiu.premiu_an.$valid, 'has-error': formCreateOrEdit_premiu.premiu_an.$dirty && formCreateOrEdit_premiu.premiu_an.$invalid}">
+
+                    <label>An</label>
+                    <input type="number" class="form-control" name="premiu_an" placeholder="An"
+                           ng-model="premiu.data.an" required>
+
+                    <div ng-show="formCreateOrEdit_premiu.premiu_an.$dirty && formCreateOrEdit_premiu.premiu_an.$invalid">
+                        <p class="help-block" ng-show="formCreateOrEdit_premiu.premiu_an.$error.required">
+                            Your field An is required.
+                        </p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-    <!-- end field 3 -->
+            <!-- end field 3 -->
         </div><!--from i+1%entityLayout -->
         <div class="row m0">
-        <div class="mb15 col-md-6">
-            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_premiu.premiu_tipPremiu.$dirty && formCreateOrEdit_premiu.premiu_tipPremiu.$valid, 'has-error': formCreateOrEdit_premiu.premiu_tipPremiu.$dirty && formCreateOrEdit_premiu.premiu_tipPremiu.$invalid}">
-                
-                <label>TipPremiu</label>
-                <input type="text" class="form-control" name="premiu_tipPremiu" placeholder="TipPremiu" ng-model="premiu.data.tipPremiu"ng-minlength=1 ng-maxlength=50 maxlength="50" required>
-                
-                <div ng-show="formCreateOrEdit_premiu.premiu_tipPremiu.$dirty && formCreateOrEdit_premiu.premiu_tipPremiu.$invalid">
-                    <p class="help-block" ng-show="formCreateOrEdit_premiu.premiu_tipPremiu.$error.required">
-                        Your field TipPremiu is required.
-                    </p><p class="help-block" ng-show="formCreateOrEdit_premiu.premiu_tipPremiu.$error.minlength">
-                        Your field TipPremiu is required to be at least 1 character
-                    </p>
-                    <p class="help-block"
-                    ng-show="formCreateOrEdit_premiu.premiu_tipPremiu.$error.maxlength">
-                        Your field TipPremiu cannot be longer than 50 characters
-                    </p>
+            <div class="mb15 col-md-6">
+                <div class="form-group"
+                     ng-class="{'has-success': formCreateOrEdit_premiu.premiu_tipPremiu.$dirty && formCreateOrEdit_premiu.premiu_tipPremiu.$valid, 'has-error': formCreateOrEdit_premiu.premiu_tipPremiu.$dirty && formCreateOrEdit_premiu.premiu_tipPremiu.$invalid}">
+
+                    <label>TipPremiu</label>
+                    <input type="text" class="form-control" name="premiu_tipPremiu" placeholder="TipPremiu"
+                           ng-model="premiu.data.tipPremiu" ng-minlength=1 ng-maxlength=50 maxlength="50" required>
+
+                    <div ng-show="formCreateOrEdit_premiu.premiu_tipPremiu.$dirty && formCreateOrEdit_premiu.premiu_tipPremiu.$invalid">
+                        <p class="help-block" ng-show="formCreateOrEdit_premiu.premiu_tipPremiu.$error.required">
+                            Your field TipPremiu is required.
+                        </p>
+                        <p class="help-block" ng-show="formCreateOrEdit_premiu.premiu_tipPremiu.$error.minlength">
+                            Your field TipPremiu is required to be at least 1 character
+                        </p>
+                        <p class="help-block"
+                           ng-show="formCreateOrEdit_premiu.premiu_tipPremiu.$error.maxlength">
+                            Your field TipPremiu cannot be longer than 50 characters
+                        </p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-    <!-- end field 4 -->
-        
-        <div class="mb15 col-md-6">
-            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_premiu.premiu_denumirePremiu.$dirty && formCreateOrEdit_premiu.premiu_denumirePremiu.$valid, 'has-error': formCreateOrEdit_premiu.premiu_denumirePremiu.$dirty && formCreateOrEdit_premiu.premiu_denumirePremiu.$invalid}">
-                
-                <label>DenumirePremiu</label>
-                <input type="text" class="form-control" name="premiu_denumirePremiu" placeholder="DenumirePremiu" ng-model="premiu.data.denumirePremiu"ng-minlength=1 ng-maxlength=50 maxlength="50" >
-                
-                <div ng-show="formCreateOrEdit_premiu.premiu_denumirePremiu.$dirty && formCreateOrEdit_premiu.premiu_denumirePremiu.$invalid">
-                    <p class="help-block" ng-show="formCreateOrEdit_premiu.premiu_denumirePremiu.$error.minlength">
-                        Your field DenumirePremiu is required to be at least 1 character
-                    </p>
-                    <p class="help-block"
-                    ng-show="formCreateOrEdit_premiu.premiu_denumirePremiu.$error.maxlength">
-                        Your field DenumirePremiu cannot be longer than 50 characters
-                    </p>
+            <!-- end field 4 -->
+
+            <div class="mb15 col-md-6">
+                <div class="form-group"
+                     ng-class="{'has-success': formCreateOrEdit_premiu.premiu_denumirePremiu.$dirty && formCreateOrEdit_premiu.premiu_denumirePremiu.$valid, 'has-error': formCreateOrEdit_premiu.premiu_denumirePremiu.$dirty && formCreateOrEdit_premiu.premiu_denumirePremiu.$invalid}">
+
+                    <label>DenumirePremiu</label>
+                    <input type="text" class="form-control" name="premiu_denumirePremiu" placeholder="DenumirePremiu"
+                           ng-model="premiu.data.denumirePremiu" ng-minlength=1 ng-maxlength=50 maxlength="50">
+
+                    <div ng-show="formCreateOrEdit_premiu.premiu_denumirePremiu.$dirty && formCreateOrEdit_premiu.premiu_denumirePremiu.$invalid">
+                        <p class="help-block" ng-show="formCreateOrEdit_premiu.premiu_denumirePremiu.$error.minlength">
+                            Your field DenumirePremiu is required to be at least 1 character
+                        </p>
+                        <p class="help-block"
+                           ng-show="formCreateOrEdit_premiu.premiu_denumirePremiu.$error.maxlength">
+                            Your field DenumirePremiu cannot be longer than 50 characters
+                        </p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-    <!-- end field 5 -->
+            <!-- end field 5 -->
         </div><!--from i+1%entityLayout -->
         <div class="row m0">
-        <div class="mb15 col-md-6">
-            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_premiu.premiu_emitent.$dirty && formCreateOrEdit_premiu.premiu_emitent.$valid, 'has-error': formCreateOrEdit_premiu.premiu_emitent.$dirty && formCreateOrEdit_premiu.premiu_emitent.$invalid}">
-                
-                <label>Emitent</label>
-                <input type="text" class="form-control" name="premiu_emitent" placeholder="Emitent" ng-model="premiu.data.emitent"ng-minlength=1 ng-maxlength=50 maxlength="50" >
-                
-                <div ng-show="formCreateOrEdit_premiu.premiu_emitent.$dirty && formCreateOrEdit_premiu.premiu_emitent.$invalid">
-                    <p class="help-block" ng-show="formCreateOrEdit_premiu.premiu_emitent.$error.minlength">
-                        Your field Emitent is required to be at least 1 character
-                    </p>
-                    <p class="help-block"
-                    ng-show="formCreateOrEdit_premiu.premiu_emitent.$error.maxlength">
-                        Your field Emitent cannot be longer than 50 characters
-                    </p>
+            <div class="mb15 col-md-6">
+                <div class="form-group"
+                     ng-class="{'has-success': formCreateOrEdit_premiu.premiu_emitent.$dirty && formCreateOrEdit_premiu.premiu_emitent.$valid, 'has-error': formCreateOrEdit_premiu.premiu_emitent.$dirty && formCreateOrEdit_premiu.premiu_emitent.$invalid}">
+
+                    <label>Emitent</label>
+                    <input type="text" class="form-control" name="premiu_emitent" placeholder="Emitent"
+                           ng-model="premiu.data.emitent" ng-minlength=1 ng-maxlength=50 maxlength="50">
+
+                    <div ng-show="formCreateOrEdit_premiu.premiu_emitent.$dirty && formCreateOrEdit_premiu.premiu_emitent.$invalid">
+                        <p class="help-block" ng-show="formCreateOrEdit_premiu.premiu_emitent.$error.minlength">
+                            Your field Emitent is required to be at least 1 character
+                        </p>
+                        <p class="help-block"
+                           ng-show="formCreateOrEdit_premiu.premiu_emitent.$error.maxlength">
+                            Your field Emitent cannot be longer than 50 characters
+                        </p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-    <!-- end field 6 -->
-        
-        <div class="mb15 col-md-6">
-            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_premiu.premiu_an.$dirty && formCreateOrEdit_premiu.premiu_an.$valid, 'has-error': formCreateOrEdit_premiu.premiu_an.$dirty && formCreateOrEdit_premiu.premiu_an.$invalid}">
-                
-                <label>An</label>
-                <input type="number" class="form-control" name="premiu_an" placeholder="An" ng-model="premiu.data.an" >
-                
-                
-        </div>
-    </div>
-    <!-- end field 7 -->
-        </div><!--from i+1%entityLayout -->
-        <div class="row m0">
             <div class="mb15 col-md-6">
                 <div class="form-group">
                     <label>Persoana</label>
 
                     <ui-select ng-model="premiu.data.persoana"
-                               theme="selectize" >
+                               theme="selectize">
                         <ui-select-match placeholder="Select persoana...">
-                            {{$select.selected.id}}
+                            {{$select.selected.nume}}
                         </ui-select-match>
                         <ui-select-choices repeat="persoana in persoanas  | filter: $select.search">
-                            <div ng-bind-html="persoana.id | highlight: $select.search"></div>
+                            <div ng-bind-html="persoana.nume | highlight: $select.search"></div>
                         </ui-select-choices>
                     </ui-select>
                 </div>
             </div>
-        </div>
-        
-    <!-- end field 2 -->
+            <!-- end field 6 -->
+
+
+            <!-- end field 7 -->
+        </div><!--from i+1%entityLayout -->
+
+
+        <!-- end field 2 -->
 
         <div class="row m0">
             <div class="col-md-12 text-right mb15">
                 <button class="btn btn-warning" ng-click="premiu.actions.back()">Cancel</button>
-                <button ng-disabled="formCreateOrEdit_premiu.$invalid" class="btn btn-success" ng-click="premiu.actions.createOrUpdate();formCreateOrEdit_premiu.$setPristine();">Save</button>
+                <button ng-disabled="formCreateOrEdit_premiu.$invalid" class="btn btn-success"
+                        ng-click="premiu.actions.createOrUpdate();formCreateOrEdit_premiu.$setPristine();">Save
+                </button>
             </div>
         </div>
     </form>
@@ -197,7 +204,8 @@
                 <form name="formDelete_premiu">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
-                                ng-click="clear()">&times;</button>
+                                ng-click="clear()">&times;
+                        </button>
                         <h4 class="modal-title">Confirm delete operation</h4>
                     </div>
                     <div class="modal-body">
@@ -207,7 +215,9 @@
                         <div class="row m0">
                             <div class="col-md-12 text-right mb15">
                                 <button class="btn btn-warning" ng-click="premiu.actions.back()">Cancel</button>
-                                <button ng-disabled="formCreateOrEdit_premiu.$invalid" class="btn btn-danger" ng-click="premiu.actions.confirmDelete()">Delete</button>
+                                <button ng-disabled="formCreateOrEdit_premiu.$invalid" class="btn btn-danger"
+                                        ng-click="premiu.actions.confirmDelete()">Delete
+                                </button>
                             </div>
                         </div>
                     </div>

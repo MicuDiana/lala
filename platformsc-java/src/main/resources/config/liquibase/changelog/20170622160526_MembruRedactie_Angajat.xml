@@ -5,7 +5,7 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
 
 
-    <changeSet id="20170622160526" author="teamnet">
+    <changeSet id="20170622160526" author="platforma">
 
         <addColumn tableName="T_MEMBRU_REDACTIE">
             <column name="angajat_id" type="bigint"/>

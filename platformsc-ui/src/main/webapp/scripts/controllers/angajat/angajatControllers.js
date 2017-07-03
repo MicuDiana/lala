@@ -6,6 +6,7 @@ platformscControllers
         Functionality.init($scope,'angajat',Angajat);
 
         $scope.setTitle('Angajat');
+        $scope.searchTerms=[];
 
         $scope.angajat.actions.clear = function () {
             $scope.angajat.data = {gradStiintific: null, gradDidactic: null, facultateAbsolvita: null, specializare: null, areDoctorat: false, dataIncepereDoctorat: null, dataFinalizareDoctorat: null, titluTezaDoctorat: null, universitateDoctorat: null, coordonatorDoctorat: false, competente: null, domeniiDeInteres: null, cursuriSpecializare: null, certificari: null, alteInformatii: null, id: null};
@@ -79,16 +80,14 @@ platformscControllers
         $scope.angajat.grid.init();
         $scope.angajat.grid.reset();
         
-        $scope.angajat.grid.addColumn('gradStiintific');
-        $scope.angajat.grid.setColumnLabelKey('gradStiintific', 'GradStiintific');
-        $scope.angajat.grid.addSearchToColumn('gradStiintific', AppGridConstants.searchValueTypes.STRING,
-            {filterType: AppGridConstants.searchFilterTypes.LIKE});
+
+
         
-        $scope.angajat.grid.addColumn('gradDidactic');
-        $scope.angajat.grid.setColumnLabelKey('gradDidactic', 'GradDidactic');
-        $scope.angajat.grid.addSearchToColumn('gradDidactic', AppGridConstants.searchValueTypes.STRING,
+        $scope.angajat.grid.addColumn('persoana.nume');
+        $scope.angajat.grid.setColumnLabelKey('persoana.nume', 'Persoana');
+        $scope.angajat.grid.addSearchToColumn('persoana.nume', AppGridConstants.searchValueTypes.STRING,
             {filterType: AppGridConstants.searchFilterTypes.LIKE});
-        
+
         $scope.angajat.grid.addColumn('facultateAbsolvita');
         $scope.angajat.grid.setColumnLabelKey('facultateAbsolvita', 'FacultateAbsolvita');
         $scope.angajat.grid.addSearchToColumn('facultateAbsolvita', AppGridConstants.searchValueTypes.STRING,
@@ -99,62 +98,13 @@ platformscControllers
         $scope.angajat.grid.addSearchToColumn('specializare', AppGridConstants.searchValueTypes.STRING,
             {filterType: AppGridConstants.searchFilterTypes.LIKE});
         
-        $scope.angajat.grid.addColumn('areDoctorat');
-        $scope.angajat.grid.setColumnLabelKey('areDoctorat', 'AreDoctorat');
-        $scope.angajat.grid.formatColumn('areDoctorat', 'yesNoBooleanFormatter');
-        $scope.angajat.grid.addSearchToColumn('areDoctorat', AppGridConstants.searchValueTypes.BOOLEAN);
-        
-        $scope.angajat.grid.addColumn('dataIncepereDoctorat');
-        $scope.angajat.grid.setColumnLabelKey('dataIncepereDoctorat', 'DataIncepereDoctorat');
-        $scope.angajat.grid.formatColumn('dataIncepereDoctorat', 'simpleDateFormatter');
-        $scope.angajat.grid.addSearchToColumn('dataIncepereDoctorat', AppGridConstants.searchValueTypes.DATE,
-            {filterType: AppGridConstants.searchFilterTypes.BETWEEN, placeholders: ["De la: ", "Pana la: "]});
-        
-        $scope.angajat.grid.addColumn('dataFinalizareDoctorat');
-        $scope.angajat.grid.setColumnLabelKey('dataFinalizareDoctorat', 'DataFinalizareDoctorat');
-        $scope.angajat.grid.formatColumn('dataFinalizareDoctorat', 'simpleDateFormatter');
-        $scope.angajat.grid.addSearchToColumn('dataFinalizareDoctorat', AppGridConstants.searchValueTypes.DATE,
-            {filterType: AppGridConstants.searchFilterTypes.BETWEEN, placeholders: ["De la: ", "Pana la: "]});
-        
+
         $scope.angajat.grid.addColumn('titluTezaDoctorat');
         $scope.angajat.grid.setColumnLabelKey('titluTezaDoctorat', 'TitluTezaDoctorat');
         $scope.angajat.grid.addSearchToColumn('titluTezaDoctorat', AppGridConstants.searchValueTypes.STRING,
             {filterType: AppGridConstants.searchFilterTypes.LIKE});
         
-        $scope.angajat.grid.addColumn('universitateDoctorat');
-        $scope.angajat.grid.setColumnLabelKey('universitateDoctorat', 'UniversitateDoctorat');
-        $scope.angajat.grid.addSearchToColumn('universitateDoctorat', AppGridConstants.searchValueTypes.STRING,
-            {filterType: AppGridConstants.searchFilterTypes.LIKE});
-        
-        $scope.angajat.grid.addColumn('coordonatorDoctorat');
-        $scope.angajat.grid.setColumnLabelKey('coordonatorDoctorat', 'CoordonatorDoctorat');
-        $scope.angajat.grid.formatColumn('coordonatorDoctorat', 'yesNoBooleanFormatter');
-        $scope.angajat.grid.addSearchToColumn('coordonatorDoctorat', AppGridConstants.searchValueTypes.BOOLEAN);
-        
-        $scope.angajat.grid.addColumn('competente');
-        $scope.angajat.grid.setColumnLabelKey('competente', 'Competente');
-        $scope.angajat.grid.addSearchToColumn('competente', AppGridConstants.searchValueTypes.STRING,
-            {filterType: AppGridConstants.searchFilterTypes.LIKE});
-        
-        $scope.angajat.grid.addColumn('domeniiDeInteres');
-        $scope.angajat.grid.setColumnLabelKey('domeniiDeInteres', 'DomeniiDeInteres');
-        $scope.angajat.grid.addSearchToColumn('domeniiDeInteres', AppGridConstants.searchValueTypes.STRING,
-            {filterType: AppGridConstants.searchFilterTypes.LIKE});
-        
-        $scope.angajat.grid.addColumn('cursuriSpecializare');
-        $scope.angajat.grid.setColumnLabelKey('cursuriSpecializare', 'CursuriSpecializare');
-        $scope.angajat.grid.addSearchToColumn('cursuriSpecializare', AppGridConstants.searchValueTypes.STRING,
-            {filterType: AppGridConstants.searchFilterTypes.LIKE});
-        
-        $scope.angajat.grid.addColumn('certificari');
-        $scope.angajat.grid.setColumnLabelKey('certificari', 'Certificari');
-        $scope.angajat.grid.addSearchToColumn('certificari', AppGridConstants.searchValueTypes.STRING,
-            {filterType: AppGridConstants.searchFilterTypes.LIKE});
-        
-        $scope.angajat.grid.addColumn('alteInformatii');
-        $scope.angajat.grid.setColumnLabelKey('alteInformatii', 'AlteInformatii');
-        $scope.angajat.grid.addSearchToColumn('alteInformatii', AppGridConstants.searchValueTypes.STRING,
-            {filterType: AppGridConstants.searchFilterTypes.LIKE});
+
          
 
         

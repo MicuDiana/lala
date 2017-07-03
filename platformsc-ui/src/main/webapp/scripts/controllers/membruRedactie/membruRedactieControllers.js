@@ -45,9 +45,9 @@ platformscControllers
         $scope.membruRedactie.grid.addSearchToColumn('calitatea', AppGridConstants.searchValueTypes.STRING,
             {filterType: AppGridConstants.searchFilterTypes.LIKE});
          
-        $scope.membruRedactie.grid.addColumn('angajat.id');
-        $scope.membruRedactie.grid.setColumnLabelKey('angajat.id', 'Angajat');
-        $scope.membruRedactie.grid.addSearchToColumn('angajat.id', AppGridConstants.searchValueTypes.STRING,
+        $scope.membruRedactie.grid.addColumn('angajat.persoana.nume');
+        $scope.membruRedactie.grid.setColumnLabelKey('angajat.persoana.nume', 'Angajat');
+        $scope.membruRedactie.grid.addSearchToColumn('angajat.persoana.nume', AppGridConstants.searchValueTypes.STRING,
             {filterType: AppGridConstants.searchFilterTypes.LIKE});
         
 
