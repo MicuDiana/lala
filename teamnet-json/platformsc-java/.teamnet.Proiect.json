@@ -1,0 +1,142 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "otherEntityName": "persoana",
+            "otherEntityModuleName": "platformsc-java",
+            "relationshipType": "one-to-many",
+            "otherEntityNameCapitalized": "Persoana",
+            "changelogDate": "20170622160232"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "tipProiect",
+            "fieldType": "String",
+            "fieldLength": 50,
+            "fieldRequired": true,
+            "fieldNameCapitalized": "TipProiect",
+            "fieldNameUnderscored": "tip_proiect",
+            "isNewField": false
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "titlu",
+            "fieldType": "String",
+            "fieldLength": 50,
+            "fieldRequired": true,
+            "fieldNameCapitalized": "Titlu",
+            "fieldNameUnderscored": "titlu",
+            "isNewField": false
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "acronim",
+            "fieldType": "String",
+            "fieldLength": 50,
+            "fieldRequired": true,
+            "fieldNameCapitalized": "Acronim",
+            "fieldNameUnderscored": "acronim",
+            "isNewField": false
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "dataIncepere",
+            "fieldType": "LocalDate",
+            "fieldRequired": false,
+            "fieldNameCapitalized": "DataIncepere",
+            "fieldNameUnderscored": "data_incepere",
+            "isNewField": false
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "dataFinalizare",
+            "fieldType": "LocalDate",
+            "fieldRequired": false,
+            "fieldNameCapitalized": "DataFinalizare",
+            "fieldNameUnderscored": "data_finalizare",
+            "isNewField": false
+        },
+        {
+            "fieldId": 6,
+            "fieldName": "beneficiar",
+            "fieldType": "String",
+            "fieldLength": 50,
+            "fieldRequired": false,
+            "fieldNameCapitalized": "Beneficiar",
+            "fieldNameUnderscored": "beneficiar",
+            "isNewField": false
+        },
+        {
+            "fieldId": 7,
+            "fieldName": "program",
+            "fieldType": "String",
+            "fieldLength": 50,
+            "fieldRequired": false,
+            "fieldNameCapitalized": "Program",
+            "fieldNameUnderscored": "program",
+            "isNewField": false
+        },
+        {
+            "fieldId": 8,
+            "fieldName": "numarContract",
+            "fieldType": "String",
+            "fieldLength": 50,
+            "fieldRequired": false,
+            "fieldNameCapitalized": "NumarContract",
+            "fieldNameUnderscored": "numar_contract",
+            "isNewField": false
+        },
+        {
+            "fieldId": 9,
+            "fieldName": "coordonator",
+            "fieldType": "String",
+            "fieldLength": 50,
+            "fieldRequired": false,
+            "fieldNameCapitalized": "Coordonator",
+            "fieldNameUnderscored": "coordonator",
+            "isNewField": false
+        },
+        {
+            "fieldId": 10,
+            "fieldName": "calitate",
+            "fieldType": "String",
+            "fieldLength": 50,
+            "fieldRequired": false,
+            "fieldNameCapitalized": "Calitate",
+            "fieldNameUnderscored": "calitate",
+            "isNewField": false
+        },
+        {
+            "fieldId": 11,
+            "fieldName": "parteneri",
+            "fieldType": "String",
+            "fieldLength": 50,
+            "fieldRequired": false,
+            "fieldNameCapitalized": "Parteneri",
+            "fieldNameUnderscored": "parteneri",
+            "isNewField": false
+        },
+        {
+            "fieldId": 12,
+            "fieldName": "siteWeb",
+            "fieldType": "String",
+            "fieldLength": 50,
+            "fieldRequired": false,
+            "fieldNameCapitalized": "SiteWeb",
+            "fieldNameUnderscored": "site_web",
+            "isNewField": false
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOneToMany": true,
+    "fieldsContainLocalDate": true,
+    "fieldsContainCustomTime": true,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": false,
+    "addFeatures": false,
+    "changelogDate": "20170621185750",
+    "entityAddedInRoutes": true,
+    "layout": "2"
+}

@@ -1,0 +1,27 @@
+
+<div ng-if="angajat.components.details">
+    <div class="row m0">
+        <div>
+            <tabset>
+                
+                    <tab heading="Limba straina" select="angajat.actions.redrawGrid('limbaStraina')">
+                        <div ng-if="showLimbaStraina" include-static='views/limbaStraina/limbaStrainaCrud.html'></div>
+                    </tab>
+                
+                    <tab heading="Membru redactie" select="angajat.actions.redrawGrid('membruRedactie')">
+                        <div ng-if="showMembruRedactie" include-static='views/membruRedactie/membruRedactieCrud.html'></div>
+                    </tab>
+                
+            </tabset>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+

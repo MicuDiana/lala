@@ -1,0 +1,23 @@
+
+<div ng-if="showCreateOrEdit && showDetails">
+    <div class="row m0">
+        <div>
+            <tabset>
+                
+                    <tab heading="persoana" select="proiect.actions.redrawGrid('persoana')">
+                        <div ng-if="showPersoana" include-static='views/persoana/persoanaCrud.html'></div>
+                    </tab>
+                
+            </tabset>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+

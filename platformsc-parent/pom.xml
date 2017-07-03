@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>ro.teamnet.bootstrap</groupId>
+        <artifactId>bootstrap-dependencies</artifactId>
+        <version>3.4.8</version>
+        <relativePath />
+    </parent>
+    <groupId>ro.platformsc</groupId>
+    <artifactId>platformsc-parent</artifactId>
+    <version>${project.version}</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <project.version>0.0.1-SNAPSHOT</project.version>
+        <java.version>1.8</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven-compiler.version>2.5.1</maven-compiler.version>
+        <maven-source.version>2.4</maven-source.version>
+        <bootstrap.version>3.4.8</bootstrap.version>
+    </properties>
+
+    <distributionManagement>
+        <repository>
+            <id>tni-hq-artifact</id>
+            <name>tni-hq-artifact-releases</name>
+            <url>http://repo.teamnet.ro/tn-components</url>
+        </repository>
+        <snapshotRepository>
+            <id>tni-hq-artifact</id>
+            <name>tni-hq-artifact-snapshots</name>
+            <url>http://repo.teamnet.ro/tn-components</url>
+        </snapshotRepository>
+    </distributionManagement>
+    <repositories>
+        <repository>
+            <id>tni-hq-artifact</id>
+            <name>tni-hq-artifact-releases</name>
+            <url>http://repo.teamnet.ro/tn-components</url>
+        </repository>
+    </repositories>
+   <dependencies>
+       
+       
+       <dependency>
+           <groupId>org.postgresql</groupId>
+           <artifactId>postgresql</artifactId>
+           <version>${postgresql.version}</version>
+       </dependency>
+       
+       <dependency>
+           <groupId>ro.teamnet.bootstrap</groupId>
+           <artifactId>app-bootstrap-commons</artifactId>
+           <version>${bootstrap.version}</version>
+       </dependency>
+       
+       <dependency>
+           <groupId>ro.teamnet.bootstrap</groupId>
+           <artifactId>app-bootstrap-security</artifactId>
+           <version>${bootstrap.version}</version>
+       </dependency>
+       
+       
+       
+
+       <dependency>
+           <groupId>ro.teamnet.bootstrap</groupId>
+           <artifactId>app-bootstrap</artifactId>
+           <version>${bootstrap.version}</version>
+           
+       </dependency>
+       
+   </dependencies>
+
+</project>

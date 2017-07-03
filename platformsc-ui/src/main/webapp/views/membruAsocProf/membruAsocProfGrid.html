@@ -1,0 +1,37 @@
+<div ng-show="membruAsocProf.components.list">
+    <div class="row m0">
+        <div class="col-md-12 text-left mb15">
+            <app-grid
+                    id="membruAsocProf.grid.id"
+                    url="membruAsocProf.grid.url"
+                    refresh-event="membruAsocProf.event.refresh"
+                    column-metadata="membruAsocProf.grid.columnMetadata"
+                    refresh-function="membruAsocProf.actions.refresh"
+                    search-terms="searchTerms"
+                    custom-options="membruAsocProf.grid.customOptions"
+                    action-event="membruAsocProf.event.list"
+                    get-selected="membruAsocProf.actions.selected"
+                    >
+            </app-grid>
+        </div>
+    </div>
+    <div class="row m0">
+        <div class="col-md-12 text-right mb15">
+            <button class="btn btn-primary"
+                    ng-show="membruAsocProf.buttons.add"
+                    ng-click="membruAsocProf.actions.showAdd()">
+                Adauga
+            </button>
+            <button class="btn btn-info"
+                    ng-show="membruAsocProf.buttons.edit"
+                    ng-click="membruAsocProf.actions.showEdit()">
+                Editeaza
+            </button>
+            <button class="btn btn-danger"
+                    ng-show="membruAsocProf.buttons.delete"
+                    ng-click="membruAsocProf.actions.showDelete()">
+                Sterge
+            </button>
+        </div>
+    </div>
+</div>

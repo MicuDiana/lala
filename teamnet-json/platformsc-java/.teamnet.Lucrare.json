@@ -1,0 +1,242 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "otherEntityName": "persoana",
+            "otherEntityModuleName": "platformsc-java",
+            "relationshipType": "many-to-many",
+            "otherEntityNameCapitalized": "Persoana",
+            "ownerSide": false,
+            "changelogDate": "20170622154448"
+        },
+        {
+            "relationshipId": 2,
+            "otherEntityName": "citari",
+            "otherEntityModuleName": "platformsc-java",
+            "relationshipType": "many-to-many",
+            "otherEntityNameCapitalized": "Citari",
+            "otherEntityField": "nrCitari",
+            "ownerSide": true,
+            "changelogDate": "20170622154532"
+        },
+        {
+            "relationshipId": 3,
+            "otherEntityName": "conferinta",
+            "otherEntityModuleName": "platformsc-java",
+            "relationshipType": "many-to-many",
+            "otherEntityNameCapitalized": "Conferinta",
+            "otherEntityField": "denumire",
+            "ownerSide": true,
+            "changelogDate": "20170622154606"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "titlu",
+            "fieldType": "String",
+            "fieldLength": 50,
+            "fieldRequired": true,
+            "fieldNameCapitalized": "Titlu",
+            "fieldNameUnderscored": "titlu",
+            "isNewField": false
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "anPublicare",
+            "fieldType": "Integer",
+            "fieldRequired": false,
+            "fieldNameCapitalized": "AnPublicare",
+            "fieldNameUnderscored": "an_publicare",
+            "isNewField": false
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "numarAutori",
+            "fieldType": "Integer",
+            "fieldRequired": false,
+            "fieldNameCapitalized": "NumarAutori",
+            "fieldNameUnderscored": "numar_autori",
+            "isNewField": false
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "denumire",
+            "fieldType": "String",
+            "fieldLength": 50,
+            "fieldRequired": false,
+            "fieldNameCapitalized": "Denumire",
+            "fieldNameUnderscored": "denumire",
+            "isNewField": false
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "factorDeImpact",
+            "fieldType": "BigDecimal",
+            "fieldRequired": false,
+            "fieldNameCapitalized": "FactorDeImpact",
+            "fieldNameUnderscored": "factor_de_impact",
+            "isNewField": false
+        },
+        {
+            "fieldId": 6,
+            "fieldName": "issn",
+            "fieldType": "String",
+            "fieldLength": 50,
+            "fieldRequired": false,
+            "fieldNameCapitalized": "Issn",
+            "fieldNameUnderscored": "issn",
+            "isNewField": false
+        },
+        {
+            "fieldId": 7,
+            "fieldName": "isbn",
+            "fieldType": "String",
+            "fieldLength": 50,
+            "fieldRequired": false,
+            "fieldNameCapitalized": "Isbn",
+            "fieldNameUnderscored": "isbn",
+            "isNewField": false
+        },
+        {
+            "fieldId": 8,
+            "fieldName": "editori",
+            "fieldType": "String",
+            "fieldLength": 50,
+            "fieldRequired": false,
+            "fieldNameCapitalized": "Editori",
+            "fieldNameUnderscored": "editori",
+            "isNewField": false
+        },
+        {
+            "fieldId": 9,
+            "fieldName": "volum",
+            "fieldType": "String",
+            "fieldLength": 50,
+            "fieldRequired": false,
+            "fieldNameCapitalized": "Volum",
+            "fieldNameUnderscored": "volum",
+            "isNewField": false
+        },
+        {
+            "fieldId": 10,
+            "fieldName": "numar",
+            "fieldType": "String",
+            "fieldLength": 50,
+            "fieldRequired": false,
+            "fieldNameCapitalized": "Numar",
+            "fieldNameUnderscored": "numar",
+            "isNewField": false
+        },
+        {
+            "fieldId": 11,
+            "fieldName": "numarPagini",
+            "fieldType": "String",
+            "fieldLength": 50,
+            "fieldRequired": false,
+            "fieldNameCapitalized": "NumarPagini",
+            "fieldNameUnderscored": "numar_pagini",
+            "isNewField": false
+        },
+        {
+            "fieldId": 12,
+            "fieldName": "editura",
+            "fieldType": "String",
+            "fieldLength": 50,
+            "fieldRequired": false,
+            "fieldNameCapitalized": "Editura",
+            "fieldNameUnderscored": "editura",
+            "isNewField": false
+        },
+        {
+            "fieldId": 13,
+            "fieldName": "wos",
+            "fieldType": "String",
+            "fieldLength": 50,
+            "fieldRequired": false,
+            "fieldNameCapitalized": "Wos",
+            "fieldNameUnderscored": "wos",
+            "isNewField": false
+        },
+        {
+            "fieldId": 14,
+            "fieldName": "issnJurnal",
+            "fieldType": "String",
+            "fieldLength": 50,
+            "fieldRequired": false,
+            "fieldNameCapitalized": "IssnJurnal",
+            "fieldNameUnderscored": "issn_jurnal",
+            "isNewField": false
+        },
+        {
+            "fieldId": 15,
+            "fieldName": "capitole",
+            "fieldType": "String",
+            "fieldLength": 50,
+            "fieldRequired": false,
+            "fieldNameCapitalized": "Capitole",
+            "fieldNameUnderscored": "capitole",
+            "isNewField": false
+        },
+        {
+            "fieldId": 16,
+            "fieldName": "rezultat",
+            "fieldType": "String",
+            "fieldLength": 50,
+            "fieldRequired": false,
+            "fieldNameCapitalized": "Rezultat",
+            "fieldNameUnderscored": "rezultat",
+            "isNewField": false
+        },
+        {
+            "fieldId": 17,
+            "fieldName": "tipLucrare",
+            "fieldType": "String",
+            "fieldLength": 50,
+            "fieldRequired": true,
+            "fieldNameCapitalized": "TipLucrare",
+            "fieldNameUnderscored": "tip_lucrare",
+            "isNewField": false
+        },
+        {
+            "fieldId": 18,
+            "fieldName": "tipBrevet",
+            "fieldType": "String",
+            "fieldLength": 50,
+            "fieldRequired": false,
+            "fieldNameCapitalized": "TipBrevet",
+            "fieldNameUnderscored": "tip_brevet",
+            "isNewField": false
+        },
+        {
+            "fieldId": 19,
+            "fieldName": "qx",
+            "fieldType": "String",
+            "fieldLength": 50,
+            "fieldRequired": false,
+            "fieldNameCapitalized": "Qx",
+            "fieldNameUnderscored": "qx",
+            "isNewField": false
+        },
+        {
+            "fieldId": 20,
+            "fieldName": "indexataDe",
+            "fieldType": "String",
+            "fieldLength": 50,
+            "fieldRequired": false,
+            "fieldNameCapitalized": "IndexataDe",
+            "fieldNameUnderscored": "indexata_de",
+            "isNewField": false
+        }
+    ],
+    "fieldsContainOwnerManyToMany": true,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": false,
+    "fieldsContainBigDecimal": true,
+    "fieldsContainDateTime": false,
+    "addFeatures": false,
+    "changelogDate": "20170621182750",
+    "entityAddedInRoutes": true,
+    "layout": "2"
+}

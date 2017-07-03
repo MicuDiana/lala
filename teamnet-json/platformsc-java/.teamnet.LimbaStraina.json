@@ -1,0 +1,85 @@
+{
+    "relationships": [
+        {
+            "otherEntityModuleName": "platformsc-java",
+            "otherEntityName": "angajat",
+            "otherEntityNameCapitalized": "Angajat",
+            "otherEntityField": "id",
+            "changelogDate": "20170622011921",
+            "relationshipType": "many-to-many",
+            "ownerSide": false
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "limba",
+            "fieldType": "String",
+            "fieldLength": 50,
+            "fieldRequired": true,
+            "fieldNameCapitalized": "Limba",
+            "fieldNameUnderscored": "limba",
+            "isNewField": false
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "ascultare",
+            "fieldType": "String",
+            "fieldLength": 50,
+            "fieldRequired": true,
+            "fieldNameCapitalized": "Ascultare",
+            "fieldNameUnderscored": "ascultare",
+            "isNewField": false
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "citire",
+            "fieldType": "String",
+            "fieldLength": 50,
+            "fieldRequired": true,
+            "fieldNameCapitalized": "Citire",
+            "fieldNameUnderscored": "citire",
+            "isNewField": false
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "conversatie",
+            "fieldType": "String",
+            "fieldLength": 50,
+            "fieldRequired": true,
+            "fieldNameCapitalized": "Conversatie",
+            "fieldNameUnderscored": "conversatie",
+            "isNewField": false
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "discurs",
+            "fieldType": "String",
+            "fieldLength": 50,
+            "fieldRequired": true,
+            "fieldNameCapitalized": "Discurs",
+            "fieldNameUnderscored": "discurs",
+            "isNewField": false
+        },
+        {
+            "fieldId": 6,
+            "fieldName": "scriere",
+            "fieldType": "String",
+            "fieldLength": 50,
+            "fieldRequired": true,
+            "fieldNameCapitalized": "Scriere",
+            "fieldNameUnderscored": "scriere",
+            "isNewField": false
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": false,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": false,
+    "addFeatures": false,
+    "changelogDate": "20170621180602",
+    "entityAddedInRoutes": true,
+    "layout": "2"
+}

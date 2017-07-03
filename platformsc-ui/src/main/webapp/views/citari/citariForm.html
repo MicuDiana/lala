@@ -1,0 +1,78 @@
+<div class="alert alert-success" ng-show="save.success" xmlns="http://www.w3.org/1999/html">
+    <strong>{{functionality}} saved!</strong>
+</div>
+<div class="alert alert-danger" ng-show="save.error">
+    <strong>An error has occurred!</strong> {{functionality}} could not be saved.
+</div>
+<div  ng-if="citari.components.create||citari.components.update">
+    <form name="formCreateOrEdit_citari" role="form" ng-submit="citari.actions.createOrUpdate()">
+        <input type="hidden" name="id" ng-model="citari.data.id" readonly>
+        
+        <div class="row m0">
+        <div class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_citari.citari_an.$dirty && formCreateOrEdit_citari.citari_an.$valid, 'has-error': formCreateOrEdit_citari.citari_an.$dirty && formCreateOrEdit_citari.citari_an.$invalid}">
+                
+                <label>An</label>
+                <input type="number" class="form-control" name="citari_an" placeholder="An" ng-model="citari.data.an" required>
+                
+                <div ng-show="formCreateOrEdit_citari.citari_an.$dirty && formCreateOrEdit_citari.citari_an.$invalid">
+                    <p class="help-block" ng-show="formCreateOrEdit_citari.citari_an.$error.required">
+                        Your field An is required.
+                    </p>
+            </div>
+        </div>
+    </div>
+    <!-- end field 0 -->
+        
+        <div class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_citari.citari_nrCitari.$dirty && formCreateOrEdit_citari.citari_nrCitari.$valid, 'has-error': formCreateOrEdit_citari.citari_nrCitari.$dirty && formCreateOrEdit_citari.citari_nrCitari.$invalid}">
+                
+                <label>NrCitari</label>
+                <input type="number" class="form-control" name="citari_nrCitari" placeholder="NrCitari" ng-model="citari.data.nrCitari" required>
+                
+                <div ng-show="formCreateOrEdit_citari.citari_nrCitari.$dirty && formCreateOrEdit_citari.citari_nrCitari.$invalid">
+                    <p class="help-block" ng-show="formCreateOrEdit_citari.citari_nrCitari.$error.required">
+                        Your field NrCitari is required.
+                    </p>
+            </div>
+        </div>
+    </div>
+    <!-- end field 1 -->
+        </div><!--from i+1%entityLayout --></div> 
+        
+    <!-- end field 2 -->
+
+        <div class="row m0">
+            <div class="col-md-12 text-right mb15">
+                <button class="btn btn-warning" ng-click="citari.actions.back()">Cancel</button>
+                <button ng-disabled="formCreateOrEdit_citari.$invalid" class="btn btn-success" ng-click="citari.actions.createOrUpdate();formCreateOrEdit_citari.$setPristine();">Save</button>
+            </div>
+        </div>
+    </form>
+</div>
+<div>
+    <div class="modal fade" id="delete_citari_Confirmation">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="formDelete_citari">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title">Confirm delete operation</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Are you sure you want to delete this row ?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="row m0">
+                            <div class="col-md-12 text-right mb15">
+                                <button class="btn btn-warning" ng-click="citari.actions.back()">Cancel</button>
+                                <button ng-disabled="formCreateOrEdit_citari.$invalid" class="btn btn-danger" ng-click="citari.actions.confirmDelete()">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

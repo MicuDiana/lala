@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+
+    <changeSet id="20170622155941" author="teamnet">
+        <createTable tableName="T_PERSOANA_T_MEMBRU_ASOC_PROF">
+            <column name="persoana_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="membru_asoc_prof_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <addPrimaryKey columnNames="persoana_id, membru_asoc_prof_id"
+                       tableName="T_PERSOANA_T_MEMBRU_ASOC_PROF"/>
+
+        <addForeignKeyConstraint baseColumnNames="persoana_id"
+                                 baseTableName="T_PERSOANA_T_MEMBRU_ASOC_PROF"
+                                 constraintName="fk_membruasocprof_persoana_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="T_PERSOANA"/>
+
+        <addForeignKeyConstraint baseColumnNames="membru_asoc_prof_id"
+                                 baseTableName="T_PERSOANA_T_MEMBRU_ASOC_PROF"
+                                 constraintName="fk_persoana_membruasocprof_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="T_MEMBRU_ASOC_PROF"/>
+    </changeSet>
+
+</databaseChangeLog>

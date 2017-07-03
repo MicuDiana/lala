@@ -1,0 +1,37 @@
+<div ng-show="angajat.components.list">
+    <div class="row m0">
+        <div class="col-md-12 text-left mb15">
+            <app-grid
+                    id="angajat.grid.id"
+                    url="angajat.grid.url"
+                    refresh-event="angajat.event.refresh"
+                    column-metadata="angajat.grid.columnMetadata"
+                    refresh-function="angajat.actions.refresh"
+                    search-terms="searchTerms"
+                    custom-options="angajat.grid.customOptions"
+                    action-event="angajat.event.list"
+                    get-selected="angajat.actions.selected"
+                    >
+            </app-grid>
+        </div>
+    </div>
+    <div class="row m0">
+        <div class="col-md-12 text-right mb15">
+            <button class="btn btn-primary"
+                    ng-show="angajat.buttons.add"
+                    ng-click="angajat.actions.showAdd()">
+                Adauga
+            </button>
+            <button class="btn btn-info"
+                    ng-show="angajat.buttons.edit"
+                    ng-click="angajat.actions.showEdit()">
+                Editeaza
+            </button>
+            <button class="btn btn-danger"
+                    ng-show="angajat.buttons.delete"
+                    ng-click="angajat.actions.showDelete()">
+                Sterge
+            </button>
+        </div>
+    </div>
+</div>

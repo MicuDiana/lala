@@ -1,0 +1,37 @@
+<div ng-show="premiu.components.list">
+    <div class="row m0">
+        <div class="col-md-12 text-left mb15">
+            <app-grid
+                    id="premiu.grid.id"
+                    url="premiu.grid.url"
+                    refresh-event="premiu.event.refresh"
+                    column-metadata="premiu.grid.columnMetadata"
+                    refresh-function="premiu.actions.refresh"
+                    search-terms="searchTerms"
+                    custom-options="premiu.grid.customOptions"
+                    action-event="premiu.event.list"
+                    get-selected="premiu.actions.selected"
+                    >
+            </app-grid>
+        </div>
+    </div>
+    <div class="row m0">
+        <div class="col-md-12 text-right mb15">
+            <button class="btn btn-primary"
+                    ng-show="premiu.buttons.add"
+                    ng-click="premiu.actions.showAdd()">
+                Adauga
+            </button>
+            <button class="btn btn-info"
+                    ng-show="premiu.buttons.edit"
+                    ng-click="premiu.actions.showEdit()">
+                Editeaza
+            </button>
+            <button class="btn btn-danger"
+                    ng-show="premiu.buttons.delete"
+                    ng-click="premiu.actions.showDelete()">
+                Sterge
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/platformsc-all.iml" filepath="$PROJECT_DIR$/platformsc-all.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../platformsc-java/platformsc-java.iml" filepath="$PROJECT_DIR$/../platformsc-java/platformsc-java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../platformsc-parent/platformsc-parent.iml" filepath="$PROJECT_DIR$/../platformsc-parent/platformsc-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../platformsc-run/platformsc-run.iml" filepath="$PROJECT_DIR$/../platformsc-run/platformsc-run.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../platformsc-ui/platformsc-ui.iml" filepath="$PROJECT_DIR$/../platformsc-ui/platformsc-ui.iml" />
+    </modules>
+  </component>
+</project>

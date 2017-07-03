@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>bootstrap-dependencies</artifactId>
+        <groupId>ro.teamnet.bootstrap</groupId>
+        <version>3.4.8</version>
+        <relativePath />
+    </parent>
+    <artifactId>app-bootstrap-web</artifactId>
+    <version>3.4.8</version>
+    <packaging>war</packaging>
+
+    <scm>
+        <connection>
+            scm:git:http://component-publisher@git-components.teamnet.ro/r/components/java/app-bootstrap-web.git
+        </connection>
+        <tag>HEAD</tag>
+        <url>http://git-components.teamnet.ro/summary/components%2Fjava%2Fapp-bootstrap-web.git</url>
+    </scm>
+
+    <distributionManagement>
+        <repository>
+            <id>tni-hq-artifact</id>
+            <name>tni-hq-artifact-releases</name>
+            <url>http://repo.teamnet.ro/tn-components</url>
+        </repository>
+        <snapshotRepository>
+            <id>tni-hq-artifact</id>
+            <name>tni-hq-artifact-snapshots</name>
+            <url>http://repo.teamnet.ro/tn-components</url>
+        </snapshotRepository>
+    </distributionManagement>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.5.2</version>
+                <configuration>
+                    <tagNameFormat>v@{project.version}</tagNameFormat>
+                    <autoVersionSubmodules>true</autoVersionSubmodules>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <configuration>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                    <warSourceDirectory>src/main/webapp</warSourceDirectory>
+                    <webResources>
+                        <resource>
+                            <directory>.</directory>
+                            <includes>
+                                <include>bower.json</include>
+                                <include>package.json</include>
+                            </includes>
+                        </resource>
+
+                    </webResources>
+                    <packagingExcludes>WEB-INF/lib/*.jar,bower_components/**</packagingExcludes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

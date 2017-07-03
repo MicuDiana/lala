@@ -1,0 +1,54 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "otherEntityName": "persoana",
+            "otherEntityModuleName": "platformsc-java",
+            "relationshipType": "many-to-many",
+            "otherEntityNameCapitalized": "Persoana",
+            "ownerSide": false,
+            "changelogDate": "20170622155941"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "international",
+            "fieldType": "Boolean",
+            "fieldRequired": true,
+            "fieldNameCapitalized": "International",
+            "fieldNameUnderscored": "international",
+            "isNewField": false
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "asociatia",
+            "fieldType": "String",
+            "fieldLength": 50,
+            "fieldRequired": false,
+            "fieldNameCapitalized": "Asociatia",
+            "fieldNameUnderscored": "asociatia",
+            "isNewField": false
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "perioada",
+            "fieldType": "String",
+            "fieldLength": 50,
+            "fieldRequired": false,
+            "fieldNameCapitalized": "Perioada",
+            "fieldNameUnderscored": "perioada",
+            "isNewField": false
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": false,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": false,
+    "addFeatures": false,
+    "changelogDate": "20170621184236",
+    "entityAddedInRoutes": true,
+    "layout": "2"
+}

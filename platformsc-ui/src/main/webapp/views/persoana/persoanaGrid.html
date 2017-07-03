@@ -1,0 +1,37 @@
+<div ng-show="persoana.components.list">
+    <div class="row m0">
+        <div class="col-md-12 text-left mb15">
+            <app-grid
+                    id="persoana.grid.id"
+                    url="persoana.grid.url"
+                    refresh-event="persoana.event.refresh"
+                    column-metadata="persoana.grid.columnMetadata"
+                    refresh-function="persoana.actions.refresh"
+                    search-terms="searchTerms"
+                    custom-options="persoana.grid.customOptions"
+                    action-event="persoana.event.list"
+                    get-selected="persoana.actions.selected"
+                    >
+            </app-grid>
+        </div>
+    </div>
+    <div class="row m0">
+        <div class="col-md-12 text-right mb15">
+            <button class="btn btn-primary"
+                    ng-show="persoana.buttons.add"
+                    ng-click="persoana.actions.showAdd()">
+                Adauga
+            </button>
+            <button class="btn btn-info"
+                    ng-show="persoana.buttons.edit"
+                    ng-click="persoana.actions.showEdit()">
+                Editeaza
+            </button>
+            <button class="btn btn-danger"
+                    ng-show="persoana.buttons.delete"
+                    ng-click="persoana.actions.showDelete()">
+                Sterge
+            </button>
+        </div>
+    </div>
+</div>

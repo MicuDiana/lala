@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+
+    <changeSet id="20170622011921" author="teamnet">
+        <createTable tableName="T_ANGAJAT_T_LIMBA_STRAINA">
+            <column name="angajat_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="limba_straina_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <addPrimaryKey columnNames="angajat_id, limba_straina_id"
+                       tableName="T_ANGAJAT_T_LIMBA_STRAINA"/>
+
+        <addForeignKeyConstraint baseColumnNames="angajat_id"
+                                 baseTableName="T_ANGAJAT_T_LIMBA_STRAINA"
+                                 constraintName="fk_limbastraina_angajat_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="T_ANGAJAT"/>
+
+        <addForeignKeyConstraint baseColumnNames="limba_straina_id"
+                                 baseTableName="T_ANGAJAT_T_LIMBA_STRAINA"
+                                 constraintName="fk_angajat_limbastraina_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="T_LIMBASTRAINA"/>
+    </changeSet>
+
+</databaseChangeLog>

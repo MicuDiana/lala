@@ -1,0 +1,359 @@
+<div class="alert alert-success" ng-show="save.success" xmlns="http://www.w3.org/1999/html">
+    <strong>{{functionality}} saved!</strong>
+</div>
+<div class="alert alert-danger" ng-show="save.error">
+    <strong>An error has occurred!</strong> {{functionality}} could not be saved.
+</div>
+<div  ng-if="angajat.components.create||angajat.components.update">
+    <form name="formCreateOrEdit_angajat" role="form" ng-submit="angajat.actions.createOrUpdate()">
+        <input type="hidden" name="id" ng-model="angajat.data.id" readonly>
+        
+        <div class="row m0">
+        <div class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_angajat.angajat_gradStiintific.$dirty && formCreateOrEdit_angajat.angajat_gradStiintific.$valid, 'has-error': formCreateOrEdit_angajat.angajat_gradStiintific.$dirty && formCreateOrEdit_angajat.angajat_gradStiintific.$invalid}">
+                
+                <label>Grad stiintific</label>
+                <input type="text" class="form-control" name="angajat_gradStiintific" placeholder="Grad stiintific" ng-model="angajat.data.gradStiintific"ng-minlength=1 ng-maxlength=50 maxlength="50" required>
+                
+                <div ng-show="formCreateOrEdit_angajat.angajat_gradStiintific.$dirty && formCreateOrEdit_angajat.angajat_gradStiintific.$invalid">
+                    <p class="help-block" ng-show="formCreateOrEdit_angajat.angajat_gradStiintific.$error.required">
+                        Your field GradStiintific is required.
+                    </p><p class="help-block" ng-show="formCreateOrEdit_angajat.angajat_gradStiintific.$error.minlength">
+                        Your field GradStiintific is required to be at least 1 character
+                    </p>
+                    <p class="help-block"
+                    ng-show="formCreateOrEdit_angajat.angajat_gradStiintific.$error.maxlength">
+                        Your field GradStiintific cannot be longer than 50 characters
+                    </p>
+            </div>
+        </div>
+    </div>
+    <!-- end field 0 -->
+        
+        <div class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_angajat.angajat_gradDidactic.$dirty && formCreateOrEdit_angajat.angajat_gradDidactic.$valid, 'has-error': formCreateOrEdit_angajat.angajat_gradDidactic.$dirty && formCreateOrEdit_angajat.angajat_gradDidactic.$invalid}">
+                
+                <label>Grad didactic</label>
+                <input type="text" class="form-control" name="angajat_gradDidactic" placeholder="Grad didactic" ng-model="angajat.data.gradDidactic"ng-minlength=1 ng-maxlength=50 maxlength="50" required>
+                
+                <div ng-show="formCreateOrEdit_angajat.angajat_gradDidactic.$dirty && formCreateOrEdit_angajat.angajat_gradDidactic.$invalid">
+                    <p class="help-block" ng-show="formCreateOrEdit_angajat.angajat_gradDidactic.$error.required">
+                        Your field GradDidactic is required.
+                    </p><p class="help-block" ng-show="formCreateOrEdit_angajat.angajat_gradDidactic.$error.minlength">
+                        Your field GradDidactic is required to be at least 1 character
+                    </p>
+                    <p class="help-block"
+                    ng-show="formCreateOrEdit_angajat.angajat_gradDidactic.$error.maxlength">
+                        Your field GradDidactic cannot be longer than 50 characters
+                    </p>
+            </div>
+        </div>
+    </div>
+    <!-- end field 1 -->
+        </div><!--from i+1%entityLayout -->
+        <div class="row m0">
+        <div class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_angajat.angajat_facultateAbsolvita.$dirty && formCreateOrEdit_angajat.angajat_facultateAbsolvita.$valid, 'has-error': formCreateOrEdit_angajat.angajat_facultateAbsolvita.$dirty && formCreateOrEdit_angajat.angajat_facultateAbsolvita.$invalid}">
+                
+                <label>Facultate absolvita</label>
+                <input type="text" class="form-control" name="angajat_facultateAbsolvita" placeholder="Facultate absolvita" ng-model="angajat.data.facultateAbsolvita"ng-minlength=1 ng-maxlength=50 maxlength="50" required>
+                
+                <div ng-show="formCreateOrEdit_angajat.angajat_facultateAbsolvita.$dirty && formCreateOrEdit_angajat.angajat_facultateAbsolvita.$invalid">
+                    <p class="help-block" ng-show="formCreateOrEdit_angajat.angajat_facultateAbsolvita.$error.required">
+                        Your field FacultateAbsolvita is required.
+                    </p><p class="help-block" ng-show="formCreateOrEdit_angajat.angajat_facultateAbsolvita.$error.minlength">
+                        Your field FacultateAbsolvita is required to be at least 1 character
+                    </p>
+                    <p class="help-block"
+                    ng-show="formCreateOrEdit_angajat.angajat_facultateAbsolvita.$error.maxlength">
+                        Your field FacultateAbsolvita cannot be longer than 50 characters
+                    </p>
+            </div>
+        </div>
+    </div>
+    <!-- end field 2 -->
+        
+        <div class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_angajat.angajat_specializare.$dirty && formCreateOrEdit_angajat.angajat_specializare.$valid, 'has-error': formCreateOrEdit_angajat.angajat_specializare.$dirty && formCreateOrEdit_angajat.angajat_specializare.$invalid}">
+                
+                <label>Specializare</label>
+                <input type="text" class="form-control" name="angajat_specializare" placeholder="Specializare" ng-model="angajat.data.specializare"ng-minlength=1 ng-maxlength=50 maxlength="50" required>
+                
+                <div ng-show="formCreateOrEdit_angajat.angajat_specializare.$dirty && formCreateOrEdit_angajat.angajat_specializare.$invalid">
+                    <p class="help-block" ng-show="formCreateOrEdit_angajat.angajat_specializare.$error.required">
+                        Your field Specializare is required.
+                    </p><p class="help-block" ng-show="formCreateOrEdit_angajat.angajat_specializare.$error.minlength">
+                        Your field Specializare is required to be at least 1 character
+                    </p>
+                    <p class="help-block"
+                    ng-show="formCreateOrEdit_angajat.angajat_specializare.$error.maxlength">
+                        Your field Specializare cannot be longer than 50 characters
+                    </p>
+            </div>
+        </div>
+    </div>
+    <!-- end field 3 -->
+        </div><!--from i+1%entityLayout -->
+        <div class="row m0">
+        <div class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_angajat.angajat_areDoctorat.$dirty && formCreateOrEdit_angajat.angajat_areDoctorat.$valid, 'has-error': formCreateOrEdit_angajat.angajat_areDoctorat.$dirty && formCreateOrEdit_angajat.angajat_areDoctorat.$invalid}">
+                
+                <div class="checkbox-container">
+                    <input id="angajat_areDoctorat"
+                           name="angajat_areDoctorat"
+                           type="checkbox"
+                           ng-model="angajat.data.areDoctorat">
+                    <label class="custom-select" for="angajat_areDoctorat">
+                        Doctorat
+                    </label>
+                </div>
+                
+                <div ng-show="formCreateOrEdit_angajat.angajat_areDoctorat.$dirty && formCreateOrEdit_angajat.angajat_areDoctorat.$invalid">
+                    <p class="help-block" ng-show="formCreateOrEdit_angajat.angajat_areDoctorat.$error.required">
+                        Your field AreDoctorat is required.
+                    </p>
+            </div>
+        </div>
+    </div>
+    <!-- end field 4 -->
+        
+        <div class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_angajat.angajat_dataIncepereDoctorat.$dirty && formCreateOrEdit_angajat.angajat_dataIncepereDoctorat.$valid, 'has-error': formCreateOrEdit_angajat.angajat_dataIncepereDoctorat.$dirty && formCreateOrEdit_angajat.angajat_dataIncepereDoctorat.$invalid}">
+                
+                <label>Data incepere doctorat</label>
+                <p class="input-group">
+                  <input type="text" class="form-control" is-open="angajat.isDataIncepereDoctoratOpened"  placeholder="Data incepere doctorat" datepicker-popup="{{dateOptions.format}}" datepicker-options="dateOptions" ng-model="angajat.data.dataIncepereDoctorat"  close-text="Inchide" />
+                  <span class="input-group-btn">
+                    <button type="button" class="btn btn-default" ng-click="openDataIncepereDoctorat($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                  </span>
+                </p>
+                
+                
+        </div>
+    </div>
+    <!-- end field 5 -->
+        </div><!--from i+1%entityLayout -->
+        <div class="row m0">
+        <div class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_angajat.angajat_dataFinalizareDoctorat.$dirty && formCreateOrEdit_angajat.angajat_dataFinalizareDoctorat.$valid, 'has-error': formCreateOrEdit_angajat.angajat_dataFinalizareDoctorat.$dirty && formCreateOrEdit_angajat.angajat_dataFinalizareDoctorat.$invalid}">
+                
+                <label>Data finalizare doctorat</label>
+                <p class="input-group">
+                  <input type="text" class="form-control" is-open="angajat.isDataFinalizareDoctoratOpened"  placeholder="Data finalizare doctorat" datepicker-popup="{{dateOptions.format}}" datepicker-options="dateOptions" ng-model="angajat.data.dataFinalizareDoctorat"  close-text="Inchide" />
+                  <span class="input-group-btn">
+                    <button type="button" class="btn btn-default" ng-click="openDataFinalizareDoctorat($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                  </span>
+                </p>
+                
+                
+        </div>
+    </div>
+    <!-- end field 6 -->
+        
+        <div class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_angajat.angajat_titluTezaDoctorat.$dirty && formCreateOrEdit_angajat.angajat_titluTezaDoctorat.$valid, 'has-error': formCreateOrEdit_angajat.angajat_titluTezaDoctorat.$dirty && formCreateOrEdit_angajat.angajat_titluTezaDoctorat.$invalid}">
+                
+                <label>Titlu teza doctorat</label>
+                <input type="text" class="form-control" name="angajat_titluTezaDoctorat" placeholder="Titlu teza doctorat" ng-model="angajat.data.titluTezaDoctorat"ng-minlength=1 ng-maxlength=50 maxlength="50" >
+                
+                <div ng-show="formCreateOrEdit_angajat.angajat_titluTezaDoctorat.$dirty && formCreateOrEdit_angajat.angajat_titluTezaDoctorat.$invalid">
+                    <p class="help-block" ng-show="formCreateOrEdit_angajat.angajat_titluTezaDoctorat.$error.minlength">
+                        Your field TitluTezaDoctorat is required to be at least 1 character
+                    </p>
+                    <p class="help-block"
+                    ng-show="formCreateOrEdit_angajat.angajat_titluTezaDoctorat.$error.maxlength">
+                        Your field TitluTezaDoctorat cannot be longer than 50 characters
+                    </p>
+            </div>
+        </div>
+    </div>
+    <!-- end field 7 -->
+        </div><!--from i+1%entityLayout -->
+        <div class="row m0">
+        <div class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_angajat.angajat_universitateDoctorat.$dirty && formCreateOrEdit_angajat.angajat_universitateDoctorat.$valid, 'has-error': formCreateOrEdit_angajat.angajat_universitateDoctorat.$dirty && formCreateOrEdit_angajat.angajat_universitateDoctorat.$invalid}">
+                
+                <label>Universitate doctorat</label>
+                <input type="text" class="form-control" name="angajat_universitateDoctorat" placeholder="Universitate doctorat" ng-model="angajat.data.universitateDoctorat"ng-minlength=1 ng-maxlength=50 maxlength="50" >
+                
+                <div ng-show="formCreateOrEdit_angajat.angajat_universitateDoctorat.$dirty && formCreateOrEdit_angajat.angajat_universitateDoctorat.$invalid">
+                    <p class="help-block" ng-show="formCreateOrEdit_angajat.angajat_universitateDoctorat.$error.minlength">
+                        Your field UniversitateDoctorat is required to be at least 1 character
+                    </p>
+                    <p class="help-block"
+                    ng-show="formCreateOrEdit_angajat.angajat_universitateDoctorat.$error.maxlength">
+                        Your field UniversitateDoctorat cannot be longer than 50 characters
+                    </p>
+            </div>
+        </div>
+    </div>
+    <!-- end field 8 -->
+        
+        <div class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_angajat.angajat_coordonatorDoctorat.$dirty && formCreateOrEdit_angajat.angajat_coordonatorDoctorat.$valid, 'has-error': formCreateOrEdit_angajat.angajat_coordonatorDoctorat.$dirty && formCreateOrEdit_angajat.angajat_coordonatorDoctorat.$invalid}">
+                
+                <div class="checkbox-container">
+                    <input id="angajat_coordonatorDoctorat"
+                           name="angajat_coordonatorDoctorat"
+                           type="checkbox"
+                           ng-model="angajat.data.coordonatorDoctorat">
+                    <label class="custom-select" for="angajat_coordonatorDoctorat">
+                        Coordonator doctorat
+                    </label>
+                </div>
+                
+                
+        </div>
+    </div>
+    <!-- end field 9 -->
+        </div><!--from i+1%entityLayout -->
+        <div class="row m0">
+        <div class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_angajat.angajat_competente.$dirty && formCreateOrEdit_angajat.angajat_competente.$valid, 'has-error': formCreateOrEdit_angajat.angajat_competente.$dirty && formCreateOrEdit_angajat.angajat_competente.$invalid}">
+                
+                <label>Competente</label>
+                <input type="text" class="form-control" name="angajat_competente" placeholder="Competente" ng-model="angajat.data.competente"ng-minlength=1 ng-maxlength=50 maxlength="50" >
+                
+                <div ng-show="formCreateOrEdit_angajat.angajat_competente.$dirty && formCreateOrEdit_angajat.angajat_competente.$invalid">
+                    <p class="help-block" ng-show="formCreateOrEdit_angajat.angajat_competente.$error.minlength">
+                        Your field Competente is required to be at least 1 character
+                    </p>
+                    <p class="help-block"
+                    ng-show="formCreateOrEdit_angajat.angajat_competente.$error.maxlength">
+                        Your field Competente cannot be longer than 50 characters
+                    </p>
+            </div>
+        </div>
+    </div>
+    <!-- end field 10 -->
+        
+        <div class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_angajat.angajat_domeniiDeInteres.$dirty && formCreateOrEdit_angajat.angajat_domeniiDeInteres.$valid, 'has-error': formCreateOrEdit_angajat.angajat_domeniiDeInteres.$dirty && formCreateOrEdit_angajat.angajat_domeniiDeInteres.$invalid}">
+                
+                <label>Domenii de interes</label>
+                <input type="text" class="form-control" name="angajat_domeniiDeInteres" placeholder="Domenii de interes" ng-model="angajat.data.domeniiDeInteres"ng-minlength=1 ng-maxlength=50 maxlength="50" >
+                
+                <div ng-show="formCreateOrEdit_angajat.angajat_domeniiDeInteres.$dirty && formCreateOrEdit_angajat.angajat_domeniiDeInteres.$invalid">
+                    <p class="help-block" ng-show="formCreateOrEdit_angajat.angajat_domeniiDeInteres.$error.minlength">
+                        Your field DomeniiDeInteres is required to be at least 1 character
+                    </p>
+                    <p class="help-block"
+                    ng-show="formCreateOrEdit_angajat.angajat_domeniiDeInteres.$error.maxlength">
+                        Your field DomeniiDeInteres cannot be longer than 50 characters
+                    </p>
+            </div>
+        </div>
+    </div>
+    <!-- end field 11 -->
+        </div><!--from i+1%entityLayout -->
+        <div class="row m0">
+        <div class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_angajat.angajat_cursuriSpecializare.$dirty && formCreateOrEdit_angajat.angajat_cursuriSpecializare.$valid, 'has-error': formCreateOrEdit_angajat.angajat_cursuriSpecializare.$dirty && formCreateOrEdit_angajat.angajat_cursuriSpecializare.$invalid}">
+                
+                <label>Cursuri specializare</label>
+                <input type="text" class="form-control" name="angajat_cursuriSpecializare" placeholder="Cursuri specializare" ng-model="angajat.data.cursuriSpecializare"ng-minlength=1 ng-maxlength=50 maxlength="50" >
+                
+                <div ng-show="formCreateOrEdit_angajat.angajat_cursuriSpecializare.$dirty && formCreateOrEdit_angajat.angajat_cursuriSpecializare.$invalid">
+                    <p class="help-block" ng-show="formCreateOrEdit_angajat.angajat_cursuriSpecializare.$error.minlength">
+                        Your field CursuriSpecializare is required to be at least 1 character
+                    </p>
+                    <p class="help-block"
+                    ng-show="formCreateOrEdit_angajat.angajat_cursuriSpecializare.$error.maxlength">
+                        Your field CursuriSpecializare cannot be longer than 50 characters
+                    </p>
+            </div>
+        </div>
+    </div>
+    <!-- end field 12 -->
+        
+        <div class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_angajat.angajat_certificari.$dirty && formCreateOrEdit_angajat.angajat_certificari.$valid, 'has-error': formCreateOrEdit_angajat.angajat_certificari.$dirty && formCreateOrEdit_angajat.angajat_certificari.$invalid}">
+                
+                <label>Certificari</label>
+                <input type="text" class="form-control" name="angajat_certificari" placeholder="Certificari" ng-model="angajat.data.certificari"ng-minlength=1 ng-maxlength=50 maxlength="50" >
+                
+                <div ng-show="formCreateOrEdit_angajat.angajat_certificari.$dirty && formCreateOrEdit_angajat.angajat_certificari.$invalid">
+                    <p class="help-block" ng-show="formCreateOrEdit_angajat.angajat_certificari.$error.minlength">
+                        Your field Certificari is required to be at least 1 character
+                    </p>
+                    <p class="help-block"
+                    ng-show="formCreateOrEdit_angajat.angajat_certificari.$error.maxlength">
+                        Your field Certificari cannot be longer than 50 characters
+                    </p>
+            </div>
+        </div>
+    </div>
+    <!-- end field 13 -->
+        </div><!--from i+1%entityLayout -->
+        <div class="row m0">
+        <div class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_angajat.angajat_alteInformatii.$dirty && formCreateOrEdit_angajat.angajat_alteInformatii.$valid, 'has-error': formCreateOrEdit_angajat.angajat_alteInformatii.$dirty && formCreateOrEdit_angajat.angajat_alteInformatii.$invalid}">
+                
+                <label>Alte informatii</label>
+                <input type="text" class="form-control" name="angajat_alteInformatii" placeholder="Alte informatii" ng-model="angajat.data.alteInformatii"ng-minlength=1 ng-maxlength=50 maxlength="50" >
+                
+                <div ng-show="formCreateOrEdit_angajat.angajat_alteInformatii.$dirty && formCreateOrEdit_angajat.angajat_alteInformatii.$invalid">
+                    <p class="help-block" ng-show="formCreateOrEdit_angajat.angajat_alteInformatii.$error.minlength">
+                        Your field AlteInformatii is required to be at least 1 character
+                    </p>
+                    <p class="help-block"
+                    ng-show="formCreateOrEdit_angajat.angajat_alteInformatii.$error.maxlength">
+                        Your field AlteInformatii cannot be longer than 50 characters
+                    </p>
+            </div>
+        </div>
+    </div>
+    <!-- end field 14 -->
+        </div><!--from fields.length%entityLayout -->
+        <div class="row m0">
+            <div class="mb15 col-md-6">
+                <div class="form-group">
+                    <label>Limba straina</label>
+
+                    <ui-select multiple ng-model="angajat.data.limbaStrainas">
+                        <ui-select-match placeholder="Select limbaStraina...">{{$item.limba}}</ui-select-match>
+                        <ui-select-choices
+                                repeat="limbaStraina in limbaStrainas | filter:$select.search">
+                            <div ng-bind-html="limbaStraina.limba | highlight: $select.search"></div>
+                        </ui-select-choices>
+                    </ui-select>
+                </div>
+            </div>
+        </div>
+        
+    <!-- end field 2 -->
+
+        <div class="row m0">
+            <div class="col-md-12 text-right mb15">
+                <button class="btn btn-warning" ng-click="angajat.actions.back()">Cancel</button>
+                <button ng-disabled="formCreateOrEdit_angajat.$invalid" class="btn btn-success" ng-click="angajat.actions.createOrUpdate();formCreateOrEdit_angajat.$setPristine();">Save</button>
+            </div>
+        </div>
+    </form>
+</div>
+<div>
+    <div class="modal fade" id="delete_angajat_Confirmation">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="formDelete_angajat">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title">Confirma operatia</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Sunteti sigur ca doriti sa stergeti acest rand ?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="row m0">
+                            <div class="col-md-12 text-right mb15">
+                                <button class="btn btn-warning" ng-click="angajat.actions.back()">Cancel</button>
+                                <button ng-disabled="formCreateOrEdit_angajat.$invalid" class="btn btn-danger" ng-click="angajat.actions.confirmDelete()">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+
+    <changeSet id="20170622154532" author="teamnet">
+        <createTable tableName="T_LUCRARE_T_CITARI">
+            <column name="lucrare_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="citari_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <addPrimaryKey columnNames="lucrare_id, citari_id"
+                       tableName="T_LUCRARE_T_CITARI"/>
+
+        <addForeignKeyConstraint baseColumnNames="lucrare_id"
+                                 baseTableName="T_LUCRARE_T_CITARI"
+                                 constraintName="fk_citari_lucrare_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="T_LUCRARE"/>
+
+        <addForeignKeyConstraint baseColumnNames="citari_id"
+                                 baseTableName="T_LUCRARE_T_CITARI"
+                                 constraintName="fk_lucrare_citari_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="T_CITARI"/>
+    </changeSet>
+
+</databaseChangeLog>

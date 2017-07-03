@@ -1,0 +1,1 @@
+var platformscServices=angular.module('platformscServices',[]);

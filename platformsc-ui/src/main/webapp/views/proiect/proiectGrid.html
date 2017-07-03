@@ -1,0 +1,37 @@
+<div ng-show="proiect.components.list">
+    <div class="row m0">
+        <div class="col-md-12 text-left mb15">
+            <app-grid
+                    id="proiect.grid.id"
+                    url="proiect.grid.url"
+                    refresh-event="proiect.event.refresh"
+                    column-metadata="proiect.grid.columnMetadata"
+                    refresh-function="proiect.actions.refresh"
+                    search-terms="searchTerms"
+                    custom-options="proiect.grid.customOptions"
+                    action-event="proiect.event.list"
+                    get-selected="proiect.actions.selected"
+                    >
+            </app-grid>
+        </div>
+    </div>
+    <div class="row m0">
+        <div class="col-md-12 text-right mb15">
+            <button class="btn btn-primary"
+                    ng-show="proiect.buttons.add"
+                    ng-click="proiect.actions.showAdd()">
+                Adauga
+            </button>
+            <button class="btn btn-info"
+                    ng-show="proiect.buttons.edit"
+                    ng-click="proiect.actions.showEdit()">
+                Editeaza
+            </button>
+            <button class="btn btn-danger"
+                    ng-show="proiect.buttons.delete"
+                    ng-click="proiect.actions.showDelete()">
+                Sterge
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Implementation-Title: app-bootstrap-web
+Implementation-Version: 3.4.8
+Archiver-Version: Plexus Archiver
+Built-By: jenkins
+Implementation-Vendor-Id: ro.teamnet.bootstrap
+Created-By: Apache Maven 3.3.9
+Build-Jdk: 1.8.0_111
+Implementation-URL: http://projects.spring.io/spring-boot/bootstrap-de
+ pendencies/app-bootstrap-web/
+Implementation-Vendor: Pivotal Software, Inc.
+

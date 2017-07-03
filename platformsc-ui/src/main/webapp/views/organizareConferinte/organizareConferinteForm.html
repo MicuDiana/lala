@@ -1,0 +1,86 @@
+<div class="alert alert-success" ng-show="save.success" xmlns="http://www.w3.org/1999/html">
+    <strong>{{functionality}} saved!</strong>
+</div>
+<div class="alert alert-danger" ng-show="save.error">
+    <strong>An error has occurred!</strong> {{functionality}} could not be saved.
+</div>
+<div  ng-if="organizareConferinte.components.create||organizareConferinte.components.update">
+    <form name="formCreateOrEdit_organizareConferinte" role="form" ng-submit="organizareConferinte.actions.createOrUpdate()">
+        <input type="hidden" name="id" ng-model="organizareConferinte.data.id" readonly>
+        
+        <div class="row m0">
+        <div class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_organizareConferinte.organizareConferinte_calitatea.$dirty && formCreateOrEdit_organizareConferinte.organizareConferinte_calitatea.$valid, 'has-error': formCreateOrEdit_organizareConferinte.organizareConferinte_calitatea.$dirty && formCreateOrEdit_organizareConferinte.organizareConferinte_calitatea.$invalid}">
+                
+                <label>Calitatea</label>
+                <input type="text" class="form-control" name="organizareConferinte_calitatea" placeholder="Calitatea" ng-model="organizareConferinte.data.calitatea"ng-minlength=1 ng-maxlength=50 maxlength="50" required>
+                
+                <div ng-show="formCreateOrEdit_organizareConferinte.organizareConferinte_calitatea.$dirty && formCreateOrEdit_organizareConferinte.organizareConferinte_calitatea.$invalid">
+                    <p class="help-block" ng-show="formCreateOrEdit_organizareConferinte.organizareConferinte_calitatea.$error.required">
+                        Your field Calitatea is required.
+                    </p><p class="help-block" ng-show="formCreateOrEdit_organizareConferinte.organizareConferinte_calitatea.$error.minlength">
+                        Your field Calitatea is required to be at least 1 character
+                    </p>
+                    <p class="help-block"
+                    ng-show="formCreateOrEdit_organizareConferinte.organizareConferinte_calitatea.$error.maxlength">
+                        Your field Calitatea cannot be longer than 50 characters
+                    </p>
+            </div>
+        </div>
+    </div>
+    <!-- end field 0 -->
+        </div><!--from fields.length%entityLayout -->
+        <div class="row m0">
+            <div class="mb15 col-md-6">
+                <div class="form-group">
+                    <label>Persoana</label>
+
+                    <ui-select ng-model="organizareConferinte.data.persoana"
+                               theme="selectize" >
+                        <ui-select-match placeholder="Select persoana...">
+                            {{$select.selected.nume}}
+                        </ui-select-match>
+                        <ui-select-choices repeat="persoana in persoanas  | filter: $select.search">
+                            <div ng-bind-html="persoana.nume | highlight: $select.search"></div>
+                        </ui-select-choices>
+                    </ui-select>
+                </div>
+            </div>
+        </div>
+        
+    <!-- end field 2 -->
+
+        <div class="row m0">
+            <div class="col-md-12 text-right mb15">
+                <button class="btn btn-warning" ng-click="organizareConferinte.actions.back()">Cancel</button>
+                <button ng-disabled="formCreateOrEdit_organizareConferinte.$invalid" class="btn btn-success" ng-click="organizareConferinte.actions.createOrUpdate();formCreateOrEdit_organizareConferinte.$setPristine();">Save</button>
+            </div>
+        </div>
+    </form>
+</div>
+<div>
+    <div class="modal fade" id="delete_organizareConferinte_Confirmation">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="formDelete_organizareConferinte">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title">Confirm delete operation</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Are you sure you want to delete this row ?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="row m0">
+                            <div class="col-md-12 text-right mb15">
+                                <button class="btn btn-warning" ng-click="organizareConferinte.actions.back()">Cancel</button>
+                                <button ng-disabled="formCreateOrEdit_organizareConferinte.$invalid" class="btn btn-danger" ng-click="organizareConferinte.actions.confirmDelete()">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

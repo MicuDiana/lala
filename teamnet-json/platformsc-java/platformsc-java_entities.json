@@ -1,0 +1,16 @@
+{
+    "entities": [
+        "Persoana",
+        "LimbaStraina",
+        "Angajat",
+        "Conferinta",
+        "Lucrare",
+        "Citari",
+        "OrganizareConferinte",
+        "MembruAsocProf",
+        "ProdusInregORDA",
+        "Premiu",
+        "MembruRedactie",
+        "Proiect"
+    ]
+}

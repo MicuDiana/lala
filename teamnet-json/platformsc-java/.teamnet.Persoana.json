@@ -1,0 +1,100 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "otherEntityName": "angajat",
+            "otherEntityModuleName": "platformsc-java",
+            "relationshipType": "one-to-one",
+            "otherEntityNameCapitalized": "Angajat",
+            "otherEntityField": "nume",
+            "ownerSide": true,
+            "changelogDate": "20170622015340"
+        },
+        {
+            "otherEntityModuleName": "platformsc-java",
+            "otherEntityName": "lucrare",
+            "otherEntityNameCapitalized": "Lucrare",
+            "otherEntityField": "id",
+            "changelogDate": "20170622154448",
+            "relationshipType": "many-to-many",
+            "ownerSide": true,
+            "fieldsContainOwnerManyToMany": true
+        },
+        {
+            "relationshipId": 1,
+            "otherEntityName": "premiu",
+            "otherEntityModuleName": "platformsc-java",
+            "relationshipType": "one-to-many",
+            "otherEntityNameCapitalized": "Premiu",
+            "changelogDate": "20170622155126"
+        },
+        {
+            "otherEntityModuleName": "platformsc-java",
+            "otherEntityName": "organizareConferinte",
+            "otherEntityNameCapitalized": "OrganizareConferinte",
+            "otherEntityField": "id",
+            "changelogDate": "20170622155729",
+            "relationshipType": "one-to-many"
+        },
+        {
+            "otherEntityModuleName": "platformsc-java",
+            "otherEntityName": "membruAsocProf",
+            "otherEntityNameCapitalized": "MembruAsocProf",
+            "otherEntityField": "id",
+            "changelogDate": "20170622155941",
+            "relationshipType": "many-to-many",
+            "ownerSide": true,
+            "fieldsContainOwnerManyToMany": true
+        },
+        {
+            "otherEntityModuleName": "platformsc-java",
+            "otherEntityName": "proiect",
+            "otherEntityNameCapitalized": "Proiect",
+            "otherEntityField": "id",
+            "changelogDate": "20170622160232",
+            "relationshipType": "many-to-one"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "nume",
+            "fieldType": "String",
+            "fieldLength": 50,
+            "fieldRequired": true,
+            "fieldNameCapitalized": "Nume",
+            "fieldNameUnderscored": "nume",
+            "isNewField": false
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "prenume",
+            "fieldType": "String",
+            "fieldLength": 50,
+            "fieldRequired": true,
+            "fieldNameCapitalized": "Prenume",
+            "fieldNameUnderscored": "prenume",
+            "isNewField": false
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "email",
+            "fieldType": "String",
+            "fieldLength": 50,
+            "fieldRequired": false,
+            "fieldNameCapitalized": "Email",
+            "fieldNameUnderscored": "email",
+            "isNewField": false
+        }
+    ],
+    "fieldsContainOwnerManyToMany": true,
+    "fieldsContainOneToMany": true,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": false,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": false,
+    "addFeatures": false,
+    "changelogDate": "20170620222354",
+    "entityAddedInRoutes": true,
+    "layout": "2"
+}

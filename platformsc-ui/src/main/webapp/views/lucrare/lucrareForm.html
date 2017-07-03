@@ -1,0 +1,453 @@
+<div class="alert alert-success" ng-show="save.success" xmlns="http://www.w3.org/1999/html">
+    <strong>{{functionality}} saved!</strong>
+</div>
+<div class="alert alert-danger" ng-show="save.error">
+    <strong>An error has occurred!</strong> {{functionality}} could not be saved.
+</div>
+<div  ng-if="lucrare.components.create||lucrare.components.update">
+    <div class="row m0">
+        <div class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_lucrare.lucrare_tipLucrare.$dirty && formCreateOrEdit_lucrare.lucrare_tipLucrare.$valid, 'has-error': formCreateOrEdit_lucrare.lucrare_tipLucrare.$dirty && formCreateOrEdit_lucrare.lucrare_tipLucrare.$invalid}">
+
+                <label>TipLucrare</label>
+                <select class="selectpicker" name="lucrare_tipLucrare" placeholder="TipLucrare" ng-change="update()" ng-model="lucrare.data.tipLucrare" ng-options="x for x in tipLucrare" ng-minlength=1 ng-maxlength=50 maxlength="50"  required>
+                </select>
+                <div ng-show="formCreateOrEdit_lucrare.lucrare_tipLucrare.$dirty && formCreateOrEdit_lucrare.lucrare_tipLucrare.$invalid">
+                    <p class="help-block" ng-show="formCreateOrEdit_lucrare.lucrare_tipLucrare.$error.required">
+                        Your field TipLucrare is required.
+                    </p><p class="help-block" ng-show="formCreateOrEdit_lucrare.lucrare_tipLucrare.$error.minlength">
+                    Your field TipLucrare is required to be at least 1 character
+                </p>
+                    <p class="help-block"
+                       ng-show="formCreateOrEdit_lucrare.lucrare_tipLucrare.$error.maxlength">
+                        Your field TipLucrare cannot be longer than 50 characters
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- end field 16 -->
+
+        <div  ng-if="esteRevista" class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_lucrare.lucrare_tipBrevet.$dirty && formCreateOrEdit_lucrare.lucrare_tipBrevet.$valid, 'has-error': formCreateOrEdit_lucrare.lucrare_tipBrevet.$dirty && formCreateOrEdit_lucrare.lucrare_tipBrevet.$invalid}">
+
+                <label>TipBrevet</label>
+                <input type="text" class="form-control" name="lucrare_tipBrevet" placeholder="TipBrevet" ng-model="lucrare.data.tipBrevet"ng-minlength=1 ng-maxlength=50 maxlength="50" >
+
+                <div ng-show="formCreateOrEdit_lucrare.lucrare_tipBrevet.$dirty && formCreateOrEdit_lucrare.lucrare_tipBrevet.$invalid">
+                    <p class="help-block" ng-show="formCreateOrEdit_lucrare.lucrare_tipBrevet.$error.minlength">
+                        Your field TipBrevet is required to be at least 1 character
+                    </p>
+                    <p class="help-block"
+                       ng-show="formCreateOrEdit_lucrare.lucrare_tipBrevet.$error.maxlength">
+                        Your field TipBrevet cannot be longer than 50 characters
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- end field 17 -->
+    </div><!--from i+1%entityLayout -->
+    <form name="formCreateOrEdit_lucrare" role="form" ng-submit="lucrare.actions.createOrUpdate()">
+        <input type="hidden" name="id" ng-model="lucrare.data.id" readonly>
+
+        <div ng-if ="esteIon" class="row m0">
+        <div class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_lucrare.lucrare_titlu.$dirty && formCreateOrEdit_lucrare.lucrare_titlu.$valid, 'has-error': formCreateOrEdit_lucrare.lucrare_titlu.$dirty && formCreateOrEdit_lucrare.lucrare_titlu.$invalid}">
+
+                <label>Titlu</label>
+                <input type="text" class="form-control" name="lucrare_titlu" placeholder="Titlu" ng-model="lucrare.data.titlu"ng-minlength=1 ng-maxlength=50 maxlength="50" required>
+
+                <div ng-show="formCreateOrEdit_lucrare.lucrare_titlu.$dirty && formCreateOrEdit_lucrare.lucrare_titlu.$invalid">
+                    <p class="help-block" ng-show="formCreateOrEdit_lucrare.lucrare_titlu.$error.required">
+                        Your field Titlu is required.
+                    </p><p class="help-block" ng-show="formCreateOrEdit_lucrare.lucrare_titlu.$error.minlength">
+                        Your field Titlu is required to be at least 1 character
+                    </p>
+                    <p class="help-block"
+                    ng-show="formCreateOrEdit_lucrare.lucrare_titlu.$error.maxlength">
+                        Your field Titlu cannot be longer than 50 characters
+                    </p>
+            </div>
+        </div>
+    </div>
+    <!-- end field 0 -->
+
+        <div class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_lucrare.lucrare_anPublicare.$dirty && formCreateOrEdit_lucrare.lucrare_anPublicare.$valid, 'has-error': formCreateOrEdit_lucrare.lucrare_anPublicare.$dirty && formCreateOrEdit_lucrare.lucrare_anPublicare.$invalid}">
+
+                <label>AnPublicare</label>
+                <input type="number" class="form-control" name="lucrare_anPublicare" placeholder="AnPublicare" ng-model="lucrare.data.anPublicare" >
+
+
+        </div>
+    </div>
+    <!-- end field 1 -->
+        </div><!--from i+1%entityLayout -->
+        <div class="row m0">
+        <div class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_lucrare.lucrare_numarAutori.$dirty && formCreateOrEdit_lucrare.lucrare_numarAutori.$valid, 'has-error': formCreateOrEdit_lucrare.lucrare_numarAutori.$dirty && formCreateOrEdit_lucrare.lucrare_numarAutori.$invalid}">
+
+                <label>NumarAutori</label>
+                <input type="number" class="form-control" name="lucrare_numarAutori" placeholder="NumarAutori" ng-model="lucrare.data.numarAutori" >
+
+
+        </div>
+    </div>
+    <!-- end field 2 -->
+
+        <div class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_lucrare.lucrare_denumire.$dirty && formCreateOrEdit_lucrare.lucrare_denumire.$valid, 'has-error': formCreateOrEdit_lucrare.lucrare_denumire.$dirty && formCreateOrEdit_lucrare.lucrare_denumire.$invalid}">
+
+                <label>Denumire</label>
+                <input type="text" class="form-control" name="lucrare_denumire" placeholder="Denumire" ng-model="lucrare.data.denumire"ng-minlength=1 ng-maxlength=50 maxlength="50" >
+
+                <div ng-show="formCreateOrEdit_lucrare.lucrare_denumire.$dirty && formCreateOrEdit_lucrare.lucrare_denumire.$invalid">
+                    <p class="help-block" ng-show="formCreateOrEdit_lucrare.lucrare_denumire.$error.minlength">
+                        Your field Denumire is required to be at least 1 character
+                    </p>
+                    <p class="help-block"
+                    ng-show="formCreateOrEdit_lucrare.lucrare_denumire.$error.maxlength">
+                        Your field Denumire cannot be longer than 50 characters
+                    </p>
+            </div>
+        </div>
+    </div>
+    <!-- end field 3 -->
+        </div><!--from i+1%entityLayout -->
+        <div class="row m0">
+        <div class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_lucrare.lucrare_factorDeImpact.$dirty && formCreateOrEdit_lucrare.lucrare_factorDeImpact.$valid, 'has-error': formCreateOrEdit_lucrare.lucrare_factorDeImpact.$dirty && formCreateOrEdit_lucrare.lucrare_factorDeImpact.$invalid}">
+
+                <label>FactorDeImpact</label>
+                <input type="number"
+                       step="any"
+                       class="form-control"
+                       name="lucrare_factorDeImpact"
+                       placeholder="FactorDeImpact"
+                       ng-model="lucrare.data.factorDeImpact"
+                        >
+
+
+        </div>
+    </div>
+    <!-- end field 4 -->
+
+        <div class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_lucrare.lucrare_issn.$dirty && formCreateOrEdit_lucrare.lucrare_issn.$valid, 'has-error': formCreateOrEdit_lucrare.lucrare_issn.$dirty && formCreateOrEdit_lucrare.lucrare_issn.$invalid}">
+
+                <label>Issn</label>
+                <input type="text" class="form-control" name="lucrare_issn" placeholder="Issn" ng-model="lucrare.data.issn"ng-minlength=1 ng-maxlength=50 maxlength="50" >
+
+                <div ng-show="formCreateOrEdit_lucrare.lucrare_issn.$dirty && formCreateOrEdit_lucrare.lucrare_issn.$invalid">
+                    <p class="help-block" ng-show="formCreateOrEdit_lucrare.lucrare_issn.$error.minlength">
+                        Your field Issn is required to be at least 1 character
+                    </p>
+                    <p class="help-block"
+                    ng-show="formCreateOrEdit_lucrare.lucrare_issn.$error.maxlength">
+                        Your field Issn cannot be longer than 50 characters
+                    </p>
+            </div>
+        </div>
+    </div>
+    <!-- end field 5 -->
+        </div><!--from i+1%entityLayout -->
+        <div class="row m0">
+        <div class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_lucrare.lucrare_isbn.$dirty && formCreateOrEdit_lucrare.lucrare_isbn.$valid, 'has-error': formCreateOrEdit_lucrare.lucrare_isbn.$dirty && formCreateOrEdit_lucrare.lucrare_isbn.$invalid}">
+
+                <label>Isbn</label>
+                <input type="text" class="form-control" name="lucrare_isbn" placeholder="Isbn" ng-model="lucrare.data.isbn"ng-minlength=1 ng-maxlength=50 maxlength="50" >
+
+                <div ng-show="formCreateOrEdit_lucrare.lucrare_isbn.$dirty && formCreateOrEdit_lucrare.lucrare_isbn.$invalid">
+                    <p class="help-block" ng-show="formCreateOrEdit_lucrare.lucrare_isbn.$error.minlength">
+                        Your field Isbn is required to be at least 1 character
+                    </p>
+                    <p class="help-block"
+                    ng-show="formCreateOrEdit_lucrare.lucrare_isbn.$error.maxlength">
+                        Your field Isbn cannot be longer than 50 characters
+                    </p>
+            </div>
+        </div>
+    </div>
+    <!-- end field 6 -->
+
+        <div class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_lucrare.lucrare_editori.$dirty && formCreateOrEdit_lucrare.lucrare_editori.$valid, 'has-error': formCreateOrEdit_lucrare.lucrare_editori.$dirty && formCreateOrEdit_lucrare.lucrare_editori.$invalid}">
+
+                <label>Editori</label>
+                <input type="text" class="form-control" name="lucrare_editori" placeholder="Editori" ng-model="lucrare.data.editori"ng-minlength=1 ng-maxlength=50 maxlength="50" >
+
+                <div ng-show="formCreateOrEdit_lucrare.lucrare_editori.$dirty && formCreateOrEdit_lucrare.lucrare_editori.$invalid">
+                    <p class="help-block" ng-show="formCreateOrEdit_lucrare.lucrare_editori.$error.minlength">
+                        Your field Editori is required to be at least 1 character
+                    </p>
+                    <p class="help-block"
+                    ng-show="formCreateOrEdit_lucrare.lucrare_editori.$error.maxlength">
+                        Your field Editori cannot be longer than 50 characters
+                    </p>
+            </div>
+        </div>
+    </div>
+    <!-- end field 7 -->
+        </div><!--from i+1%entityLayout -->
+        <div class="row m0">
+        <div class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_lucrare.lucrare_volum.$dirty && formCreateOrEdit_lucrare.lucrare_volum.$valid, 'has-error': formCreateOrEdit_lucrare.lucrare_volum.$dirty && formCreateOrEdit_lucrare.lucrare_volum.$invalid}">
+
+                <label>Volum</label>
+                <input type="text" class="form-control" name="lucrare_volum" placeholder="Volum" ng-model="lucrare.data.volum"ng-minlength=1 ng-maxlength=50 maxlength="50" >
+
+                <div ng-show="formCreateOrEdit_lucrare.lucrare_volum.$dirty && formCreateOrEdit_lucrare.lucrare_volum.$invalid">
+                    <p class="help-block" ng-show="formCreateOrEdit_lucrare.lucrare_volum.$error.minlength">
+                        Your field Volum is required to be at least 1 character
+                    </p>
+                    <p class="help-block"
+                    ng-show="formCreateOrEdit_lucrare.lucrare_volum.$error.maxlength">
+                        Your field Volum cannot be longer than 50 characters
+                    </p>
+            </div>
+        </div>
+    </div>
+    <!-- end field 8 -->
+
+        <div class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_lucrare.lucrare_numar.$dirty && formCreateOrEdit_lucrare.lucrare_numar.$valid, 'has-error': formCreateOrEdit_lucrare.lucrare_numar.$dirty && formCreateOrEdit_lucrare.lucrare_numar.$invalid}">
+
+                <label>Numar</label>
+                <input type="text" class="form-control" name="lucrare_numar" placeholder="Numar" ng-model="lucrare.data.numar"ng-minlength=1 ng-maxlength=50 maxlength="50" >
+
+                <div ng-show="formCreateOrEdit_lucrare.lucrare_numar.$dirty && formCreateOrEdit_lucrare.lucrare_numar.$invalid">
+                    <p class="help-block" ng-show="formCreateOrEdit_lucrare.lucrare_numar.$error.minlength">
+                        Your field Numar is required to be at least 1 character
+                    </p>
+                    <p class="help-block"
+                    ng-show="formCreateOrEdit_lucrare.lucrare_numar.$error.maxlength">
+                        Your field Numar cannot be longer than 50 characters
+                    </p>
+            </div>
+        </div>
+    </div>
+    <!-- end field 9 -->
+        </div><!--from i+1%entityLayout -->
+        <div class="row m0">
+        <div class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_lucrare.lucrare_numarPagini.$dirty && formCreateOrEdit_lucrare.lucrare_numarPagini.$valid, 'has-error': formCreateOrEdit_lucrare.lucrare_numarPagini.$dirty && formCreateOrEdit_lucrare.lucrare_numarPagini.$invalid}">
+
+                <label>NumarPagini</label>
+                <input type="text" class="form-control" name="lucrare_numarPagini" placeholder="NumarPagini" ng-model="lucrare.data.numarPagini"ng-minlength=1 ng-maxlength=50 maxlength="50" >
+
+                <div ng-show="formCreateOrEdit_lucrare.lucrare_numarPagini.$dirty && formCreateOrEdit_lucrare.lucrare_numarPagini.$invalid">
+                    <p class="help-block" ng-show="formCreateOrEdit_lucrare.lucrare_numarPagini.$error.minlength">
+                        Your field NumarPagini is required to be at least 1 character
+                    </p>
+                    <p class="help-block"
+                    ng-show="formCreateOrEdit_lucrare.lucrare_numarPagini.$error.maxlength">
+                        Your field NumarPagini cannot be longer than 50 characters
+                    </p>
+            </div>
+        </div>
+    </div>
+    <!-- end field 10 -->
+
+        <div class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_lucrare.lucrare_editura.$dirty && formCreateOrEdit_lucrare.lucrare_editura.$valid, 'has-error': formCreateOrEdit_lucrare.lucrare_editura.$dirty && formCreateOrEdit_lucrare.lucrare_editura.$invalid}">
+
+                <label>Editura</label>
+                <input type="text" class="form-control" name="lucrare_editura" placeholder="Editura" ng-model="lucrare.data.editura"ng-minlength=1 ng-maxlength=50 maxlength="50" >
+
+                <div ng-show="formCreateOrEdit_lucrare.lucrare_editura.$dirty && formCreateOrEdit_lucrare.lucrare_editura.$invalid">
+                    <p class="help-block" ng-show="formCreateOrEdit_lucrare.lucrare_editura.$error.minlength">
+                        Your field Editura is required to be at least 1 character
+                    </p>
+                    <p class="help-block"
+                    ng-show="formCreateOrEdit_lucrare.lucrare_editura.$error.maxlength">
+                        Your field Editura cannot be longer than 50 characters
+                    </p>
+            </div>
+        </div>
+    </div>
+    <!-- end field 11 -->
+        </div><!--from i+1%entityLayout -->
+        <div class="row m0">
+        <div class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_lucrare.lucrare_wos.$dirty && formCreateOrEdit_lucrare.lucrare_wos.$valid, 'has-error': formCreateOrEdit_lucrare.lucrare_wos.$dirty && formCreateOrEdit_lucrare.lucrare_wos.$invalid}">
+
+                <label>Wos</label>
+                <input type="text" class="form-control" name="lucrare_wos" placeholder="Wos" ng-model="lucrare.data.wos"ng-minlength=1 ng-maxlength=50 maxlength="50" >
+
+                <div ng-show="formCreateOrEdit_lucrare.lucrare_wos.$dirty && formCreateOrEdit_lucrare.lucrare_wos.$invalid">
+                    <p class="help-block" ng-show="formCreateOrEdit_lucrare.lucrare_wos.$error.minlength">
+                        Your field Wos is required to be at least 1 character
+                    </p>
+                    <p class="help-block"
+                    ng-show="formCreateOrEdit_lucrare.lucrare_wos.$error.maxlength">
+                        Your field Wos cannot be longer than 50 characters
+                    </p>
+            </div>
+        </div>
+    </div>
+    <!-- end field 12 -->
+
+        <div class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_lucrare.lucrare_issnJurnal.$dirty && formCreateOrEdit_lucrare.lucrare_issnJurnal.$valid, 'has-error': formCreateOrEdit_lucrare.lucrare_issnJurnal.$dirty && formCreateOrEdit_lucrare.lucrare_issnJurnal.$invalid}">
+
+                <label>IssnJurnal</label>
+                <input type="text" class="form-control" name="lucrare_issnJurnal" placeholder="IssnJurnal" ng-model="lucrare.data.issnJurnal"ng-minlength=1 ng-maxlength=50 maxlength="50" >
+
+                <div ng-show="formCreateOrEdit_lucrare.lucrare_issnJurnal.$dirty && formCreateOrEdit_lucrare.lucrare_issnJurnal.$invalid">
+                    <p class="help-block" ng-show="formCreateOrEdit_lucrare.lucrare_issnJurnal.$error.minlength">
+                        Your field IssnJurnal is required to be at least 1 character
+                    </p>
+                    <p class="help-block"
+                    ng-show="formCreateOrEdit_lucrare.lucrare_issnJurnal.$error.maxlength">
+                        Your field IssnJurnal cannot be longer than 50 characters
+                    </p>
+            </div>
+        </div>
+    </div>
+    <!-- end field 13 -->
+        </div><!--from i+1%entityLayout -->
+        <div class="row m0">
+        <div class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_lucrare.lucrare_capitole.$dirty && formCreateOrEdit_lucrare.lucrare_capitole.$valid, 'has-error': formCreateOrEdit_lucrare.lucrare_capitole.$dirty && formCreateOrEdit_lucrare.lucrare_capitole.$invalid}">
+
+                <label>Capitole</label>
+                <input type="text" class="form-control" name="lucrare_capitole" placeholder="Capitole" ng-model="lucrare.data.capitole"ng-minlength=1 ng-maxlength=50 maxlength="50" >
+
+                <div ng-show="formCreateOrEdit_lucrare.lucrare_capitole.$dirty && formCreateOrEdit_lucrare.lucrare_capitole.$invalid">
+                    <p class="help-block" ng-show="formCreateOrEdit_lucrare.lucrare_capitole.$error.minlength">
+                        Your field Capitole is required to be at least 1 character
+                    </p>
+                    <p class="help-block"
+                    ng-show="formCreateOrEdit_lucrare.lucrare_capitole.$error.maxlength">
+                        Your field Capitole cannot be longer than 50 characters
+                    </p>
+            </div>
+        </div>
+    </div>
+    <!-- end field 14 -->
+
+        <div class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_lucrare.lucrare_rezultat.$dirty && formCreateOrEdit_lucrare.lucrare_rezultat.$valid, 'has-error': formCreateOrEdit_lucrare.lucrare_rezultat.$dirty && formCreateOrEdit_lucrare.lucrare_rezultat.$invalid}">
+
+                <label>Rezultat</label>
+                <input type="text" class="form-control" name="lucrare_rezultat" placeholder="Rezultat" ng-model="lucrare.data.rezultat"ng-minlength=1 ng-maxlength=50 maxlength="50" >
+
+                <div ng-show="formCreateOrEdit_lucrare.lucrare_rezultat.$dirty && formCreateOrEdit_lucrare.lucrare_rezultat.$invalid">
+                    <p class="help-block" ng-show="formCreateOrEdit_lucrare.lucrare_rezultat.$error.minlength">
+                        Your field Rezultat is required to be at least 1 character
+                    </p>
+                    <p class="help-block"
+                    ng-show="formCreateOrEdit_lucrare.lucrare_rezultat.$error.maxlength">
+                        Your field Rezultat cannot be longer than 50 characters
+                    </p>
+            </div>
+        </div>
+    </div>
+    <!-- end field 15 -->
+        </div><!--from i+1%entityLayout -->
+
+        <div class="row m0">
+        <div class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_lucrare.lucrare_qx.$dirty && formCreateOrEdit_lucrare.lucrare_qx.$valid, 'has-error': formCreateOrEdit_lucrare.lucrare_qx.$dirty && formCreateOrEdit_lucrare.lucrare_qx.$invalid}">
+
+                <label>Qx</label>
+                <input type="text" class="form-control" name="lucrare_qx" placeholder="Qx" ng-model="lucrare.data.qx"ng-minlength=1 ng-maxlength=50 maxlength="50" >
+
+                <div ng-show="formCreateOrEdit_lucrare.lucrare_qx.$dirty && formCreateOrEdit_lucrare.lucrare_qx.$invalid">
+                    <p class="help-block" ng-show="formCreateOrEdit_lucrare.lucrare_qx.$error.minlength">
+                        Your field Qx is required to be at least 1 character
+                    </p>
+                    <p class="help-block"
+                    ng-show="formCreateOrEdit_lucrare.lucrare_qx.$error.maxlength">
+                        Your field Qx cannot be longer than 50 characters
+                    </p>
+            </div>
+        </div>
+    </div>
+    <!-- end field 18 -->
+
+        <div class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_lucrare.lucrare_indexataDe.$dirty && formCreateOrEdit_lucrare.lucrare_indexataDe.$valid, 'has-error': formCreateOrEdit_lucrare.lucrare_indexataDe.$dirty && formCreateOrEdit_lucrare.lucrare_indexataDe.$invalid}">
+
+                <label>IndexataDe</label>
+                <input type="text" class="form-control" name="lucrare_indexataDe" placeholder="IndexataDe" ng-model="lucrare.data.indexataDe"ng-minlength=1 ng-maxlength=50 maxlength="50" >
+
+                <div ng-show="formCreateOrEdit_lucrare.lucrare_indexataDe.$dirty && formCreateOrEdit_lucrare.lucrare_indexataDe.$invalid">
+                    <p class="help-block" ng-show="formCreateOrEdit_lucrare.lucrare_indexataDe.$error.minlength">
+                        Your field IndexataDe is required to be at least 1 character
+                    </p>
+                    <p class="help-block"
+                    ng-show="formCreateOrEdit_lucrare.lucrare_indexataDe.$error.maxlength">
+                        Your field IndexataDe cannot be longer than 50 characters
+                    </p>
+            </div>
+        </div>
+    </div>
+    <!-- end field 19 -->
+        </div><!--from i+1%entityLayout --></div>
+        <div class="row m0">
+            <div class="mb15 col-md-6">
+                <div class="form-group">
+                    <label>Citari</label>
+
+                    <ui-select multiple ng-model="lucrare.data.citaris">
+                        <ui-select-match placeholder="Select citari...">{{$item.nrCitari}}</ui-select-match>
+                        <ui-select-choices
+                                repeat="citari in citaris | filter:$select.search">
+                            <div ng-bind-html="citari.nrCitari | highlight: $select.search"></div>
+                        </ui-select-choices>
+                    </ui-select>
+                </div>
+            </div>
+
+            <div class="mb15 col-md-6">
+                <div class="form-group">
+                    <label>Conferinta</label>
+
+                    <ui-select multiple ng-model="lucrare.data.conferintas">
+                        <ui-select-match placeholder="Select conferinta...">{{$item.denumire}}</ui-select-match>
+                        <ui-select-choices
+                                repeat="conferinta in conferintas | filter:$select.search">
+                            <div ng-bind-html="conferinta.denumire | highlight: $select.search"></div>
+                        </ui-select-choices>
+                    </ui-select>
+                </div>
+            </div>
+        </div>
+
+    <!-- end field 2 -->
+
+        <div class="row m0">
+            <div class="col-md-12 text-right mb15">
+                <button class="btn btn-warning" ng-click="lucrare.actions.back()">Cancel</button>
+                <button ng-disabled="formCreateOrEdit_lucrare.$invalid" class="btn btn-success" ng-click="lucrare.actions.createOrUpdate();formCreateOrEdit_lucrare.$setPristine();">Save</button>
+            </div>
+        </div>
+    </form>
+</div>
+<div>
+    <div class="modal fade" id="delete_lucrare_Confirmation">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="formDelete_lucrare">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title">Confirm delete operation</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Are you sure you want to delete this row ?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="row m0">
+                            <div class="col-md-12 text-right mb15">
+                                <button class="btn btn-warning" ng-click="lucrare.actions.back()">Cancel</button>
+                                <button ng-disabled="formCreateOrEdit_lucrare.$invalid" class="btn btn-danger" ng-click="lucrare.actions.confirmDelete()">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

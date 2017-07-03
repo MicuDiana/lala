@@ -1,0 +1,281 @@
+<div class="alert alert-success" ng-show="save.success" xmlns="http://www.w3.org/1999/html">
+    <strong>{{functionality}} saved!</strong>
+</div>
+<div class="alert alert-danger" ng-show="save.error">
+    <strong>An error has occurred!</strong> {{functionality}} could not be saved.
+</div>
+<div  ng-if="proiect.components.create||proiect.components.update">
+    <form name="formCreateOrEdit_proiect" role="form" ng-submit="proiect.actions.createOrUpdate()">
+        <input type="hidden" name="id" ng-model="proiect.data.id" readonly>
+        
+        <div class="row m0">
+        <div class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_proiect.proiect_tipProiect.$dirty && formCreateOrEdit_proiect.proiect_tipProiect.$valid, 'has-error': formCreateOrEdit_proiect.proiect_tipProiect.$dirty && formCreateOrEdit_proiect.proiect_tipProiect.$invalid}">
+                
+                <label>TipProiect</label>
+                <input type="text" class="form-control" name="proiect_tipProiect" placeholder="TipProiect" ng-model="proiect.data.tipProiect"ng-minlength=1 ng-maxlength=50 maxlength="50" required>
+                
+                <div ng-show="formCreateOrEdit_proiect.proiect_tipProiect.$dirty && formCreateOrEdit_proiect.proiect_tipProiect.$invalid">
+                    <p class="help-block" ng-show="formCreateOrEdit_proiect.proiect_tipProiect.$error.required">
+                        Your field TipProiect is required.
+                    </p><p class="help-block" ng-show="formCreateOrEdit_proiect.proiect_tipProiect.$error.minlength">
+                        Your field TipProiect is required to be at least 1 character
+                    </p>
+                    <p class="help-block"
+                    ng-show="formCreateOrEdit_proiect.proiect_tipProiect.$error.maxlength">
+                        Your field TipProiect cannot be longer than 50 characters
+                    </p>
+            </div>
+        </div>
+    </div>
+    <!-- end field 0 -->
+        
+        <div class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_proiect.proiect_titlu.$dirty && formCreateOrEdit_proiect.proiect_titlu.$valid, 'has-error': formCreateOrEdit_proiect.proiect_titlu.$dirty && formCreateOrEdit_proiect.proiect_titlu.$invalid}">
+                
+                <label>Titlu</label>
+                <input type="text" class="form-control" name="proiect_titlu" placeholder="Titlu" ng-model="proiect.data.titlu"ng-minlength=1 ng-maxlength=50 maxlength="50" required>
+                
+                <div ng-show="formCreateOrEdit_proiect.proiect_titlu.$dirty && formCreateOrEdit_proiect.proiect_titlu.$invalid">
+                    <p class="help-block" ng-show="formCreateOrEdit_proiect.proiect_titlu.$error.required">
+                        Your field Titlu is required.
+                    </p><p class="help-block" ng-show="formCreateOrEdit_proiect.proiect_titlu.$error.minlength">
+                        Your field Titlu is required to be at least 1 character
+                    </p>
+                    <p class="help-block"
+                    ng-show="formCreateOrEdit_proiect.proiect_titlu.$error.maxlength">
+                        Your field Titlu cannot be longer than 50 characters
+                    </p>
+            </div>
+        </div>
+    </div>
+    <!-- end field 1 -->
+        </div><!--from i+1%entityLayout -->
+        <div class="row m0">
+        <div class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_proiect.proiect_acronim.$dirty && formCreateOrEdit_proiect.proiect_acronim.$valid, 'has-error': formCreateOrEdit_proiect.proiect_acronim.$dirty && formCreateOrEdit_proiect.proiect_acronim.$invalid}">
+                
+                <label>Acronim</label>
+                <input type="text" class="form-control" name="proiect_acronim" placeholder="Acronim" ng-model="proiect.data.acronim"ng-minlength=1 ng-maxlength=50 maxlength="50" required>
+                
+                <div ng-show="formCreateOrEdit_proiect.proiect_acronim.$dirty && formCreateOrEdit_proiect.proiect_acronim.$invalid">
+                    <p class="help-block" ng-show="formCreateOrEdit_proiect.proiect_acronim.$error.required">
+                        Your field Acronim is required.
+                    </p><p class="help-block" ng-show="formCreateOrEdit_proiect.proiect_acronim.$error.minlength">
+                        Your field Acronim is required to be at least 1 character
+                    </p>
+                    <p class="help-block"
+                    ng-show="formCreateOrEdit_proiect.proiect_acronim.$error.maxlength">
+                        Your field Acronim cannot be longer than 50 characters
+                    </p>
+            </div>
+        </div>
+    </div>
+    <!-- end field 2 -->
+        
+        <div class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_proiect.proiect_dataIncepere.$dirty && formCreateOrEdit_proiect.proiect_dataIncepere.$valid, 'has-error': formCreateOrEdit_proiect.proiect_dataIncepere.$dirty && formCreateOrEdit_proiect.proiect_dataIncepere.$invalid}">
+                
+                <label>DataIncepere</label>
+                <p class="input-group">
+                  <input type="text" class="form-control" is-open="proiect.isDataIncepereOpened"  placeholder="DataIncepere" datepicker-popup="{{dateOptions.format}}" datepicker-options="dateOptions" ng-model="proiect.data.dataIncepere"  close-text="Inchide" />
+                  <span class="input-group-btn">
+                    <button type="button" class="btn btn-default" ng-click="openDataIncepere($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                  </span>
+                </p>
+                
+                
+        </div>
+    </div>
+    <!-- end field 3 -->
+        </div><!--from i+1%entityLayout -->
+        <div class="row m0">
+        <div class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_proiect.proiect_dataFinalizare.$dirty && formCreateOrEdit_proiect.proiect_dataFinalizare.$valid, 'has-error': formCreateOrEdit_proiect.proiect_dataFinalizare.$dirty && formCreateOrEdit_proiect.proiect_dataFinalizare.$invalid}">
+                
+                <label>DataFinalizare</label>
+                <p class="input-group">
+                  <input type="text" class="form-control" is-open="proiect.isDataFinalizareOpened"  placeholder="DataFinalizare" datepicker-popup="{{dateOptions.format}}" datepicker-options="dateOptions" ng-model="proiect.data.dataFinalizare"  close-text="Inchide" />
+                  <span class="input-group-btn">
+                    <button type="button" class="btn btn-default" ng-click="openDataFinalizare($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                  </span>
+                </p>
+                
+                
+        </div>
+    </div>
+    <!-- end field 4 -->
+        
+        <div class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_proiect.proiect_beneficiar.$dirty && formCreateOrEdit_proiect.proiect_beneficiar.$valid, 'has-error': formCreateOrEdit_proiect.proiect_beneficiar.$dirty && formCreateOrEdit_proiect.proiect_beneficiar.$invalid}">
+                
+                <label>Beneficiar</label>
+                <input type="text" class="form-control" name="proiect_beneficiar" placeholder="Beneficiar" ng-model="proiect.data.beneficiar"ng-minlength=1 ng-maxlength=50 maxlength="50" >
+                
+                <div ng-show="formCreateOrEdit_proiect.proiect_beneficiar.$dirty && formCreateOrEdit_proiect.proiect_beneficiar.$invalid">
+                    <p class="help-block" ng-show="formCreateOrEdit_proiect.proiect_beneficiar.$error.minlength">
+                        Your field Beneficiar is required to be at least 1 character
+                    </p>
+                    <p class="help-block"
+                    ng-show="formCreateOrEdit_proiect.proiect_beneficiar.$error.maxlength">
+                        Your field Beneficiar cannot be longer than 50 characters
+                    </p>
+            </div>
+        </div>
+    </div>
+    <!-- end field 5 -->
+        </div><!--from i+1%entityLayout -->
+        <div class="row m0">
+        <div class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_proiect.proiect_program.$dirty && formCreateOrEdit_proiect.proiect_program.$valid, 'has-error': formCreateOrEdit_proiect.proiect_program.$dirty && formCreateOrEdit_proiect.proiect_program.$invalid}">
+                
+                <label>Program</label>
+                <input type="text" class="form-control" name="proiect_program" placeholder="Program" ng-model="proiect.data.program"ng-minlength=1 ng-maxlength=50 maxlength="50" >
+                
+                <div ng-show="formCreateOrEdit_proiect.proiect_program.$dirty && formCreateOrEdit_proiect.proiect_program.$invalid">
+                    <p class="help-block" ng-show="formCreateOrEdit_proiect.proiect_program.$error.minlength">
+                        Your field Program is required to be at least 1 character
+                    </p>
+                    <p class="help-block"
+                    ng-show="formCreateOrEdit_proiect.proiect_program.$error.maxlength">
+                        Your field Program cannot be longer than 50 characters
+                    </p>
+            </div>
+        </div>
+    </div>
+    <!-- end field 6 -->
+        
+        <div class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_proiect.proiect_numarContract.$dirty && formCreateOrEdit_proiect.proiect_numarContract.$valid, 'has-error': formCreateOrEdit_proiect.proiect_numarContract.$dirty && formCreateOrEdit_proiect.proiect_numarContract.$invalid}">
+                
+                <label>NumarContract</label>
+                <input type="text" class="form-control" name="proiect_numarContract" placeholder="NumarContract" ng-model="proiect.data.numarContract"ng-minlength=1 ng-maxlength=50 maxlength="50" >
+                
+                <div ng-show="formCreateOrEdit_proiect.proiect_numarContract.$dirty && formCreateOrEdit_proiect.proiect_numarContract.$invalid">
+                    <p class="help-block" ng-show="formCreateOrEdit_proiect.proiect_numarContract.$error.minlength">
+                        Your field NumarContract is required to be at least 1 character
+                    </p>
+                    <p class="help-block"
+                    ng-show="formCreateOrEdit_proiect.proiect_numarContract.$error.maxlength">
+                        Your field NumarContract cannot be longer than 50 characters
+                    </p>
+            </div>
+        </div>
+    </div>
+    <!-- end field 7 -->
+        </div><!--from i+1%entityLayout -->
+        <div class="row m0">
+        <div class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_proiect.proiect_coordonator.$dirty && formCreateOrEdit_proiect.proiect_coordonator.$valid, 'has-error': formCreateOrEdit_proiect.proiect_coordonator.$dirty && formCreateOrEdit_proiect.proiect_coordonator.$invalid}">
+                
+                <label>Coordonator</label>
+                <input type="text" class="form-control" name="proiect_coordonator" placeholder="Coordonator" ng-model="proiect.data.coordonator"ng-minlength=1 ng-maxlength=50 maxlength="50" >
+                
+                <div ng-show="formCreateOrEdit_proiect.proiect_coordonator.$dirty && formCreateOrEdit_proiect.proiect_coordonator.$invalid">
+                    <p class="help-block" ng-show="formCreateOrEdit_proiect.proiect_coordonator.$error.minlength">
+                        Your field Coordonator is required to be at least 1 character
+                    </p>
+                    <p class="help-block"
+                    ng-show="formCreateOrEdit_proiect.proiect_coordonator.$error.maxlength">
+                        Your field Coordonator cannot be longer than 50 characters
+                    </p>
+            </div>
+        </div>
+    </div>
+    <!-- end field 8 -->
+        
+        <div class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_proiect.proiect_calitate.$dirty && formCreateOrEdit_proiect.proiect_calitate.$valid, 'has-error': formCreateOrEdit_proiect.proiect_calitate.$dirty && formCreateOrEdit_proiect.proiect_calitate.$invalid}">
+                
+                <label>Calitate</label>
+                <input type="text" class="form-control" name="proiect_calitate" placeholder="Calitate" ng-model="proiect.data.calitate"ng-minlength=1 ng-maxlength=50 maxlength="50" >
+                
+                <div ng-show="formCreateOrEdit_proiect.proiect_calitate.$dirty && formCreateOrEdit_proiect.proiect_calitate.$invalid">
+                    <p class="help-block" ng-show="formCreateOrEdit_proiect.proiect_calitate.$error.minlength">
+                        Your field Calitate is required to be at least 1 character
+                    </p>
+                    <p class="help-block"
+                    ng-show="formCreateOrEdit_proiect.proiect_calitate.$error.maxlength">
+                        Your field Calitate cannot be longer than 50 characters
+                    </p>
+            </div>
+        </div>
+    </div>
+    <!-- end field 9 -->
+        </div><!--from i+1%entityLayout -->
+        <div class="row m0">
+        <div class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_proiect.proiect_parteneri.$dirty && formCreateOrEdit_proiect.proiect_parteneri.$valid, 'has-error': formCreateOrEdit_proiect.proiect_parteneri.$dirty && formCreateOrEdit_proiect.proiect_parteneri.$invalid}">
+                
+                <label>Parteneri</label>
+                <input type="text" class="form-control" name="proiect_parteneri" placeholder="Parteneri" ng-model="proiect.data.parteneri"ng-minlength=1 ng-maxlength=50 maxlength="50" >
+                
+                <div ng-show="formCreateOrEdit_proiect.proiect_parteneri.$dirty && formCreateOrEdit_proiect.proiect_parteneri.$invalid">
+                    <p class="help-block" ng-show="formCreateOrEdit_proiect.proiect_parteneri.$error.minlength">
+                        Your field Parteneri is required to be at least 1 character
+                    </p>
+                    <p class="help-block"
+                    ng-show="formCreateOrEdit_proiect.proiect_parteneri.$error.maxlength">
+                        Your field Parteneri cannot be longer than 50 characters
+                    </p>
+            </div>
+        </div>
+    </div>
+    <!-- end field 10 -->
+        
+        <div class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_proiect.proiect_siteWeb.$dirty && formCreateOrEdit_proiect.proiect_siteWeb.$valid, 'has-error': formCreateOrEdit_proiect.proiect_siteWeb.$dirty && formCreateOrEdit_proiect.proiect_siteWeb.$invalid}">
+                
+                <label>SiteWeb</label>
+                <input type="text" class="form-control" name="proiect_siteWeb" placeholder="SiteWeb" ng-model="proiect.data.siteWeb"ng-minlength=1 ng-maxlength=50 maxlength="50" >
+                
+                <div ng-show="formCreateOrEdit_proiect.proiect_siteWeb.$dirty && formCreateOrEdit_proiect.proiect_siteWeb.$invalid">
+                    <p class="help-block" ng-show="formCreateOrEdit_proiect.proiect_siteWeb.$error.minlength">
+                        Your field SiteWeb is required to be at least 1 character
+                    </p>
+                    <p class="help-block"
+                    ng-show="formCreateOrEdit_proiect.proiect_siteWeb.$error.maxlength">
+                        Your field SiteWeb cannot be longer than 50 characters
+                    </p>
+            </div>
+        </div>
+    </div>
+    <!-- end field 11 -->
+        </div><!--from i+1%entityLayout --></div> 
+        
+    <!-- end field 2 -->
+
+        <div class="row m0">
+            <div class="col-md-12 text-right mb15">
+                <button class="btn btn-warning" ng-click="proiect.actions.back()">Cancel</button>
+                <button ng-disabled="formCreateOrEdit_proiect.$invalid" class="btn btn-success" ng-click="proiect.actions.createOrUpdate();formCreateOrEdit_proiect.$setPristine();">Save</button>
+            </div>
+        </div>
+    </form>
+</div>
+<div>
+    <div class="modal fade" id="delete_proiect_Confirmation">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="formDelete_proiect">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title">Confirm delete operation</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Are you sure you want to delete this row ?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="row m0">
+                            <div class="col-md-12 text-right mb15">
+                                <button class="btn btn-warning" ng-click="proiect.actions.back()">Cancel</button>
+                                <button ng-disabled="formCreateOrEdit_proiect.$invalid" class="btn btn-danger" ng-click="proiect.actions.confirmDelete()">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+
+<div ng-if="showCreateOrEdit && showDetails">
+    <div class="row m0">
+        <div>
+            <tabset>
+                
+                    <tab heading="lucrare" select="persoana.actions.redrawGrid('lucrare')">
+                        <div ng-if="showLucrare" include-static='views/lucrare/lucrareCrud.html'></div>
+                    </tab>
+                
+                    <tab heading="premiu" select="persoana.actions.redrawGrid('premiu')">
+                        <div ng-if="showPremiu" include-static='views/premiu/premiuCrud.html'></div>
+                    </tab>
+                
+                    <tab heading="organizareConferinte" select="persoana.actions.redrawGrid('organizareConferinte')">
+                        <div ng-if="showOrganizareConferinte" include-static='views/organizareConferinte/organizareConferinteCrud.html'></div>
+                    </tab>
+                
+                    <tab heading="membruAsocProf" select="persoana.actions.redrawGrid('membruAsocProf')">
+                        <div ng-if="showMembruAsocProf" include-static='views/membruAsocProf/membruAsocProfCrud.html'></div>
+                    </tab>
+                
+            </tabset>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,177 @@
+<div class="alert alert-success" ng-show="save.success" xmlns="http://www.w3.org/1999/html">
+    <strong>{{functionality}} saved!</strong>
+</div>
+<div class="alert alert-danger" ng-show="save.error">
+    <strong>An error has occurred!</strong> {{functionality}} could not be saved.
+</div>
+<div  ng-if="limbaStraina.components.create||limbaStraina.components.update">
+    <form name="formCreateOrEdit_limbaStraina" role="form" ng-submit="limbaStraina.actions.createOrUpdate()">
+        <input type="hidden" name="id" ng-model="limbaStraina.data.id" readonly>
+        
+        <div class="row m0">
+        <div class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_limbaStraina.limbaStraina_limba.$dirty && formCreateOrEdit_limbaStraina.limbaStraina_limba.$valid, 'has-error': formCreateOrEdit_limbaStraina.limbaStraina_limba.$dirty && formCreateOrEdit_limbaStraina.limbaStraina_limba.$invalid}">
+                
+                <label>Limba</label>
+                <input type="text" class="form-control" name="limbaStraina_limba" placeholder="Limba" ng-model="limbaStraina.data.limba"ng-minlength=1 ng-maxlength=50 maxlength="50" required>
+                
+                <div ng-show="formCreateOrEdit_limbaStraina.limbaStraina_limba.$dirty && formCreateOrEdit_limbaStraina.limbaStraina_limba.$invalid">
+                    <p class="help-block" ng-show="formCreateOrEdit_limbaStraina.limbaStraina_limba.$error.required">
+                        Your field Limba is required.
+                    </p><p class="help-block" ng-show="formCreateOrEdit_limbaStraina.limbaStraina_limba.$error.minlength">
+                        Your field Limba is required to be at least 1 character
+                    </p>
+                    <p class="help-block"
+                    ng-show="formCreateOrEdit_limbaStraina.limbaStraina_limba.$error.maxlength">
+                        Your field Limba cannot be longer than 50 characters
+                    </p>
+            </div>
+        </div>
+    </div>
+    <!-- end field 0 -->
+        
+        <div class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_limbaStraina.limbaStraina_ascultare.$dirty && formCreateOrEdit_limbaStraina.limbaStraina_ascultare.$valid, 'has-error': formCreateOrEdit_limbaStraina.limbaStraina_ascultare.$dirty && formCreateOrEdit_limbaStraina.limbaStraina_ascultare.$invalid}">
+                
+                <label>Ascultare</label>
+                <select class="js-example-theme-multiple js-states form-control"  name="limbaStraina_ascultare" ng-options ="x for x in gradLimba"  ng-model="limbaStraina.data.ascultare"ng-minlength=1 ng-maxlength=50 maxlength="50" required>
+                </select>
+
+                <div ng-show="formCreateOrEdit_limbaStraina.limbaStraina_ascultare.$dirty && formCreateOrEdit_limbaStraina.limbaStraina_ascultare.$invalid">
+                    <p class="help-block" ng-show="formCreateOrEdit_limbaStraina.limbaStraina_ascultare.$error.required">
+                        Your field Ascultare is required.
+                    </p><p class="help-block" ng-show="formCreateOrEdit_limbaStraina.limbaStraina_ascultare.$error.minlength">
+                        Your field Ascultare is required to be at least 1 character
+                    </p>
+                    <p class="help-block"
+                    ng-show="formCreateOrEdit_limbaStraina.limbaStraina_ascultare.$error.maxlength">
+                        Your field Ascultare cannot be longer than 50 characters
+                    </p>
+            </div>
+        </div>
+    </div>
+    <!-- end field 1 -->
+        </div><!--from i+1%entityLayout -->
+        <div class="row m0">
+        <div class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_limbaStraina.limbaStraina_citire.$dirty && formCreateOrEdit_limbaStraina.limbaStraina_citire.$valid, 'has-error': formCreateOrEdit_limbaStraina.limbaStraina_citire.$dirty && formCreateOrEdit_limbaStraina.limbaStraina_citire.$invalid}">
+                
+                <label>Citire</label>
+                <select class="js-example-theme-multiple js-states form-control" name="limbaStraina_citire" placeholder="Citire"  ng-options ="x for x in gradLimba" ng-model="limbaStraina.data.citire"ng-minlength=1 ng-maxlength=50 maxlength="50" required>
+                </select>
+                <div ng-show="formCreateOrEdit_limbaStraina.limbaStraina_citire.$dirty && formCreateOrEdit_limbaStraina.limbaStraina_citire.$invalid">
+                    <p class="help-block" ng-show="formCreateOrEdit_limbaStraina.limbaStraina_citire.$error.required">
+                        Your field Citire is required.
+                    </p><p class="help-block" ng-show="formCreateOrEdit_limbaStraina.limbaStraina_citire.$error.minlength">
+                        Your field Citire is required to be at least 1 character
+                    </p>
+                    <p class="help-block"
+                    ng-show="formCreateOrEdit_limbaStraina.limbaStraina_citire.$error.maxlength">
+                        Your field Citire cannot be longer than 50 characters
+                    </p>
+            </div>
+        </div>
+    </div>
+    <!-- end field 2 -->
+        
+        <div class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_limbaStraina.limbaStraina_conversatie.$dirty && formCreateOrEdit_limbaStraina.limbaStraina_conversatie.$valid, 'has-error': formCreateOrEdit_limbaStraina.limbaStraina_conversatie.$dirty && formCreateOrEdit_limbaStraina.limbaStraina_conversatie.$invalid}">
+                
+                <label>Conversatie</label>
+                <select class="js-example-theme-multiple js-states form-control"  name="limbaStraina_conversatie" ng-options ="x for x in gradLimba" placeholder="Conversatie" ng-model="limbaStraina.data.conversatie"ng-minlength=1 ng-maxlength=50 maxlength="50" required>
+                </select>
+                <div ng-show="formCreateOrEdit_limbaStraina.limbaStraina_conversatie.$dirty && formCreateOrEdit_limbaStraina.limbaStraina_conversatie.$invalid">
+                    <p class="help-block" ng-show="formCreateOrEdit_limbaStraina.limbaStraina_conversatie.$error.required">
+                        Your field Conversatie is required.
+                    </p><p class="help-block" ng-show="formCreateOrEdit_limbaStraina.limbaStraina_conversatie.$error.minlength">
+                        Your field Conversatie is required to be at least 1 character
+                    </p>
+                    <p class="help-block"
+                    ng-show="formCreateOrEdit_limbaStraina.limbaStraina_conversatie.$error.maxlength">
+                        Your field Conversatie cannot be longer than 50 characters
+                    </p>
+            </div>
+        </div>
+    </div>
+    <!-- end field 3 -->
+        </div><!--from i+1%entityLayout -->
+        <div class="row m0">
+        <div class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_limbaStraina.limbaStraina_discurs.$dirty && formCreateOrEdit_limbaStraina.limbaStraina_discurs.$valid, 'has-error': formCreateOrEdit_limbaStraina.limbaStraina_discurs.$dirty && formCreateOrEdit_limbaStraina.limbaStraina_discurs.$invalid}">
+                
+                <label>Discurs</label>
+                <select  class="js-example-theme-multiple js-states form-control" name="limbaStraina_discurs" ng-options ="x for x in gradLimba" placeholder="Discurs" ng-model="limbaStraina.data.discurs"ng-minlength=1 ng-maxlength=50 maxlength="50" required>
+                </select>
+                <div ng-show="formCreateOrEdit_limbaStraina.limbaStraina_discurs.$dirty && formCreateOrEdit_limbaStraina.limbaStraina_discurs.$invalid">
+                    <p class="help-block" ng-show="formCreateOrEdit_limbaStraina.limbaStraina_discurs.$error.required">
+                        Your field Discurs is required.
+                    </p><p class="help-block" ng-show="formCreateOrEdit_limbaStraina.limbaStraina_discurs.$error.minlength">
+                        Your field Discurs is required to be at least 1 character
+                    </p>
+                    <p class="help-block"
+                    ng-show="formCreateOrEdit_limbaStraina.limbaStraina_discurs.$error.maxlength">
+                        Your field Discurs cannot be longer than 50 characters
+                    </p>
+            </div>
+        </div>
+    </div>
+    <!-- end field 4 -->
+        
+        <div class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_limbaStraina.limbaStraina_scriere.$dirty && formCreateOrEdit_limbaStraina.limbaStraina_scriere.$valid, 'has-error': formCreateOrEdit_limbaStraina.limbaStraina_scriere.$dirty && formCreateOrEdit_limbaStraina.limbaStraina_scriere.$invalid}">
+                
+                <label>Scriere</label>
+                <select class="js-example-theme-multiple js-states form-control" name="limbaStraina_scriere" ng-options ="x for x in gradLimba" placeholder="Scriere" ng-model="limbaStraina.data.scriere"ng-minlength=1 ng-maxlength=50 maxlength="50" required>
+                </select>
+                <div ng-show="formCreateOrEdit_limbaStraina.limbaStraina_scriere.$dirty && formCreateOrEdit_limbaStraina.limbaStraina_scriere.$invalid">
+                    <p class="help-block" ng-show="formCreateOrEdit_limbaStraina.limbaStraina_scriere.$error.required">
+                        Your field Scriere is required.
+                    </p><p class="help-block" ng-show="formCreateOrEdit_limbaStraina.limbaStraina_scriere.$error.minlength">
+                        Your field Scriere is required to be at least 1 character
+                    </p>
+                    <p class="help-block"
+                    ng-show="formCreateOrEdit_limbaStraina.limbaStraina_scriere.$error.maxlength">
+                        Your field Scriere cannot be longer than 50 characters
+                    </p>
+            </div>
+        </div>
+    </div>
+    <!-- end field 5 -->
+        </div><!--from i+1%entityLayout --></div> 
+        
+    <!-- end field 2 -->
+
+        <div class="row m0">
+            <div class="col-md-12 text-right mb15">
+                <button class="btn btn-warning" ng-click="limbaStraina.actions.back()">Cancel</button>
+                <button ng-disabled="formCreateOrEdit_limbaStraina.$invalid" class="btn btn-success" ng-click="limbaStraina.actions.createOrUpdate();formCreateOrEdit_limbaStraina.$setPristine();">Save</button>
+            </div>
+        </div>
+    </form>
+</div>
+<div>
+    <div class="modal fade" id="delete_limbaStraina_Confirmation">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="formDelete_limbaStraina">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title">Confirma <operatia></operatia></h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Esti sigur ca vrei sa stergi acest rand ?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="row m0">
+                            <div class="col-md-12 text-right mb15">
+                                <button class="btn btn-warning" ng-click="limbaStraina.actions.back()">Cancel</button>
+                                <button ng-disabled="formCreateOrEdit_limbaStraina.$invalid" class="btn btn-danger" ng-click="limbaStraina.actions.confirmDelete()">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

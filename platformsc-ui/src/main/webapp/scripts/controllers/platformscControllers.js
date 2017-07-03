@@ -1,0 +1,1 @@
+var platformscControllers=angular.module('platformscControllers',[]);

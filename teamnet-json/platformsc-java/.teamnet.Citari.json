@@ -1,0 +1,43 @@
+{
+    "relationships": [
+        {
+            "otherEntityModuleName": "platformsc-java",
+            "otherEntityName": "lucrare",
+            "otherEntityNameCapitalized": "Lucrare",
+            "otherEntityField": "id",
+            "changelogDate": "20170622154532",
+            "relationshipType": "many-to-many",
+            "ownerSide": false
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "an",
+            "fieldType": "Integer",
+            "fieldRequired": true,
+            "fieldNameCapitalized": "An",
+            "fieldNameUnderscored": "an",
+            "isNewField": false
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "nrCitari",
+            "fieldType": "Integer",
+            "fieldRequired": true,
+            "fieldNameCapitalized": "NrCitari",
+            "fieldNameUnderscored": "nr_citari",
+            "isNewField": false
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": false,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": false,
+    "changelogDate": "20170621183447",
+    "addFeatures": false,
+    "entityAddedInRoutes": true,
+    "layout": "2"
+}

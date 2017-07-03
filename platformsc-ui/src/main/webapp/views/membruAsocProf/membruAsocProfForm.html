@@ -1,0 +1,109 @@
+<div class="alert alert-success" ng-show="save.success" xmlns="http://www.w3.org/1999/html">
+    <strong>{{functionality}} saved!</strong>
+</div>
+<div class="alert alert-danger" ng-show="save.error">
+    <strong>An error has occurred!</strong> {{functionality}} could not be saved.
+</div>
+<div  ng-if="membruAsocProf.components.create||membruAsocProf.components.update">
+    <form name="formCreateOrEdit_membruAsocProf" role="form" ng-submit="membruAsocProf.actions.createOrUpdate()">
+        <input type="hidden" name="id" ng-model="membruAsocProf.data.id" readonly>
+        
+        <div class="row m0">
+        <div class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_membruAsocProf.membruAsocProf_international.$dirty && formCreateOrEdit_membruAsocProf.membruAsocProf_international.$valid, 'has-error': formCreateOrEdit_membruAsocProf.membruAsocProf_international.$dirty && formCreateOrEdit_membruAsocProf.membruAsocProf_international.$invalid}">
+                
+                <div class="checkbox-container">
+                    <input id="membruAsocProf_international"
+                           name="membruAsocProf_international"
+                           type="checkbox"
+                           ng-model="membruAsocProf.data.international">
+                    <label class="custom-select" for="membruAsocProf_international">
+                        International
+                    </label>
+                </div>
+                
+                <div ng-show="formCreateOrEdit_membruAsocProf.membruAsocProf_international.$dirty && formCreateOrEdit_membruAsocProf.membruAsocProf_international.$invalid">
+                    <p class="help-block" ng-show="formCreateOrEdit_membruAsocProf.membruAsocProf_international.$error.required">
+                        Your field International is required.
+                    </p>
+            </div>
+        </div>
+    </div>
+    <!-- end field 0 -->
+        
+        <div class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_membruAsocProf.membruAsocProf_asociatia.$dirty && formCreateOrEdit_membruAsocProf.membruAsocProf_asociatia.$valid, 'has-error': formCreateOrEdit_membruAsocProf.membruAsocProf_asociatia.$dirty && formCreateOrEdit_membruAsocProf.membruAsocProf_asociatia.$invalid}">
+                
+                <label>Asociatia</label>
+                <input type="text" class="form-control" name="membruAsocProf_asociatia" placeholder="Asociatia" ng-model="membruAsocProf.data.asociatia"ng-minlength=1 ng-maxlength=50 maxlength="50" >
+                
+                <div ng-show="formCreateOrEdit_membruAsocProf.membruAsocProf_asociatia.$dirty && formCreateOrEdit_membruAsocProf.membruAsocProf_asociatia.$invalid">
+                    <p class="help-block" ng-show="formCreateOrEdit_membruAsocProf.membruAsocProf_asociatia.$error.minlength">
+                        Your field Asociatia is required to be at least 1 character
+                    </p>
+                    <p class="help-block"
+                    ng-show="formCreateOrEdit_membruAsocProf.membruAsocProf_asociatia.$error.maxlength">
+                        Your field Asociatia cannot be longer than 50 characters
+                    </p>
+            </div>
+        </div>
+    </div>
+    <!-- end field 1 -->
+        </div><!--from i+1%entityLayout -->
+        <div class="row m0">
+        <div class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_membruAsocProf.membruAsocProf_perioada.$dirty && formCreateOrEdit_membruAsocProf.membruAsocProf_perioada.$valid, 'has-error': formCreateOrEdit_membruAsocProf.membruAsocProf_perioada.$dirty && formCreateOrEdit_membruAsocProf.membruAsocProf_perioada.$invalid}">
+                
+                <label>Perioada</label>
+                <input type="text" class="form-control" name="membruAsocProf_perioada" placeholder="Perioada" ng-model="membruAsocProf.data.perioada"ng-minlength=1 ng-maxlength=50 maxlength="50" >
+                
+                <div ng-show="formCreateOrEdit_membruAsocProf.membruAsocProf_perioada.$dirty && formCreateOrEdit_membruAsocProf.membruAsocProf_perioada.$invalid">
+                    <p class="help-block" ng-show="formCreateOrEdit_membruAsocProf.membruAsocProf_perioada.$error.minlength">
+                        Your field Perioada is required to be at least 1 character
+                    </p>
+                    <p class="help-block"
+                    ng-show="formCreateOrEdit_membruAsocProf.membruAsocProf_perioada.$error.maxlength">
+                        Your field Perioada cannot be longer than 50 characters
+                    </p>
+            </div>
+        </div>
+    </div>
+    <!-- end field 2 -->
+        </div><!--from fields.length%entityLayout --></div> 
+        
+    <!-- end field 2 -->
+
+        <div class="row m0">
+            <div class="col-md-12 text-right mb15">
+                <button class="btn btn-warning" ng-click="membruAsocProf.actions.back()">Cancel</button>
+                <button ng-disabled="formCreateOrEdit_membruAsocProf.$invalid" class="btn btn-success" ng-click="membruAsocProf.actions.createOrUpdate();formCreateOrEdit_membruAsocProf.$setPristine();">Save</button>
+            </div>
+        </div>
+    </form>
+</div>
+<div>
+    <div class="modal fade" id="delete_membruAsocProf_Confirmation">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="formDelete_membruAsocProf">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title">Confirm delete operation</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Are you sure you want to delete this row ?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="row m0">
+                            <div class="col-md-12 text-right mb15">
+                                <button class="btn btn-warning" ng-click="membruAsocProf.actions.back()">Cancel</button>
+                                <button ng-disabled="formCreateOrEdit_membruAsocProf.$invalid" class="btn btn-danger" ng-click="membruAsocProf.actions.confirmDelete()">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

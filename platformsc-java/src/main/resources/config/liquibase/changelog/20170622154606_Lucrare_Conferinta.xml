@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+
+    <changeSet id="20170622154606" author="teamnet">
+        <createTable tableName="T_LUCRARE_T_CONFERINTA">
+            <column name="lucrare_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="conferinta_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <addPrimaryKey columnNames="lucrare_id, conferinta_id"
+                       tableName="T_LUCRARE_T_CONFERINTA"/>
+
+        <addForeignKeyConstraint baseColumnNames="lucrare_id"
+                                 baseTableName="T_LUCRARE_T_CONFERINTA"
+                                 constraintName="fk_conferinta_lucrare_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="T_LUCRARE"/>
+
+        <addForeignKeyConstraint baseColumnNames="conferinta_id"
+                                 baseTableName="T_LUCRARE_T_CONFERINTA"
+                                 constraintName="fk_lucrare_conferinta_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="T_CONFERINTA"/>
+    </changeSet>
+
+</databaseChangeLog>

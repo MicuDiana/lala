@@ -1,0 +1,1 @@
+var platformscDirectives=angular.module('platformscDirectives',[]);

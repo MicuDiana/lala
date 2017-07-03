@@ -1,0 +1,73 @@
+{
+    "relationships": [
+        {
+            "otherEntityModuleName": "platformsc-java",
+            "otherEntityName": "lucrare",
+            "otherEntityNameCapitalized": "Lucrare",
+            "otherEntityField": "id",
+            "changelogDate": "20170622154606",
+            "relationshipType": "many-to-many",
+            "ownerSide": false
+        },
+        {
+            "otherEntityModuleName": "platformsc-java",
+            "otherEntityName": "organizareConferinte",
+            "otherEntityNameCapitalized": "OrganizareConferinte",
+            "otherEntityField": "id",
+            "changelogDate": "20170622155803",
+            "relationshipType": "one-to-one",
+            "ownerSide": true
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "denumire",
+            "fieldType": "String",
+            "fieldLength": 50,
+            "fieldRequired": true,
+            "fieldNameCapitalized": "Denumire",
+            "fieldNameUnderscored": "denumire",
+            "isNewField": false
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "locatie",
+            "fieldType": "String",
+            "fieldLength": 50,
+            "fieldRequired": true,
+            "fieldNameCapitalized": "Locatie",
+            "fieldNameUnderscored": "locatie",
+            "isNewField": false
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "tara",
+            "fieldType": "String",
+            "fieldLength": 50,
+            "fieldRequired": true,
+            "fieldNameCapitalized": "Tara",
+            "fieldNameUnderscored": "tara",
+            "isNewField": false
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "data",
+            "fieldType": "LocalDate",
+            "fieldRequired": true,
+            "fieldNameCapitalized": "Data",
+            "fieldNameUnderscored": "data",
+            "isNewField": false
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": true,
+    "fieldsContainCustomTime": true,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": false,
+    "changelogDate": "20170621182012",
+    "addFeatures": false,
+    "entityAddedInRoutes": true,
+    "layout": "2"
+}

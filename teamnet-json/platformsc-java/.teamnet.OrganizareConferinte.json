@@ -1,0 +1,44 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "otherEntityName": "persoana",
+            "otherEntityModuleName": "platformsc-java",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "Persoana",
+            "otherEntityField": "nume",
+            "changelogDate": "20170622155729"
+        },
+        {
+            "relationshipId": 2,
+            "otherEntityName": "conferinta",
+            "otherEntityModuleName": "platformsc-java",
+            "relationshipType": "one-to-one",
+            "otherEntityNameCapitalized": "Conferinta",
+            "ownerSide": false,
+            "changelogDate": "20170622155803"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "calitatea",
+            "fieldType": "String",
+            "fieldLength": 50,
+            "fieldRequired": true,
+            "fieldNameCapitalized": "Calitatea",
+            "fieldNameUnderscored": "calitatea",
+            "isNewField": false
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": false,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": false,
+    "addFeatures": false,
+    "changelogDate": "20170621183843",
+    "entityAddedInRoutes": true,
+    "layout": "2"
+}

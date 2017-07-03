@@ -1,0 +1,37 @@
+<div ng-show="limbaStraina.components.list">
+    <div class="row m0">
+        <div class="col-md-12 text-left mb15">
+            <app-grid
+                    id="limbaStraina.grid.id"
+                    url="limbaStraina.grid.url"
+                    refresh-event="limbaStraina.event.refresh"
+                    column-metadata="limbaStraina.grid.columnMetadata"
+                    refresh-function="limbaStraina.actions.refresh"
+                    search-terms="searchTerms"
+                    custom-options="limbaStraina.grid.customOptions"
+                    action-event="limbaStraina.event.list"
+                    get-selected="limbaStraina.actions.selected"
+                    >
+            </app-grid>
+        </div>
+    </div>
+    <div class="row m0">
+        <div class="col-md-12 text-right mb15">
+            <button class="btn btn-primary"
+                    ng-show="limbaStraina.buttons.add"
+                    ng-click="limbaStraina.actions.showAdd()">
+                Adauga
+            </button>
+            <button class="btn btn-info"
+                    ng-show="limbaStraina.buttons.edit"
+                    ng-click="limbaStraina.actions.showEdit()">
+                Editeaza
+            </button>
+            <button class="btn btn-danger"
+                    ng-show="limbaStraina.buttons.delete"
+                    ng-click="limbaStraina.actions.showDelete()">
+                Sterge
+            </button>
+        </div>
+    </div>
+</div>

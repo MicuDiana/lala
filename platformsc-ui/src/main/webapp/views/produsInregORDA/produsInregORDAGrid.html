@@ -1,0 +1,37 @@
+<div ng-show="produsInregORDA.components.list">
+    <div class="row m0">
+        <div class="col-md-12 text-left mb15">
+            <app-grid
+                    id="produsInregORDA.grid.id"
+                    url="produsInregORDA.grid.url"
+                    refresh-event="produsInregORDA.event.refresh"
+                    column-metadata="produsInregORDA.grid.columnMetadata"
+                    refresh-function="produsInregORDA.actions.refresh"
+                    search-terms="searchTerms"
+                    custom-options="produsInregORDA.grid.customOptions"
+                    action-event="produsInregORDA.event.list"
+                    get-selected="produsInregORDA.actions.selected"
+                    >
+            </app-grid>
+        </div>
+    </div>
+    <div class="row m0">
+        <div class="col-md-12 text-right mb15">
+            <button class="btn btn-primary"
+                    ng-show="produsInregORDA.buttons.add"
+                    ng-click="produsInregORDA.actions.showAdd()">
+                Adauga
+            </button>
+            <button class="btn btn-info"
+                    ng-show="produsInregORDA.buttons.edit"
+                    ng-click="produsInregORDA.actions.showEdit()">
+                Editeaza
+            </button>
+            <button class="btn btn-danger"
+                    ng-show="produsInregORDA.buttons.delete"
+                    ng-click="produsInregORDA.actions.showDelete()">
+                Sterge
+            </button>
+        </div>
+    </div>
+</div>

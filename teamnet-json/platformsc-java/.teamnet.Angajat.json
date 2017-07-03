@@ -1,0 +1,189 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "otherEntityName": "limbaStraina",
+            "otherEntityModuleName": "platformsc-java",
+            "relationshipType": "many-to-many",
+            "otherEntityNameCapitalized": "LimbaStraina",
+            "otherEntityField": "limba",
+            "ownerSide": true,
+            "changelogDate": "20170622011921"
+        },
+        {
+            "otherEntityModuleName": "platformsc-java",
+            "otherEntityName": "persoana",
+            "otherEntityNameCapitalized": "Persoana",
+            "otherEntityField": "id",
+            "changelogDate": "20170622015340",
+            "relationshipType": "one-to-one",
+            "ownerSide": false
+        },
+        {
+            "otherEntityModuleName": "platformsc-java",
+            "otherEntityName": "membruRedactie",
+            "otherEntityNameCapitalized": "MembruRedactie",
+            "otherEntityField": "id",
+            "changelogDate": "20170622160526",
+            "relationshipType": "one-to-many"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "gradStiintific",
+            "fieldType": "String",
+            "fieldLength": 50,
+            "fieldRequired": true,
+            "fieldNameCapitalized": "GradStiintific",
+            "fieldNameUnderscored": "grad_stiintific",
+            "isNewField": false
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "gradDidactic",
+            "fieldType": "String",
+            "fieldLength": 50,
+            "fieldRequired": true,
+            "fieldNameCapitalized": "GradDidactic",
+            "fieldNameUnderscored": "grad_didactic",
+            "isNewField": false
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "facultateAbsolvita",
+            "fieldType": "String",
+            "fieldLength": 50,
+            "fieldRequired": true,
+            "fieldNameCapitalized": "FacultateAbsolvita",
+            "fieldNameUnderscored": "facultate_absolvita",
+            "isNewField": false
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "specializare",
+            "fieldType": "String",
+            "fieldLength": 50,
+            "fieldRequired": true,
+            "fieldNameCapitalized": "Specializare",
+            "fieldNameUnderscored": "specializare",
+            "isNewField": false
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "areDoctorat",
+            "fieldType": "Boolean",
+            "fieldRequired": true,
+            "fieldNameCapitalized": "AreDoctorat",
+            "fieldNameUnderscored": "are_doctorat",
+            "isNewField": false
+        },
+        {
+            "fieldId": 6,
+            "fieldName": "dataIncepereDoctorat",
+            "fieldType": "LocalDate",
+            "fieldRequired": false,
+            "fieldNameCapitalized": "DataIncepereDoctorat",
+            "fieldNameUnderscored": "data_incepere_doctorat",
+            "isNewField": false
+        },
+        {
+            "fieldId": 7,
+            "fieldName": "dataFinalizareDoctorat",
+            "fieldType": "LocalDate",
+            "fieldRequired": false,
+            "fieldNameCapitalized": "DataFinalizareDoctorat",
+            "fieldNameUnderscored": "data_finalizare_doctorat",
+            "isNewField": false
+        },
+        {
+            "fieldId": 8,
+            "fieldName": "titluTezaDoctorat",
+            "fieldType": "String",
+            "fieldLength": 50,
+            "fieldRequired": false,
+            "fieldNameCapitalized": "TitluTezaDoctorat",
+            "fieldNameUnderscored": "titlu_teza_doctorat",
+            "isNewField": false
+        },
+        {
+            "fieldId": 9,
+            "fieldName": "universitateDoctorat",
+            "fieldType": "String",
+            "fieldLength": 50,
+            "fieldRequired": false,
+            "fieldNameCapitalized": "UniversitateDoctorat",
+            "fieldNameUnderscored": "universitate_doctorat",
+            "isNewField": false
+        },
+        {
+            "fieldId": 10,
+            "fieldName": "coordonatorDoctorat",
+            "fieldType": "Boolean",
+            "fieldRequired": false,
+            "fieldNameCapitalized": "CoordonatorDoctorat",
+            "fieldNameUnderscored": "coordonator_doctorat",
+            "isNewField": false
+        },
+        {
+            "fieldId": 11,
+            "fieldName": "competente",
+            "fieldType": "String",
+            "fieldLength": 50,
+            "fieldRequired": false,
+            "fieldNameCapitalized": "Competente",
+            "fieldNameUnderscored": "competente",
+            "isNewField": false
+        },
+        {
+            "fieldId": 12,
+            "fieldName": "domeniiDeInteres",
+            "fieldType": "String",
+            "fieldLength": 50,
+            "fieldRequired": false,
+            "fieldNameCapitalized": "DomeniiDeInteres",
+            "fieldNameUnderscored": "domenii_de_interes",
+            "isNewField": false
+        },
+        {
+            "fieldId": 13,
+            "fieldName": "cursuriSpecializare",
+            "fieldType": "String",
+            "fieldLength": 50,
+            "fieldRequired": false,
+            "fieldNameCapitalized": "CursuriSpecializare",
+            "fieldNameUnderscored": "cursuri_specializare",
+            "isNewField": false
+        },
+        {
+            "fieldId": 14,
+            "fieldName": "certificari",
+            "fieldType": "String",
+            "fieldLength": 50,
+            "fieldRequired": false,
+            "fieldNameCapitalized": "Certificari",
+            "fieldNameUnderscored": "certificari",
+            "isNewField": false
+        },
+        {
+            "fieldId": 15,
+            "fieldName": "alteInformatii",
+            "fieldType": "String",
+            "fieldLength": 50,
+            "fieldRequired": false,
+            "fieldNameCapitalized": "AlteInformatii",
+            "fieldNameUnderscored": "alte_informatii",
+            "isNewField": false
+        }
+    ],
+    "fieldsContainOwnerManyToMany": true,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": true,
+    "fieldsContainCustomTime": true,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": false,
+    "addFeatures": false,
+    "changelogDate": "20170621180914",
+    "entityAddedInRoutes": true,
+    "layout": "2"
+}

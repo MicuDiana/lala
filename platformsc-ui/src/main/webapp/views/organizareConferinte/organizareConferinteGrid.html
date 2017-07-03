@@ -1,0 +1,37 @@
+<div ng-show="organizareConferinte.components.list">
+    <div class="row m0">
+        <div class="col-md-12 text-left mb15">
+            <app-grid
+                    id="organizareConferinte.grid.id"
+                    url="organizareConferinte.grid.url"
+                    refresh-event="organizareConferinte.event.refresh"
+                    column-metadata="organizareConferinte.grid.columnMetadata"
+                    refresh-function="organizareConferinte.actions.refresh"
+                    search-terms="searchTerms"
+                    custom-options="organizareConferinte.grid.customOptions"
+                    action-event="organizareConferinte.event.list"
+                    get-selected="organizareConferinte.actions.selected"
+                    >
+            </app-grid>
+        </div>
+    </div>
+    <div class="row m0">
+        <div class="col-md-12 text-right mb15">
+            <button class="btn btn-primary"
+                    ng-show="organizareConferinte.buttons.add"
+                    ng-click="organizareConferinte.actions.showAdd()">
+                Adauga
+            </button>
+            <button class="btn btn-info"
+                    ng-show="organizareConferinte.buttons.edit"
+                    ng-click="organizareConferinte.actions.showEdit()">
+                Editeaza
+            </button>
+            <button class="btn btn-danger"
+                    ng-show="organizareConferinte.buttons.delete"
+                    ng-click="organizareConferinte.actions.showDelete()">
+                Sterge
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,149 @@
+<div class="alert alert-success" ng-show="save.success" xmlns="http://www.w3.org/1999/html">
+    <strong>{{functionality}} saved!</strong>
+</div>
+<div class="alert alert-danger" ng-show="save.error">
+    <strong>An error has occurred!</strong> {{functionality}} could not be saved.
+</div>
+<div  ng-if="conferinta.components.create||conferinta.components.update">
+    <form name="formCreateOrEdit_conferinta" role="form" ng-submit="conferinta.actions.createOrUpdate()">
+        <input type="hidden" name="id" ng-model="conferinta.data.id" readonly>
+        
+        <div class="row m0">
+        <div class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_conferinta.conferinta_denumire.$dirty && formCreateOrEdit_conferinta.conferinta_denumire.$valid, 'has-error': formCreateOrEdit_conferinta.conferinta_denumire.$dirty && formCreateOrEdit_conferinta.conferinta_denumire.$invalid}">
+                
+                <label>Denumire</label>
+                <input type="text" class="form-control" name="conferinta_denumire" placeholder="Denumire" ng-model="conferinta.data.denumire"ng-minlength=1 ng-maxlength=50 maxlength="50" required>
+                
+                <div ng-show="formCreateOrEdit_conferinta.conferinta_denumire.$dirty && formCreateOrEdit_conferinta.conferinta_denumire.$invalid">
+                    <p class="help-block" ng-show="formCreateOrEdit_conferinta.conferinta_denumire.$error.required">
+                        Your field Denumire is required.
+                    </p><p class="help-block" ng-show="formCreateOrEdit_conferinta.conferinta_denumire.$error.minlength">
+                        Your field Denumire is required to be at least 1 character
+                    </p>
+                    <p class="help-block"
+                    ng-show="formCreateOrEdit_conferinta.conferinta_denumire.$error.maxlength">
+                        Your field Denumire cannot be longer than 50 characters
+                    </p>
+            </div>
+        </div>
+    </div>
+    <!-- end field 0 -->
+        
+        <div class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_conferinta.conferinta_locatie.$dirty && formCreateOrEdit_conferinta.conferinta_locatie.$valid, 'has-error': formCreateOrEdit_conferinta.conferinta_locatie.$dirty && formCreateOrEdit_conferinta.conferinta_locatie.$invalid}">
+                
+                <label>Locatie</label>
+                <input type="text" class="form-control" name="conferinta_locatie" placeholder="Locatie" ng-model="conferinta.data.locatie"ng-minlength=1 ng-maxlength=50 maxlength="50" required>
+                
+                <div ng-show="formCreateOrEdit_conferinta.conferinta_locatie.$dirty && formCreateOrEdit_conferinta.conferinta_locatie.$invalid">
+                    <p class="help-block" ng-show="formCreateOrEdit_conferinta.conferinta_locatie.$error.required">
+                        Your field Locatie is required.
+                    </p><p class="help-block" ng-show="formCreateOrEdit_conferinta.conferinta_locatie.$error.minlength">
+                        Your field Locatie is required to be at least 1 character
+                    </p>
+                    <p class="help-block"
+                    ng-show="formCreateOrEdit_conferinta.conferinta_locatie.$error.maxlength">
+                        Your field Locatie cannot be longer than 50 characters
+                    </p>
+            </div>
+        </div>
+    </div>
+    <!-- end field 1 -->
+        </div><!--from i+1%entityLayout -->
+        <div class="row m0">
+        <div class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_conferinta.conferinta_tara.$dirty && formCreateOrEdit_conferinta.conferinta_tara.$valid, 'has-error': formCreateOrEdit_conferinta.conferinta_tara.$dirty && formCreateOrEdit_conferinta.conferinta_tara.$invalid}">
+                
+                <label>Tara</label>
+                <input type="text" class="form-control" name="conferinta_tara" placeholder="Tara" ng-model="conferinta.data.tara"ng-minlength=1 ng-maxlength=50 maxlength="50" required>
+                
+                <div ng-show="formCreateOrEdit_conferinta.conferinta_tara.$dirty && formCreateOrEdit_conferinta.conferinta_tara.$invalid">
+                    <p class="help-block" ng-show="formCreateOrEdit_conferinta.conferinta_tara.$error.required">
+                        Your field Tara is required.
+                    </p><p class="help-block" ng-show="formCreateOrEdit_conferinta.conferinta_tara.$error.minlength">
+                        Your field Tara is required to be at least 1 character
+                    </p>
+                    <p class="help-block"
+                    ng-show="formCreateOrEdit_conferinta.conferinta_tara.$error.maxlength">
+                        Your field Tara cannot be longer than 50 characters
+                    </p>
+            </div>
+        </div>
+    </div>
+    <!-- end field 2 -->
+        
+        <div class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_conferinta.conferinta_data.$dirty && formCreateOrEdit_conferinta.conferinta_data.$valid, 'has-error': formCreateOrEdit_conferinta.conferinta_data.$dirty && formCreateOrEdit_conferinta.conferinta_data.$invalid}">
+                
+                <label>Data</label>
+                <p class="input-group">
+                  <input type="text" class="form-control" is-open="conferinta.isDataOpened"  placeholder="Data" datepicker-popup="{{dateOptions.format}}" datepicker-options="dateOptions" ng-model="conferinta.data.data" required close-text="Inchide" />
+                  <span class="input-group-btn">
+                    <button type="button" class="btn btn-default" ng-click="openData($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                  </span>
+                </p>
+                
+                <div ng-show="formCreateOrEdit_conferinta.conferinta_data.$dirty && formCreateOrEdit_conferinta.conferinta_data.$invalid">
+                    <p class="help-block" ng-show="formCreateOrEdit_conferinta.conferinta_data.$error.required">
+                        Your field Data is required.
+                    </p>
+            </div>
+        </div>
+    </div>
+    <!-- end field 3 -->
+        </div><!--from i+1%entityLayout --></div> 
+        <div class="row m0">
+            <div class="mb15 col-md-6">
+                <div class="form-group">
+                    <label>Organizare Conferinte</label>
+
+                    <ui-select ng-model="conferinta.data.organizareConferinte"
+                               theme="selectize" >
+                        <ui-select-match placeholder="Select organizareConferinte...">
+                            {{$select.selected.id}}
+                        </ui-select-match>
+                        <ui-select-choices repeat="organizareConferinte in organizareConferintes  | filter: $select.search">
+                            <div ng-bind-html="organizareConferinte.id | highlight: $select.search"></div>
+                        </ui-select-choices>
+                    </ui-select>
+                </div>
+            </div>
+        </div>
+        
+    <!-- end field 2 -->
+
+        <div class="row m0">
+            <div class="col-md-12 text-right mb15">
+                <button class="btn btn-warning" ng-click="conferinta.actions.back()">Cancel</button>
+                <button ng-disabled="formCreateOrEdit_conferinta.$invalid" class="btn btn-success" ng-click="conferinta.actions.createOrUpdate();formCreateOrEdit_conferinta.$setPristine();">Save</button>
+            </div>
+        </div>
+    </form>
+</div>
+<div>
+    <div class="modal fade" id="delete_conferinta_Confirmation">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="formDelete_conferinta">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title">Confirm delete operation</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Are you sure you want to delete this row ?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="row m0">
+                            <div class="col-md-12 text-right mb15">
+                                <button class="btn btn-warning" ng-click="conferinta.actions.back()">Cancel</button>
+                                <button ng-disabled="formCreateOrEdit_conferinta.$invalid" class="btn btn-danger" ng-click="conferinta.actions.confirmDelete()">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

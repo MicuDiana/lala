@@ -1,0 +1,126 @@
+<div class="alert alert-success" ng-show="save.success" xmlns="http://www.w3.org/1999/html">
+    <strong>{{functionality}} saved!</strong>
+</div>
+<div class="alert alert-danger" ng-show="save.error">
+    <strong>An error has occurred!</strong> {{functionality}} could not be saved.
+</div>
+<div  ng-if="membruRedactie.components.create||membruRedactie.components.update">
+    <form name="formCreateOrEdit_membruRedactie" role="form" ng-submit="membruRedactie.actions.createOrUpdate()">
+        <input type="hidden" name="id" ng-model="membruRedactie.data.id" readonly>
+        
+        <div class="row m0">
+        <div class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_membruRedactie.membruRedactie_international.$dirty && formCreateOrEdit_membruRedactie.membruRedactie_international.$valid, 'has-error': formCreateOrEdit_membruRedactie.membruRedactie_international.$dirty && formCreateOrEdit_membruRedactie.membruRedactie_international.$invalid}">
+                
+                <div class="checkbox-container">
+                    <input id="membruRedactie_international"
+                           name="membruRedactie_international"
+                           type="checkbox"
+                           ng-model="membruRedactie.data.international">
+                    <label class="custom-select" for="membruRedactie_international">
+                        International
+                    </label>
+                </div>
+                
+                
+        </div>
+    </div>
+    <!-- end field 0 -->
+        
+        <div class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_membruRedactie.membruRedactie_perioada.$dirty && formCreateOrEdit_membruRedactie.membruRedactie_perioada.$valid, 'has-error': formCreateOrEdit_membruRedactie.membruRedactie_perioada.$dirty && formCreateOrEdit_membruRedactie.membruRedactie_perioada.$invalid}">
+                
+                <label>Perioada</label>
+                <input type="text" class="form-control" name="membruRedactie_perioada" placeholder="Perioada" ng-model="membruRedactie.data.perioada"ng-minlength=1 ng-maxlength=50 maxlength="50" required>
+                
+                <div ng-show="formCreateOrEdit_membruRedactie.membruRedactie_perioada.$dirty && formCreateOrEdit_membruRedactie.membruRedactie_perioada.$invalid">
+                    <p class="help-block" ng-show="formCreateOrEdit_membruRedactie.membruRedactie_perioada.$error.required">
+                        Your field Perioada is required.
+                    </p><p class="help-block" ng-show="formCreateOrEdit_membruRedactie.membruRedactie_perioada.$error.minlength">
+                        Your field Perioada is required to be at least 1 character
+                    </p>
+                    <p class="help-block"
+                    ng-show="formCreateOrEdit_membruRedactie.membruRedactie_perioada.$error.maxlength">
+                        Your field Perioada cannot be longer than 50 characters
+                    </p>
+            </div>
+        </div>
+    </div>
+    <!-- end field 1 -->
+        </div><!--from i+1%entityLayout -->
+        <div class="row m0">
+        <div class="mb15 col-md-6">
+            <div  class="form-group" ng-class="{'has-success': formCreateOrEdit_membruRedactie.membruRedactie_calitatea.$dirty && formCreateOrEdit_membruRedactie.membruRedactie_calitatea.$valid, 'has-error': formCreateOrEdit_membruRedactie.membruRedactie_calitatea.$dirty && formCreateOrEdit_membruRedactie.membruRedactie_calitatea.$invalid}">
+                
+                <label>Calitatea</label>
+                <input type="text" class="form-control" name="membruRedactie_calitatea" placeholder="Calitatea" ng-model="membruRedactie.data.calitatea"ng-minlength=1 ng-maxlength=50 maxlength="50" required>
+                
+                <div ng-show="formCreateOrEdit_membruRedactie.membruRedactie_calitatea.$dirty && formCreateOrEdit_membruRedactie.membruRedactie_calitatea.$invalid">
+                    <p class="help-block" ng-show="formCreateOrEdit_membruRedactie.membruRedactie_calitatea.$error.required">
+                        Your field Calitatea is required.
+                    </p><p class="help-block" ng-show="formCreateOrEdit_membruRedactie.membruRedactie_calitatea.$error.minlength">
+                        Your field Calitatea is required to be at least 1 character
+                    </p>
+                    <p class="help-block"
+                    ng-show="formCreateOrEdit_membruRedactie.membruRedactie_calitatea.$error.maxlength">
+                        Your field Calitatea cannot be longer than 50 characters
+                    </p>
+            </div>
+        </div>
+    </div>
+    <!-- end field 2 -->
+        </div><!--from fields.length%entityLayout -->
+        <div class="row m0">
+            <div class="mb15 col-md-6">
+                <div class="form-group">
+                    <label>Angajat</label>
+
+                    <ui-select ng-model="membruRedactie.data.angajat"
+                               theme="selectize" >
+                        <ui-select-match placeholder="Select angajat...">
+                            {{$select.selected.id}}
+                        </ui-select-match>
+                        <ui-select-choices repeat="angajat in angajats  | filter: $select.search">
+                            <div ng-bind-html="angajat.id | highlight: $select.search"></div>
+                        </ui-select-choices>
+                    </ui-select>
+                </div>
+            </div>
+        </div>
+        
+    <!-- end field 2 -->
+
+        <div class="row m0">
+            <div class="col-md-12 text-right mb15">
+                <button class="btn btn-warning" ng-click="membruRedactie.actions.back()">Cancel</button>
+                <button ng-disabled="formCreateOrEdit_membruRedactie.$invalid" class="btn btn-success" ng-click="membruRedactie.actions.createOrUpdate();formCreateOrEdit_membruRedactie.$setPristine();">Save</button>
+            </div>
+        </div>
+    </form>
+</div>
+<div>
+    <div class="modal fade" id="delete_membruRedactie_Confirmation">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="formDelete_membruRedactie">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title">Confirm delete operation</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Are you sure you want to delete this row ?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="row m0">
+                            <div class="col-md-12 text-right mb15">
+                                <button class="btn btn-warning" ng-click="membruRedactie.actions.back()">Cancel</button>
+                                <button ng-disabled="formCreateOrEdit_membruRedactie.$invalid" class="btn btn-danger" ng-click="membruRedactie.actions.confirmDelete()">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+<div ng-show="conferinta.components.list">
+    <div class="row m0">
+        <div class="col-md-12 text-left mb15">
+            <app-grid
+                    id="conferinta.grid.id"
+                    url="conferinta.grid.url"
+                    refresh-event="conferinta.event.refresh"
+                    column-metadata="conferinta.grid.columnMetadata"
+                    refresh-function="conferinta.actions.refresh"
+                    search-terms="searchTerms"
+                    custom-options="conferinta.grid.customOptions"
+                    action-event="conferinta.event.list"
+                    get-selected="conferinta.actions.selected"
+                    >
+            </app-grid>
+        </div>
+    </div>
+    <div class="row m0">
+        <div class="col-md-12 text-right mb15">
+            <button class="btn btn-primary"
+                    ng-show="conferinta.buttons.add"
+                    ng-click="conferinta.actions.showAdd()">
+                Adauga
+            </button>
+            <button class="btn btn-info"
+                    ng-show="conferinta.buttons.edit"
+                    ng-click="conferinta.actions.showEdit()">
+                Editeaza
+            </button>
+            <button class="btn btn-danger"
+                    ng-show="conferinta.buttons.delete"
+                    ng-click="conferinta.actions.showDelete()">
+                Sterge
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+<div ng-show="citari.components.list">
+    <div class="row m0">
+        <div class="col-md-12 text-left mb15">
+            <app-grid
+                    id="citari.grid.id"
+                    url="citari.grid.url"
+                    refresh-event="citari.event.refresh"
+                    column-metadata="citari.grid.columnMetadata"
+                    refresh-function="citari.actions.refresh"
+                    search-terms="searchTerms"
+                    custom-options="citari.grid.customOptions"
+                    action-event="citari.event.list"
+                    get-selected="citari.actions.selected"
+                    >
+            </app-grid>
+        </div>
+    </div>
+    <div class="row m0">
+        <div class="col-md-12 text-right mb15">
+            <button class="btn btn-primary"
+                    ng-show="citari.buttons.add"
+                    ng-click="citari.actions.showAdd()">
+                Adauga
+            </button>
+            <button class="btn btn-info"
+                    ng-show="citari.buttons.edit"
+                    ng-click="citari.actions.showEdit()">
+                Editeaza
+            </button>
+            <button class="btn btn-danger"
+                    ng-show="citari.buttons.delete"
+                    ng-click="citari.actions.showDelete()">
+                Sterge
+            </button>
+        </div>
+    </div>
+</div>

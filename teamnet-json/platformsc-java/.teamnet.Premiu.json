@@ -1,0 +1,100 @@
+{
+    "relationships": [
+        {
+            "otherEntityModuleName": "platformsc-java",
+            "otherEntityName": "persoana",
+            "otherEntityNameCapitalized": "Persoana",
+            "otherEntityField": "id",
+            "changelogDate": "20170622155126",
+            "relationshipType": "many-to-one"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "international",
+            "fieldType": "Boolean",
+            "fieldRequired": true,
+            "fieldNameCapitalized": "International",
+            "fieldNameUnderscored": "international",
+            "isNewField": false
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "emisDeAR",
+            "fieldType": "Boolean",
+            "fieldRequired": true,
+            "fieldNameCapitalized": "EmisDeAR",
+            "fieldNameUnderscored": "emis_de_ar",
+            "isNewField": false
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "emisDe",
+            "fieldType": "String",
+            "fieldLength": 50,
+            "fieldRequired": true,
+            "fieldNameCapitalized": "EmisDe",
+            "fieldNameUnderscored": "emis_de",
+            "isNewField": false
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "an",
+            "fieldType": "Integer",
+            "fieldRequired": true,
+            "fieldNameCapitalized": "An",
+            "fieldNameUnderscored": "an",
+            "isNewField": false
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "tipPremiu",
+            "fieldType": "String",
+            "fieldLength": 50,
+            "fieldRequired": true,
+            "fieldNameCapitalized": "TipPremiu",
+            "fieldNameUnderscored": "tip_premiu",
+            "isNewField": true
+        },
+        {
+            "fieldId": 6,
+            "fieldName": "denumirePremiu",
+            "fieldType": "String",
+            "fieldLength": 50,
+            "fieldRequired": false,
+            "fieldNameCapitalized": "DenumirePremiu",
+            "fieldNameUnderscored": "denumire_premiu",
+            "isNewField": true
+        },
+        {
+            "fieldId": 7,
+            "fieldName": "emitent",
+            "fieldType": "String",
+            "fieldLength": 50,
+            "fieldRequired": false,
+            "fieldNameCapitalized": "Emitent",
+            "fieldNameUnderscored": "emitent",
+            "isNewField": true
+        },
+        {
+            "fieldId": 8,
+            "fieldName": "an",
+            "fieldType": "Integer",
+            "fieldRequired": false,
+            "fieldNameCapitalized": "An",
+            "fieldNameUnderscored": "an",
+            "isNewField": true
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": false,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": false,
+    "addFeatures": false,
+    "changelogDate": "20170621184750",
+    "entityAddedInRoutes": true,
+    "layout": "2"
+}

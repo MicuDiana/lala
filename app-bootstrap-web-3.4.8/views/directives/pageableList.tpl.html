@@ -1,0 +1,23 @@
+<div class="col-lg-3 col-md-3 col-sm-4">
+    <div class="list-group" style="max-height: 500px; overflow: auto">
+        <div class="list-group-item"
+             style="cursor: pointer; border-top-right-radius: 0px; border-bottom-right-radius: 0px;"
+             ng-repeat="item in items"
+             ng-click="selectItem(item)"
+             ng-class="{active:isSelected(item)}">
+            {{formatItem(item)}}
+        </div>
+    </div>
+    <div>
+        <button type="button" class="col-xs-3 btn btn-default" style="margin-right: 0" ng-click="changePage(-1)">&lt&lt
+        </button>
+        <div class="col-xs-6">
+            <input type="number" style="width: 65%" class="form-control col-xs-6"
+                   ng-keypress="onPageSelect(meta.selected, $event)" ng-blur="onPageSelectBlur()"
+                   ng-model="meta.selected">
+            <div style="text-align: center; line-height: 32px;">/ {{meta.total}}</div>
+        </div>
+        <button type="button" class="col-xs-3 btn btn-default" style="margin-right: 0" ng-click="changePage(+1)">&gt&gt
+        </button>
+    </div>
+</div>

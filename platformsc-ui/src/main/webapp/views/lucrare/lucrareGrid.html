@@ -1,0 +1,37 @@
+<div ng-show="lucrare.components.list">
+    <div class="row m0">
+        <div class="col-md-12 text-left mb15">
+            <app-grid
+                    id="lucrare.grid.id"
+                    url="lucrare.grid.url"
+                    refresh-event="lucrare.event.refresh"
+                    column-metadata="lucrare.grid.columnMetadata"
+                    refresh-function="lucrare.actions.refresh"
+                    search-terms="searchTerms"
+                    custom-options="lucrare.grid.customOptions"
+                    action-event="lucrare.event.list"
+                    get-selected="lucrare.actions.selected"
+                    >
+            </app-grid>
+        </div>
+    </div>
+    <div class="row m0">
+        <div class="col-md-12 text-right mb15">
+            <button class="btn btn-primary"
+                    ng-show="lucrare.buttons.add"
+                    ng-click="lucrare.actions.showAdd()">
+                Adauga
+            </button>
+            <button class="btn btn-info"
+                    ng-show="lucrare.buttons.edit"
+                    ng-click="lucrare.actions.showEdit()">
+                Editeaza
+            </button>
+            <button class="btn btn-danger"
+                    ng-show="lucrare.buttons.delete"
+                    ng-click="lucrare.actions.showDelete()">
+                Sterge
+            </button>
+        </div>
+    </div>
+</div>

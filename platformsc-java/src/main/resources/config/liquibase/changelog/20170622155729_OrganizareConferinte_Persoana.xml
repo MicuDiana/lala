@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+
+    <changeSet id="20170622155729" author="teamnet">
+
+        <addColumn tableName="T_ORGANIZARE_CONFERINTE">
+            <column name="persoana_id" type="bigint"/>
+        </addColumn>
+
+        <addForeignKeyConstraint baseColumnNames="persoana_id"
+                                 baseTableName="T_ORGANIZARE_CONFERINTE"
+                                 constraintName="fk_organizareconferinte_persoana_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="T_PERSOANA"/>
+    </changeSet>
+
+</databaseChangeLog>

@@ -1,0 +1,54 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "otherEntityName": "angajat",
+            "otherEntityModuleName": "platformsc-java",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "Angajat",
+            "otherEntityField": "id",
+            "changelogDate": "20170622160526"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "international",
+            "fieldType": "Boolean",
+            "fieldRequired": false,
+            "fieldNameCapitalized": "International",
+            "fieldNameUnderscored": "international",
+            "isNewField": false
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "perioada",
+            "fieldType": "String",
+            "fieldLength": 50,
+            "fieldRequired": true,
+            "fieldNameCapitalized": "Perioada",
+            "fieldNameUnderscored": "perioada",
+            "isNewField": false
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "calitatea",
+            "fieldType": "String",
+            "fieldLength": 50,
+            "fieldRequired": true,
+            "fieldNameCapitalized": "Calitatea",
+            "fieldNameUnderscored": "calitatea",
+            "isNewField": false
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": false,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": false,
+    "addFeatures": false,
+    "changelogDate": "20170621185244",
+    "entityAddedInRoutes": true,
+    "layout": "2"
+}

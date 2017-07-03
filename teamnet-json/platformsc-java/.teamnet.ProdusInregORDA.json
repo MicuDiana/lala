@@ -1,0 +1,34 @@
+{
+    "relationships": [],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "numeProdus",
+            "fieldType": "String",
+            "fieldLength": 50,
+            "fieldRequired": true,
+            "fieldNameCapitalized": "NumeProdus",
+            "fieldNameUnderscored": "nume_produs",
+            "isNewField": false
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "an",
+            "fieldType": "Integer",
+            "fieldRequired": true,
+            "fieldNameCapitalized": "An",
+            "fieldNameUnderscored": "an",
+            "isNewField": false
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": false,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": false,
+    "changelogDate": "20170621184715",
+    "addFeatures": false,
+    "entityAddedInRoutes": true,
+    "layout": "2"
+}

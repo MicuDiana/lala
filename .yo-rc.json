@@ -1,0 +1,27 @@
+{
+  "generator-teamnet-application": {
+    "baseName": "platformsc",
+    "appDependencies": "platformsc-parent",
+    "customApp": "platformsc-ui",
+    "javaReports": "0",
+    "dictionaryFeature": false,
+    "organizationalFeature": false,
+    "customBackend": "platformsc-java",
+    "appAll": "platformsc-all",
+    "appVersion": "0.0.1-SNAPSHOT",
+    "packageName": "ro.platformsc",
+    "devDatabaseType": "postgresql",
+    "prodDatabaseType": "postgresql",
+    "javaVersion": "8",
+    "bootstrapVersion": "3.4.8",
+    "databaseServerName": "localhost",
+    "databaseName": "platformsc",
+    "databaseUsername": "platformsc",
+    "databasePassword": "platformsc",
+    "databasePort": "5432",
+    "enablingSecurity": true,
+    "skipInstall": false,
+    "modules": [],
+    "runApp": "platformsc-run"
+  }
+}
